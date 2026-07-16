@@ -1,0 +1,17 @@
+export 'domain/entities/vendor_product.dart';
+export 'domain/entities/inventory_transaction.dart';
+export 'domain/failures/vendor_product_failure.dart';
+export 'domain/failures/inventory_transaction_failure.dart';
+export 'domain/repositories/vendor_product_repository.dart';
+export 'domain/repositories/inventory_transaction_repository.dart';
+export 'data/models/vendor_product_model.dart';
+export 'data/models/inventory_transaction_model.dart';
+export 'data/datasources/vendor_product_remote_data_source.dart';
+export 'data/datasources/inventory_transaction_remote_data_source.dart';
+export 'data/repositories/vendor_product_repository_impl.dart';
+export 'data/repositories/inventory_transaction_repository_impl.dart';
+export 'presentation/providers/vendor_products_provider.dart';
+export 'presentation/providers/vendor_products_state.dart';
+export 'presentation/providers/inventory_transactions_provider.dart';
+export 'presentation/providers/inventory_transactions_state.dart';
+export 'presentation/screens/inventory_transactions_screen.dart';

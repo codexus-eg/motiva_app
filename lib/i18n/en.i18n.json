@@ -1,0 +1,2233 @@
+{
+    "general": {
+        "app_name": "Motiva App"
+    },
+    "auth": {
+        "login": {
+            "title": "Login",
+            "loading": "Logging in...",
+            "do_not_have_account": "Do not have an account? ",
+            "create_account": "Create Account"
+        },
+        "register_as": {
+            "title": "Register As",
+            "select_user_type": "Select User Type",
+            "business_owner": "Business Owner",
+            "customer": "Customer",
+            "driver": "Driver"
+        },
+        "register_vendor": {
+            "business_name": "Business Name",
+            "business_email": "Business Email",
+            "representative_name": "Representative Name",
+            "commercial_license": "Commercial License No (Optional)"
+        },
+        "register_customer": {
+            "name": "Name",
+            "email": "Email",
+            "country": "Country",
+            "kuwait": "Kuwait",
+            "saudi_arabia": "Saudi Arabia",
+            "uae": "UAE",
+            "city": "City",
+            "kuwait_city": "Kuwait City",
+            "al_jahra": "Al Jahra",
+            "hawalli": "Hawalli"
+        },
+        "verify": {
+            "title": "VERIFY PHONE\n NUMBER",
+            "description": "We've Sent Code To",
+            "loading": "VERIFYING...",
+            "button": "VERIFY",
+            "resend": "Resend",
+            "resend_in": "Resend in",
+            "did_not_receive_code": "Didn't Receive Code? "
+        },
+        "category": {
+            "title": "Choose Category",
+            "select_category": "Select Category",
+            "loading": "REGISTERING...",
+            "error": {
+                "null_category": "Please select a category",
+                "no_categories": "No categories available",
+                "failed_to_load": "Failed to load categories",
+                "button": "Retry",
+                "registration_failed": "Registration failed. Please try again."
+            },
+            "registration_success": "Registration submitted! Your account requires admin approval before you can login."
+        },
+        "splash": {
+            "vendor": {
+                "title": "Verifying profile...",
+                "login_error": "Vendor profile verification failed",
+                "logout_error": "Your vendor profile is incomplete or was not found.\nPlease contact support or complete your registration to continue."
+            },
+            "error": {
+                "splash_failed": "Auth error in splash",
+                "auth_failed": "Authentication failed. Please login again."
+            },
+            "initializing": "Initializing...",
+            "loading": "Loading...",
+            "checking_auth": "Checking authentication..."
+        },
+        "phone_number": "Phone Number",
+        "password": "Password",
+        "confirm_password": "Confirm Password",
+        "continue_button": "CONTINUE",
+        "get_started": "GET STARTED",
+        "loading": "SENDING OTP...",
+        "already_have_account": "Already have an account? ",
+        "login_button": "Login"
+    },
+    "booking": {
+        "booking_screen": {
+            "title": "Book Service",
+            "service_details": "Service Details",
+            "location": {
+                "title": "Service Location",
+                "selected": "Selected",
+                "tap_to_select": "Tap to select",
+                "tap_to_select_location": "Tap to select location on map",
+                "pick": "pick",
+                "pick_location": "pick location",
+                "additional_details": "Additional address details (optional)",
+                "pickup": "Pickup Location",
+                "drop_off": "Drop off Location",
+                "location_selected": "Location Selected",
+                "success": "selected successfully",
+                "success_location": "Location selected successfully",
+                "null_location": "Please select your location",
+                "null_pickup": "Please select pickup location",
+                "null_drop_off": "Please select drop off location"
+            },
+            "scheduling": {
+                "title": "Schedule",
+                "date": "Choose Date",
+                "jan": "Jan",
+                "feb": "Feb",
+                "mar": "Mar",
+                "apr": "Apr",
+                "may": "May",
+                "jun": "Jun",
+                "jul": "Jul",
+                "aug": "Aug",
+                "sep": "Sep",
+                "oct": "Oct",
+                "nov": "Nov",
+                "dec": "Dec",
+                "time": "Available Time",
+                "clear": "Clear",
+                "null_time": "No available time slots for this date. Please select another date.",
+                "select_time": "Please select time slot",
+                "error_time": "No Time Slot Available",
+                "next_available": "Next available",
+                "select_next_available": "Select This Day"
+            },
+            "order": {
+                "title": "Order Summary",
+                "base_amount": "Base Amount",
+                "description": "Final amount will be confirmed by vendor"
+            },
+            "button": {
+                "title": "Confirm Booking",
+                "error_location": "Please select your location to continue",
+                "error_pickup": "Please select pickup location",
+                "error_drop_off": "Please select drop off location"
+            }
+        },
+        "order_confirmation": {
+            "title": "Booking Submitted!",
+            "order": "Order:",
+            "status": {
+                "title": "Booking Confirmed",
+                "description": "Your booking has been auto-accepted and confirmed successfully."
+            },
+            "info": {
+                "service": "Service",
+                "vendor": "Vendor",
+                "base_amount": "Base Amount",
+                "scheduled": "Scheduled",
+                "location": "Location"
+            },
+            "button": {
+                "primary": "Back to Home",
+                "secondary": "Go to My Requests"
+            }
+        }
+    },
+    "home": {
+        "services_grid": {
+            "spare_parts": "Spare Parts"
+        },
+        "customer": {
+            "search": "Search Products",
+            "active_orders": {
+                "empty": {
+                    "title": "No Active Orders",
+                    "description": "Your active orders will appear here"
+                },
+                "order": {
+                    "title": "Active Orders",
+                    "more_orders": "more orders",
+                    "view_all": "View All Orders",
+                    "order_card": {
+                        "service": "Service",
+                        "scheduled": "Scheduled",
+                        "asap": "ASAP",
+                        "status": {
+                            "pending": "Pending",
+                            "accepted": "Accepted",
+                            "en_route": "En Route",
+                            "arrived": "Arrived",
+                            "active": "Active"
+                        }
+                    }
+                }
+            },
+            "premium_banner": {
+                "title": "Upgrade to Premium\nfor Exclusive\nBenefits!",
+                "button": "Upgrade Now"
+            },
+            "ad_banner": {
+                "title": "Road Assistance\n at 10% Off - Book Now!"
+            },
+            "services_grid": {
+                "title": "Available Services",
+                "view_all": "View All",
+                "error_category": "Failed to load service categories",
+                "error": {
+                    "title": "Failed to load services",
+                    "retry": "Retry"
+                },
+                "empty": {
+                    "title": "No services available",
+                    "refresh": "Refresh"
+                }
+            },
+            "buy_sell_card": {
+                "buy": "Buy a Car",
+                "sell": "Sell Your Car",
+                "tap": "Tap here"
+            },
+            "promo_banner": {
+                "title": "Save upTo KD 5",
+                "description": "Limited time offer on specific\nservices"
+            },
+            "listing": {
+                "popular_today": "Popular Today",
+                "top_vendors": "Top Vendors",
+                "new_vendors": "New Vendors"
+            }
+        },
+        "vendor": {
+            "services_grid": {
+                "messages": "Messages",
+                "support": "Support",
+                "requests": "Requests",
+                "orders": "Orders",
+                "add_services": "Add Services",
+                "current_services": "Current Services"
+            },
+            "stats": {
+                "today": "Today",
+                "weekly": "Weekly",
+                "monthly": "Monthly",
+                "this_weekly": "This Week",
+                "this_monthly": "This Month",
+                "stats_card": {
+                    "title": "Statistics",
+                    "earnings": "Earnings",
+                    "orders": "Orders",
+                    "rating": "Rating",
+                    "sales": "Sales"
+                }
+            },
+            "completed_jobs": "Completed Jobs",
+            "availability_capacity": {
+                "title": "Availability & Capacity",
+                "availability": {
+                    "title": "Accepting New Orders",
+                    "available": "Available",
+                    "not_available": "Not Available"
+                },
+                "status": {
+                    "title": "Vendor Status",
+                    "open": "Open",
+                    "busy": "Busy"
+                },
+                "capacity": {
+                    "title": "Order Capacity",
+                    "description": "Max concurrent orders"
+                }
+            },
+            "active_orders": {
+                "title": "Active Orders",
+                "all": "All",
+                "en_route": "En Route",
+                "arrived": "Arrived",
+                "in_progress": "In Progress",
+                "empty": "No orders",
+                "service": "Service",
+                "customer": "Customer",
+                "asap": "ASAP"
+            },
+            "checkout_orders": {
+                "title": "Product Orders",
+                "all": "All",
+                "pending": "Pending",
+                "processing": "Processing",
+                "confirmed": "Confirmed",
+                "shipped": "Shipped",
+                "empty": "No product orders",
+                "order_number": "Order #",
+                "items_count": "items",
+                "item": "item",
+                "payment_method": "Payment: COD",
+                "cancel": "Cancel",
+                "ship": "Mark Shipped",
+                "deliver": "Mark Delivered",
+                "product_order": "Product Order",
+                "placed": "Placed",
+                "total": "Total",
+                "status_timeline": "Status Timeline",
+                "timeline": {
+                    "pending": "Pending",
+                    "pending_sublabel": "Received",
+                    "processing": "Processing",
+                    "processing_sublabel": "Preparing",
+                    "shipped": "Shipped",
+                    "shipped_sublabel": "En Route",
+                    "delivered": "Delivered",
+                    "delivered_sublabel": "Done"
+                },
+                "status": {
+                    "pending": "Pending",
+                    "processing": "Processing",
+                    "confirmed": "Confirmed",
+                    "shipped": "Shipped",
+                    "delivered": "Delivered",
+                    "cancelled": "Cancelled"
+                },
+                "customer": "Customer",
+                "order_items": "Order Items",
+                "delivery": "Delivery",
+                "delivery_address": "Delivery Address",
+                "no_address_provided": "No address provided",
+                "payment": "Payment",
+                "payment_status": "Status",
+                "payment_paid": "Paid",
+                "payment_pending": "Pending",
+                "order_info": "Order Info",
+                "order_id": "Order ID",
+                "placed_on": "Placed on",
+                "last_updated": "Last updated",
+                "est_delivery": "Est. delivery",
+                "cancellation": "Cancellation",
+                "cancellation_reason": "Cancellation Reason",
+                "no_reason_provided": "No reason provided",
+                "loading_order": "Loading order...",
+                "failed_to_load": "Failed to Load",
+                "try_again": "Try Again",
+                "mark_shipped": "Mark Shipped",
+                "mark_delivered": "Delivered",
+                "order_shipped_success": "Order shipped!",
+                "order_delivered_success": "Order delivered!",
+                "failed": "Failed",
+                "not_specified": "Not specified",
+                "cash_on_delivery": "Cash on Delivery",
+                "credit_debit_card": "Credit/Debit Card"
+            },
+            "empty": "Profile not found",
+            "error": "Error loading data"
+        },
+        "operator": {
+            "incoming_requests": "Incoming Requests",
+            "accepted_requests": "Accepted Requests",
+            "rides_history": "Rides History"
+        }
+    },
+    "cart": {
+        "title": "CART",
+        "error_loading": "Failed to load cart:",
+        "empty": {
+            "title": "Your cart is empty",
+            "subtitle": "Browse our services and book your next appointment",
+            "browse_button": "Browse Services"
+        },
+        "delivering_from": "Delivering from",
+        "all_items": "All Items",
+        "special_request": "Special Request",
+        "special_request_hint": "Write any special request about the order.",
+        "price": "Price",
+        "items": "items",
+        "promo_code": "Promo Code",
+        "total_amount": "Total Amount",
+        "you_saved": "You saved",
+        "order": "on this order",
+        "checkout_button": "CHECKOUT",
+        "vendor_subtitle": "We are ready to serve you anytime"
+    },
+    "checkout": {
+        "title": "CHECKOUT",
+        "order_summary": "Order Summary",
+        "subtotal": "Subtotal",
+        "delivery_fee": "Delivery Fee",
+        "voucher_discount": "Voucher Discount",
+        "wallet_used": "Wallet Used",
+        "total": "Total",
+        "delivery_address": "Delivery Address",
+        "add_new_address": "Add New Address",
+        "save_address": "Save Address",
+        "voucher_code": "Voucher Code",
+        "enter_voucher": "Enter voucher code",
+        "apply": "Apply",
+        "voucher_applied": "Voucher applied successfully!",
+        "wallet_balance": "Wallet Balance",
+        "payment_methods": "Payment Methods",
+        "pay": "PAY",
+        "processing": "PROCESSING...",
+        "order_confirmed": "Order Confirmed!",
+        "order_placed": "Your order has been placed successfully.",
+        "total_payment": "Total Payment",
+        "order_number": "Order #",
+        "payment_time": "Payment Time",
+        "payment_method": "Payment Method",
+        "items": "Items",
+        "estimated_delivery": "Estimated Delivery",
+        "track_order": "Track Order",
+        "back_home": "BACK HOME",
+        "continue_shopping": "Continue shopping",
+        "motiva_wallet": "Motiva Wallet",
+        "balance": "Balance:",
+        "fill_required_fields": "Please fill required fields",
+        "address_label_hint": "Label (e.g. Home, Work)",
+        "street": "Street *",
+        "area": "Area *",
+        "block": "Block *",
+        "building": "Building",
+        "floor": "Floor",
+        "apartment": "Apartment",
+        "notes": "Notes",
+        "default_address_label": "Address",
+        "block_label": "Block",
+        "building_label": "Building",
+        "floor_label": "Floor",
+        "apartment_label": "Apt"
+    },
+    "public_services": {
+        "category_vendors": {
+            "description": "Find the best services",
+            "search": "Search Vendors",
+            "all_vendors": "All Vendors",
+            "error_vendor": "Failed to load vendors",
+            "null_vendor": "No vendors found",
+            "vendor_card": {
+                "sub_title": "services available",
+                "badge_title": "verified"
+            }
+        },
+        "vendor_services": {
+            "services": "Services",
+            "reviews": "Reviews",
+            "most_popular": "Most Popular",
+            "search": "Search Service",
+            "error_service": "Failed to load services",
+            "null_service": "No services found",
+            "all_services": "All Services",
+            "service_card": {
+                "description": "Professional Service",
+                "button": "View Details"
+            }
+        },
+        "services_details": {
+            "title": "About this services",
+            "min": "min",
+            "description": {
+                "title": "Description",
+                "dec": "Professional Service From"
+            },
+            "service_details": "Service Details",
+            "provider": "Service Provider",
+            "services": "Services",
+            "reviews": "Reviews",
+            "working_hours": {
+                "title": "Working Hours",
+                "closed": "Closed",
+                "open": "Open"
+            },
+            "days": {
+                "Monday": "Monday",
+                "Tuesday": "Tuesday",
+                "Wednesday": "Wednesday",
+                "Thursday": "Thursday",
+                "Friday": "Friday",
+                "Saturday": "Saturday",
+                "Sunday": "Sunday"
+            },
+            "button": {
+                "title": "REQUEST NOW",
+                "null_service": "Loading service details...",
+                "error_service": "This service requires a quotation. Please contact the vendor directly."
+            }
+        }
+    },
+    "public_marketplace": {
+        "category_screen": {
+            "title_accessories": "Accessories",
+            "title_spare_parts": "Spare Parts",
+            "subtitle": "Find the best services",
+            "search_hint": "Search Vendor",
+            "all_supplies": "All Supplies",
+            "no_vendors_match_search": "No vendors match your search",
+            "no_vendors_found": "No vendors found",
+            "label_accessories": "accessories",
+            "label_spare_parts": "spare parts",
+            "verified": "Verified",
+            "error_loading": "Failed to load vendors"
+        },
+        "details_screen": {
+            "app_bar_title": "About This Service",
+            "product_not_found": "Product not found",
+            "description": "Description",
+            "no_description": "No description available.",
+            "quantity": "Quantity",
+            "added_to_cart": "added to cart",
+            "add_to_cart_button": "ADD TO CART",
+            "reviews": "Reviews",
+            "load_more_reviews": "Load More Reviews",
+            "similar_products": "Similar Products",
+            "months_ago": "Months Ago"
+        },
+        "vendor_details_screen": {
+            "search_hint": "Search Service",
+            "most_popular": "Most Popular",
+            "all_services": "All Services",
+            "reviews": "Reviews",
+            "no_services_found": "No services found",
+            "professional_service": "Professional service",
+            "add_to_cart": "Add to Cart",
+            "services": "services",
+            "reviews_label": "reviews"
+        },
+        "spare_parts": {
+            "title": "Spare Parts",
+            "details_screen": {
+                "specifications": "Specifications",
+                "brand": "Brand",
+                "part_number": "Part Number",
+                "warranty": "Warranty",
+                "warranty_months_suffix": "{months} mo warranty",
+                "compatibility": "Compatibility",
+                "compatibility_empty": "No compatibility info",
+                "no_value": "—"
+            },
+            "category_screen": {
+                "title": "Spare Parts",
+                "filter_button_tooltip": "Filter spare parts",
+                "chip_make": "Make: {value}",
+                "chip_model": "Model: {value}",
+                "chip_year_from": "Year {value}+",
+                "chip_year_to": "to {value}",
+                "chip_brand": "Brand: {value}",
+                "chip_min_price": "Min: {value}",
+                "chip_max_price": "Max: {value}",
+                "chip_clear_all": "Clear all"
+            },
+            "filter_sheet": {
+                "title": "Filter Spare Parts",
+                "make_label": "Make",
+                "model_label": "Model",
+                "year_from_label": "Year from",
+                "year_to_label": "Year to",
+                "brand_label": "Brand",
+                "min_price_label": "Min price (KWD)",
+                "max_price_label": "Max price (KWD)",
+                "apply": "Apply",
+                "reset": "Reset",
+                "cancel": "Cancel"
+            }
+        }
+    },
+    "services": {
+        "screen": {
+            "title": "All Services",
+            "search_hint": "Search Services"
+        },
+        "all_services_grid": {
+            "error": {
+                "title": "Failed to load services",
+                "retry": "Retry"
+            },
+            "empty": {
+                "title": "No services found for your search"
+            },
+            "static": {
+                "buy_a_car": "Buy a Car",
+                "sell_your_car": "Sell your Car",
+                "car_accessories": "Car Accessories",
+                "spare_parts": "Spare Parts"
+            }
+        }
+    },
+    "buy_a_car": {
+        "screen": {
+            "title": "BUY A CARS",
+            "subtitle": "We have offers waiting for you"
+        },
+        "service_section": {
+            "good_condition_cars": "Good Condition Cars",
+            "damaged_cars": "Damaged Cars",
+            "approved_cars": "Approved Cars",
+            "good_condition_description": "Browse through our wide selection of cars in great condition.",
+            "damaged_cars_description": "Find damaged cars for spare parts or repair projects.",
+            "approved_cars_description": "Shop certified and approved cars with full inspection reports."
+        },
+        "good_condition_screen": {
+            "title": "Explore Cars",
+            "search_hint": "Search cars by make, model...",
+            "all_cars": "All Cars",
+            "no_cars_found": "No cars found matching",
+            "no_cars_available": "No cars available",
+            "failed_to_load": "Failed to load cars",
+            "retry": "Retry"
+        },
+        "approved_cars_screen": {
+            "title": "Approved Cars",
+            "search_hint": "Search approved cars...",
+            "all_approved_cars": "All Approved Cars",
+            "no_cars_found": "No cars found matching",
+            "no_approved_cars_available": "No approved cars available",
+            "failed_to_load": "Failed to load cars",
+            "retry": "Retry"
+        },
+        "damaged_cars_screen": {
+            "title": "Damaged Cars",
+            "search_hint": "Search damaged cars...",
+            "all_damaged_cars": "All Damaged Cars",
+            "no_cars_found": "No cars found matching",
+            "no_damaged_cars_available": "No damaged cars available",
+            "failed_to_load": "Failed to load cars",
+            "retry": "Retry"
+        },
+        "details_screen": {
+            "about_this_car": "About This Car",
+            "failed_to_load_listing": "Failed to load listing",
+            "retry": "Retry",
+            "price_on_request": "Price on Request",
+            "car_details": "Car Details",
+            "location_not_specified": "Location not specified",
+            "featured": "Featured",
+            "inspected": "Inspected",
+            "view_details": "View Details",
+            "inspection_report": {
+                "title": "Inspection Report",
+                "description": "Download and view the\n inspection report of this car.",
+                "view_report": "View Inspection Report"
+            },
+            "specifications": "Specifications",
+            "spec_labels": {
+                "make": "Make",
+                "model": "Model",
+                "trim": "Trim",
+                "year": "Year",
+                "mileage": "Mileage",
+                "transmission": "Transmission",
+                "engine": "Engine",
+                "color": "Color"
+            },
+            "na": "N/A",
+            "description": "Description",
+            "no_description": "No description available.",
+            "location": "Location",
+            "call_now": "CALL NOW",
+            "chat": "Chat",
+            "condition": {
+                "excellent": "Excellent",
+                "good": "Good",
+                "fair": "Fair",
+                "poor": "Poor",
+                "damaged": "Damaged"
+            },
+            "error_open_report": "Could not open inspection report"
+        },
+        "car_chat": {
+            "title": "Toyota land cruiser 300",
+            "this_message_relates_to": "This message relates to:",
+            "buy_a_car": "Buy a Car",
+            "inspection_report_pdf": "InspectionReport.pdf",
+            "size_kb": "487 KB",
+            "download": "Download",
+            "inspection_report_message": "Please have a look at this inspection report.",
+            "sender_initial": "R",
+            "sender_name": "Prime Car care",
+            "you": "You",
+            "type_message": "Type a message"
+        },
+        "listing_card": {
+            "featured": "Featured",
+            "inspected": "Inspected",
+            "not_inspected": "Not Inspected"
+        },
+        "filters": {
+            "clear_all": "Clear All",
+            "make": "Make",
+            "model": "Model",
+            "trim": "Trim",
+            "year": "Year",
+            "mileage": "Mileage",
+            "transmission": "Transmission",
+            "automatic": "Automatic",
+            "manual": "Manual",
+            "search_makes": "Search makes...",
+            "no_makes_found": "No makes found",
+            "failed_to_load_makes": "Failed to load makes",
+            "select_make_first": "Please select a make first",
+            "search_models": "Search models...",
+            "no_models_found": "No models found",
+            "failed_to_load_models": "Failed to load models",
+            "select_model_first": "Please select a model first",
+            "search_trims": "Search trims...",
+            "no_trims_available": "No trims available",
+            "no_trims_found": "No trims found",
+            "failed_to_load_trims": "Failed to load trims",
+            "from_year": "From Year",
+            "to_year": "To Year",
+            "select_year": "Select year",
+            "any": "Any",
+            "failed_to_load_years": "Failed to load years",
+            "mileage_any": "Any",
+            "under_50k": "Under 50,000 km",
+            "range_50k_100k": "50,000 - 100,000 km",
+            "range_100k_150k": "100,000 - 150,000 km",
+            "over_150k": "150,000+ km"
+        }
+    },
+    "reviews": {
+        "screen_title": "Submit Review",
+        "rate_service": "Rate Service",
+        "your_review": "Your Review",
+        "review_placeholder": "Share your experience with this service...",
+        "character_count": "/5000",
+        "submit_review": "Submit Review",
+        "submitting": "Submitting...",
+        "success_message": "Review submitted successfully!",
+        "error_already_reviewed": "You have already reviewed this order",
+        "error_validation": "Please check your input and try again",
+        "error_network": "Network error. Please try again",
+        "display": {
+            "title": "Reviews",
+            "review": "Review",
+            "filter_all": "All",
+            "filter_5_stars": "5★",
+            "filter_4_stars": "4★",
+            "filter_3_stars": "3★",
+            "filter_2_stars": "2★",
+            "filter_1_star": "1★",
+            "sort_most_recent": "Most Recent",
+            "sort_highest": "Highest",
+            "sort_lowest": "Lowest",
+            "verified_badge": "Verified",
+            "empty_state_title": "No reviews yet",
+            "empty_state_message": "Be the first to leave a review!",
+            "load_more": "Load More"
+        }
+    },
+    "user_dashboard": {
+        "profile": {
+            "greeting": "Hi {name}!",
+            "guest": "Guest",
+            "guest_initial": "G",
+            "location": "Kuwait"
+        },
+        "menu": {
+            "wallet": "Wallet",
+            "orders": "Orders",
+            "listings": "Listings",
+            "loyalty_program": "Loyalty Program"
+        },
+        "wallet": {
+            "screen_title": "Motiva Wallet",
+            "encrypted": "All data is encrypted",
+            "total": "Total (KWD):",
+            "use_now": "use it now",
+            "history": "History",
+            "use_reward_balance": "Use Reward Balance",
+            "coming_soon": "Coming Soon",
+            "coming_soon_message": "Wallet balance can be used for payments — coming soon!",
+            "no_transactions": "No transactions yet",
+            "error_loading": "Failed to load wallet data",
+            "available_balance": "Available Balance",
+            "failed_to_load_balance": "Failed to load balance",
+            "credit": "Credit",
+            "debit": "Debit",
+            "balance_available": "Balance Available",
+            "retry": "Retry",
+            "reference_types": {
+                "order": "Order Payment",
+                "refund": "Refund",
+                "voucher": "Voucher Redemption",
+                "adjustment": "Adjustment",
+                "admin": "Admin Credit",
+                "payout_hold": "Payout Hold",
+                "payout_release": "Payout Released",
+                "product_order": "Product Order"
+            },
+            "transaction_details": {
+                "description": "Description",
+                "reference_id": "Reference ID",
+                "type": "Type",
+                "date": "Date"
+            },
+            "reward_cards": {
+                "buy_a_car": "Buy a Car",
+                "car_accessories": "Car Accessories",
+                "spare_parts": "Spare Parts"
+            },
+            "transaction": {
+                "compensation": "Compensation",
+                "used": "Used"
+            },
+            "months": {
+                "jan": "Jan", "feb": "Feb", "mar": "Mar", "apr": "Apr",
+                "may": "May", "jun": "Jun", "jul": "Jul", "aug": "Aug",
+                "sep": "Sep", "oct": "Oct", "nov": "Nov", "dec": "Dec"
+            },
+            "detail_labels": {
+                "service_type": "Service type",
+                "vendor_name": "Vendor Name",
+                "liters": "Liters",
+                "order_id": "Order Id",
+                "status": "Status"
+            }
+        },
+        "orders": {
+            "screen_title": "Orders",
+            "search_hint": "Search orders...",
+            "filter_all": "All",
+            "filter_service": "Service",
+            "filter_product": "Product",
+            "tab_all": "All",
+            "tab_active": "Active",
+            "tab_completed": "Completed",
+            "service_details": "Service details available in full view",
+            "empty": {
+                "no_results": "No Results Found",
+                "no_tab_orders": "No {tabName} Orders",
+                "adjust_search": "Try adjusting your search terms.",
+                "orders_appear_here": "Orders will appear here once available."
+            },
+            "error": {
+                "title": "Error Loading Orders",
+                "retry": "Retry"
+            },
+            "card": {
+                "service_order": "Service Order",
+                "product_order": "Product Order",
+                "fallback_service": "Service",
+                "fallback_vendor": "Vendor",
+                "item": "item",
+                "items": "items",
+                "reference": "Reference",
+                "amount": "Amount",
+                "time": "Time",
+                "order_id": "Order ID",
+                "date": "Date",
+                "delivery_address": "Delivery Address",
+                "order_summary": "Order Summary",
+                "download_receipt": "Download Receipt",
+                "subtotal": "Subtotal",
+                "total": "Total",
+                "payment_method": "Payment Method",
+                "failed_details": "Failed to load details: {error}",
+                "more_items": "+ {count} more",
+                "view_details": "View Details",
+                "add_review": "ADD REVIEW"
+            },
+            "status": {
+                "pending": "Pending",
+                "accepted": "Accepted",
+                "on_the_way": "On the Way",
+                "arrived": "Arrived",
+                "in_progress": "In Progress",
+                "completed": "Completed",
+                "rejected": "Rejected",
+                "cancelled": "Cancelled",
+                "processing": "Processing",
+                "confirmed": "Confirmed",
+                "shipped": "Shipped",
+                "delivered": "Delivered"
+            },
+            "details": {
+                "screen_title": "Request Details",
+                "service_specifications": "Service Specifications",
+                "your_details": "Your Details",
+                "failed_to_load": "Failed to load order",
+                "unknown_service": "Unknown Service",
+                "unknown_vendor": "Unknown Vendor",
+                "order_information": "Order Information",
+                "order_reference": "Order Reference",
+                "service": "Service",
+                "vendor": "Vendor",
+                "base_amount": "Base Amount",
+                "total_amount": "Total Amount",
+                "scheduled_date_time": "Scheduled Date & Time",
+                "date": "Date",
+                "time": "Time",
+                "service_location": "Service Location",
+                "open_in_maps": "Open in Maps",
+                "timeline": "Timeline",
+                "order_placed": "Order Placed",
+                "vendor_accepted": "Vendor Accepted",
+                "service_completed": "Service Completed",
+                "order_cancelled": "Order Cancelled",
+                "documents": "Documents",
+                "document": "Document",
+                "rejection_reason": "Rejection Reason",
+                "cancellation_reason": "Cancellation Reason",
+                "call_vendor": "Call Vendor",
+                "write_review": "Write Review",
+                "book_again": "Book Again",
+                "phone_not_available": "Vendor phone number is not available",
+                "could_not_launch_dialer": "Could not launch phone dialer",
+                "review_coming_soon": "Review feature coming soon",
+                "screen_title_product": "Order Details",
+                "order_date": "Order Date",
+                "order_items": "Order Items",
+                "quantity_label": "Qty: {qty}",
+                "payment_summary": "Payment Summary",
+                "order_updated": "Order Updated"
+            }
+        },
+        "active_orders_preview": {
+            "empty_title": "No Active Requests",
+            "empty_subtitle": "Your active service requests will appear here.",
+            "section_title": "My Active Requests",
+            "view_all": "View All",
+            "unknown_service": "Unknown Service",
+            "unknown_vendor": "Unknown Vendor",
+            "time_ago": {
+                "just_now": "Just now",
+                "minutes_ago": "{n}m ago",
+                "hours_ago": "{n}h ago",
+                "days_ago": "{n}d ago"
+            }
+        },
+        "loyalty": {
+            "screen_title": "Loyalty Program",
+            "points_balance": "Points Balance",
+            "points": "Points",
+            "progress_to_reward": "Progress to Reward",
+            "of_points_to_reward": "{current} of {total} points to next reward",
+            "redeem_points": "Redeem Points",
+            "transactions": "Transactions",
+            "earn": "Earn",
+            "redeem": "Redeem",
+            "expire": "Expire",
+            "adjust": "Adjust",
+            "empty_title": "No Transactions Yet",
+            "empty_subtitle": "Your loyalty transactions will appear here.",
+            "error_title": "Failed to Load",
+            "retry": "Retry"
+        },
+        "listings": {
+            "screen_title": "Listings",
+            "search_hint": "Search Listed car",
+            "error": {
+                "failed_to_load": "Failed to load listings",
+                "retry": "Retry"
+            },
+            "empty": {
+                "no_results": "No listings found",
+                "no_listings_yet": "No listings yet",
+                "no_match": "No listings match.",
+                "appear_here": "Your car listings will appear here"
+            },
+            "card": {
+                "featured": "Featured",
+                "inspected": "Inspected",
+                "not_inspected": "Not Inspected"
+            }
+        },
+        "listing_details": {
+            "screen_title": "About This Car",
+            "featured": "Featured",
+            "price_on_request": "Price on request",
+            "inspected": "Inspected",
+            "not_inspected": "Not Inspected",
+            "view_details": "View Details",
+            "unknown_location": "Unknown location",
+            "time_ago": {
+                "just_now": "Just now",
+                "minutes_ago": "{n} minutes ago",
+                "hours_ago": "{n} hours ago",
+                "days_ago": "{n} days ago",
+                "months_ago": "{n} months ago"
+            },
+            "inspection": {
+                "title": "Inspection Report",
+                "has_report_desc": "Download and view the\n inspection report of this car.",
+                "no_report_desc": "No inspection report\n available for this car.",
+                "view_report": "View Inspection Report"
+            },
+            "specifications": {
+                "title": "Specifications",
+                "edit": "Edit",
+                "labels": {
+                    "make": "Make",
+                    "model": "Model",
+                    "trim": "Trim",
+                    "year": "Year",
+                    "mileage": "Mileage",
+                    "transmission": "Transmission",
+                    "engine": "Engine",
+                    "color": "Color"
+                },
+                "na": "N/A"
+            },
+            "description": {
+                "title": "Description",
+                "no_description": "No description available.",
+                "edit_dialog_title": "Edit Description",
+                "edit_dialog_hint": "Enter new description...",
+                "cancel": "Cancel",
+                "save": "Save"
+            },
+            "save_button": "Save"
+        },
+        "edit_specs": {
+            "screen_title": "Edit Specifications",
+            "steps": {
+                "make": "Make",
+                "model": "Model",
+                "trim": "Trim",
+                "year": "Year",
+                "mileage": "Mileage",
+                "transmission": "Transmission",
+                "color": "Color"
+            },
+            "save_button_loading": "Saving...",
+            "save_button": "Save Changes",
+            "validation": {
+                "complete_all_fields": "Please complete all fields"
+            }
+        },
+        "notifications": {
+            "screen_title": "NOTIFICATIONS",
+            "read_all": "Read All",
+            "tab_all": "All",
+            "tab_orders": "Orders",
+            "tab_offers": "Offers",
+            "tab_system": "System",
+            "empty": {
+                "title": "All Caught Up!",
+                "subtitle": "No new notifications to display."
+            }
+        },
+        "settings": {
+            "screen_title": "SETTINGS",
+            "search_hint": "Search settings",
+            "not_found": "No settings found",
+            "menu": {
+                "account_info": "Account Info",
+                "saved_addresses": "Saved Addresses",
+                "change_email": "Change Email",
+                "change_password": "Change Password",
+                "country": "Country",
+                "notifications": "Notifications",
+                "language": "Language",
+                "app_mode": "App Mode",
+                "logout": "Logout",
+                "delete_account": "Delete Account"
+            },
+            "delete_account_confirm": {
+                "title": "Delete Account?",
+                "message": "Are you sure you want to delete your account? This action is permanent and cannot be undone.",
+                "confirm": "Delete",
+                "cancel": "Cancel",
+                "error": "Failed to delete account. Please try again."
+            },
+            "account_info": {
+                "screen_title": "Account Info",
+                "edit": "Edit",
+                "fields": {
+                    "first_name": "First Name",
+                    "last_name": "Last Name",
+                    "email": "Email",
+                    "date_of_birth": "Date of birth",
+                    "phone_number": "Phone Number"
+                },
+                "gender": {
+                    "title": "Gender",
+                    "male": "Male",
+                    "female": "Female"
+                },
+                "preferences": {
+                    "receive_offers": "Yes, I want to receive offers and discounts",
+                    "newsletter": "Subscribe to Newsletter"
+                },
+                "delete_account": "DELETE ACCOUNT"
+            },
+            "change_email": {
+                "screen_title": "Change Email",
+                "field_hint": "New Email Address",
+                "validation_error": "Please enter a valid email address",
+                "confirm_button_loading": "CONFIRMING...",
+                "confirm_button": "Confirm",
+                "success": "Email updated successfully",
+                "error": "Failed to update email. Please try again."
+            },
+            "change_password": {
+                "screen_title": "Change Password",
+                "fields": {
+                    "current_password": "Current Password",
+                    "new_password": "New Password",
+                    "confirm_password": "Confirm New Password"
+                },
+                "validation": {
+                    "current_required": "Current password is required",
+                    "min_length": "Password must be at least 8 characters",
+                    "match": "Passwords do not match"
+                },
+                "button_loading": "CHANGING...",
+                "button": "Change Password",
+                "success": "Password change success.",
+                "error": "Failed to change password. Please try again."
+            },
+            "language": {
+                "title": "Language",
+                "english": "English",
+                "arabic": "Arabic"
+            },
+            "app_mode": {
+                "title": "App Mode",
+                "dark": "Dark",
+                "light": "Light"
+            },
+            "country": {
+                "title": "Country",
+                "kuwait": "Kuwait",
+                "bahrain": "Bahrain",
+                "uae": "UAE",
+                "oman": "Oman",
+                "qatar": "Qatar",
+                "saudi_arabia": "Saudi Arabia"
+            },
+            "saved_addresses": {
+                "screen_title": "Addresses",
+                "add_button": "Add",
+                "empty_title": "No saved addresses",
+                "add_new_button": "Add New Address"
+            },
+            "notification_preferences": {
+                "screen_title": "NOTIFICATION PREFERENCES",
+                "order_updates": "Order updates",
+                "promotions": "Promotions"
+            },
+            "verify_email_otp": {
+                "title": "VERIFY EMAIL",
+                "sent_code": "We've sent a code to ",
+                "otp_error": "Please enter the complete OTP code",
+                "verify_button_loading": "VERIFYING...",
+                "verify_button": "VERIFY",
+                "success": "Email updated successfully",
+                "error": "Failed to update email. Please try again.",
+                "otp_sent": "OTP sent successfully",
+                "resend": {
+                    "did_not_receive": "Didn't Receive Code? ",
+                    "resend_in": "Resend in {time}",
+                    "resend_button": "Resend"
+                }
+            },
+            "edit_address": {
+                "edit_title": "Edit Address",
+                "add_title": "Add Address",
+                "delete": "Delete",
+                "delete_dialog": {
+                    "title": "Delete Address",
+                    "description": "Are you sure you want to delete this address?",
+                    "yes": "YES",
+                    "no": "no"
+                },
+                "validation": {
+                    "required_fields": "Please fill required fields"
+                },
+                "area": {
+                    "label": "Area",
+                    "hint": "Tap Change to set area",
+                    "change_button": "Change",
+                    "dialog_title": "Area",
+                    "dialog_hint": "Enter area",
+                    "cancel": "Cancel",
+                    "ok": "OK"
+                },
+                "property_types": {
+                    "apartment": "Apartment",
+                    "house": "House",
+                    "office": "Office"
+                },
+                "fields": {
+                    "address_title": "Address Title",
+                    "building_name": "Building Name",
+                    "apt_number": "Apt. Number",
+                    "street": "Street",
+                    "block": "Block",
+                    "avenue_optional": "Avenue (optional)",
+                    "directions_optional": "Additional Directions (optional)",
+                    "phone_number": "Phone Number",
+                    "address_label_optional": "Address Label (optional)"
+                },
+                "save_button": "SAVE ADDRESS",
+                "default_label": "Address"
+            },
+            "address_tile": {
+                "block": "Block {n}",
+                "building": "Building {n}",
+                "apt": "Apt {n}",
+                "mobile_number": "Mobile Number: {n}"
+            }
+        }
+    },
+    "bottom_nav": {
+        "customer": {
+            "home": "Home",
+            "services": "Services",
+            "offers": "Offers",
+            "cart": "Cart",
+            "profile": "Profile"
+        },
+        "vendor": {
+            "home": "Home",
+            "listings": "Listings",
+            "orders": "Orders",
+            "operator": "Operator",
+            "profile": "Profile"
+        },
+        "operator": {
+            "home": "Home",
+            "orders": "Orders",
+            "profile": "Profile"
+        }
+    },
+    "sell_your_car": {
+        "screens": {
+            "condition_car": {
+                "title": "SELL Your CARS",
+                "subtitle": "We have offers waiting for you"
+            },
+            "sell_a_car": {
+                "title": "SELL A CAR",
+                "subtitle": "We have offers waiting for you"
+            },
+            "sell_or_buy_car": {
+                "title": "SELL OR BUY YOUR CARS",
+                "subtitle": "Buy and Sell Your Car Quickly and Conveniently"
+            },
+            "fast_track_condition": {
+                "title": "Fast Track Car Sale",
+                "subtitle": "We have offers waiting for you"
+            },
+            "fast_track_sale": {
+                "title": "FAST TRACK CAR SALE",
+                "subtitle": "We have offers waiting for you",
+                "description_title": "Description",
+                "description": "Fast Track Car Sale is designed for those who need to sell their car quickly and efficiently. By listing at a discounted price, your car can be sold within 15 hours. Once you approve the offer, our team will handle the process, ensuring a smooth and hassle-free transaction. A representative will contact you to finalize the sale after your approval.",
+                "terms_title": "Terms and Conditions",
+                "terms_intro": "By using our car listing services, you agree to the following terms and conditions:",
+                "bullet_1": "Cars listed under Fast Track Sale must be priced 30% lower than the lowest market value.",
+                "bullet_2": "Listing fees are non-refundable.",
+                "bullet_3": "Transactions are subject to a 5% fee for both the buyer and seller.",
+                "bullet_4": "The seller must approve the offer and terms before proceeding.",
+                "bullet_5": "Listings and offers are valid only after Motiva's approval.",
+                "approve_checkbox": "Yes, I approve the Motiva's terms and conditions of fast track car sale.",
+                "continue": "CONTINUE"
+            },
+            "open_an_auction": {
+                "title": "OPEN AN AUCTION",
+                "subtitle": "Sell Fast Through Auction",
+                "description_title": "Description",
+                "description": "List your car for sale with ease using our platform. Choose from Normal, Auction, or Fast Track options to find buyers quickly and securely. Opt for add-ons like an inspection report to boost your listing credibility. Fast Track ensures a guaranteed sale within 15 hours at 30% below the lowest market price.",
+                "terms_title": "Terms and Conditions",
+                "terms_intro": "By using our car listing services, you agree to the following terms and conditions:",
+                "bullet_1": "All car details must be accurate and up-to-date.",
+                "bullet_2": "Listing fees are non-refundable and vary by service type.",
+                "bullet_3": "Fast Track Sales require a 30% discount on the lowest market price.",
+                "bullet_4": "A 5% transaction fee applies to both seller and buyer on successful sales.",
+                "bullet_5": "Inspection reports must be valid and accurate.",
+                "approve_checkbox": "Yes, I approve the Motiva's terms and conditions of opening an auction.",
+                "continue": "CONTINUE"
+            },
+            "car_details": {
+                "title": "Car Details",
+                "submitting_listing": "Submitting your listing...",
+                "submitting_request": "Submitting your request..."
+            },
+            "success_dialog": {
+                "title": "Success!",
+                "damaged_car_message": "Your damaged car listing has been submitted successfully.",
+                "listing_created": "Listing Created Successfully!",
+                "listing_saved": "Your car listing has been saved.",
+                "ok": "OK",
+                "done": "Done"
+            },
+            "request_received_dialog": {
+                "title": "Request Received!",
+                "message": "Request sent to Motiva admins — we will contact you with an offer"
+            },
+            "error_dialog": {
+                "title": "Error"
+            }
+        },
+        "steps": {
+            "make": "Make",
+            "model": "Model",
+            "trim": "Trim",
+            "year": "Year",
+            "mileage": "Mileage",
+            "selling_price": "Selling Price",
+            "car_specs": "Car Specs",
+            "car_condition": "Car Condition",
+            "colors": "Colors",
+            "images": "Images",
+            "location": "Location",
+            "additional_info": "Additional Information",
+            "duration": "Duration",
+            "color": "Color",
+            "image": "Image"
+        },
+        "make_tab": {
+            "title": "Select Your car make",
+            "search_hint": "Search Car Make",
+            "no_available": "No makes available",
+            "no_found": "No makes found",
+            "retry": "Retry"
+        },
+        "model_tab": {
+            "title": "Select Your car model",
+            "search_hint": "Search Car Model",
+            "select_make_first": "Please select a make first",
+            "no_available": "No models available",
+            "no_found": "No models found",
+            "retry": "Retry"
+        },
+        "trim_tab": {
+            "title": "Select Your car Trim",
+            "search_hint": "Search Car Trim",
+            "select_model_first": "Please select a model first",
+            "no_available": "No trims available",
+            "no_found": "No trims found",
+            "retry": "Retry"
+        },
+        "year_tab": {
+            "title": "Enter Model Year",
+            "error": "Please enter a year between 1900 and {year}"
+        },
+        "mileage_tab": {
+            "title": "Enter Mileage",
+            "unit": "KM",
+            "continue": "CONTINUE"
+        },
+        "selling_price_tab": {
+            "title": "Enter Selling Price",
+            "unit": "KWD",
+            "continue": "CONTINUE"
+        },
+        "colors_tab": {
+            "title": "Select your car colors",
+            "exterior_title": "Select your exterior color",
+            "interior_title": "Select your Interior Color",
+            "view_more": "View More",
+            "continue": "CONTINUE"
+        },
+        "car_color": {
+            "white": "White",
+            "black": "Black",
+            "orange": "Orange",
+            "blue": "Blue",
+            "red": "Red",
+            "green": "Green",
+            "purple": "Purple",
+            "yellow": "Yellow",
+            "aqua": "Aqua",
+            "snow": "Snow",
+            "beige": "Beige",
+            "dim_gray": "DimGray"
+        },
+        "images_tab": {
+            "car_images_title": "Upload Car Images",
+            "car_images_hint": "Add photos of your car (exterior, interior, engine)",
+            "damage_images_title": "Upload Damage Images",
+            "damage_images_hint": "Add photos showing damage areas",
+            "camera": "Camera",
+            "gallery": "Gallery",
+            "add_photo": "Add Photo",
+            "select_source": "Select Image Source",
+            "uploading": "Uploading images...",
+            "skip": "SKIP",
+            "continue": "CONTINUE",
+            "car_label": "Car",
+            "damage_label": "Damage",
+            "image_label": "Image {number}"
+        },
+        "location_tab": {
+            "pick_location": "Pick Your Location",
+            "select_location_title": "Select Location",
+            "select": "Select",
+            "cancel": "Cancel",
+            "country": "Country",
+            "city": "City",
+            "continue": "continue",
+            "failed_picker": "Failed to open location picker"
+        },
+        "inspection_report": {
+            "title": "Do you have recent inspection report?",
+            "browse": "Browse ",
+            "your_file": "your File",
+            "max_size": "Max 10 MB files are allowed",
+            "file_types": "PDF, JPG, PNG",
+            "uploaded_success": "Uploaded successfully",
+            "no_report": "No, I don't have",
+            "inspect_question": "Do you want us to inspect your car?",
+            "inspect_description": "Get your car professionally inspected for peace of mind. Add this service for a thorough check to ensure it's in top condition.",
+            "inspect_price": "KD 20   + 3 Stars",
+            "dialog_title": "Enter Inspection Report URL",
+            "cancel": "Cancel",
+            "upload": "UPLOAD",
+            "continue": "CONTINUE",
+            "uploading": "Uploading file...",
+            "file_size_error": "File size must be less than 10MB",
+            "pick_error": "Error picking file: {error}",
+            "upload_error": "Failed to upload file. Please try again.",
+            "upload_error_generic": "Error uploading file: {error}"
+        },
+        "car_condition": {
+            "chassis_title": "Are there any chassis issues?",
+            "mechanical_title": "Are there any mechanical issues in the car?",
+            "warning_lights_title": "Are there any warning lights on?",
+            "tires_title": "What is the condition of the tires?",
+            "tires_new": "New",
+            "tires_good": "Good",
+            "tires_needs_change": "Needs Change",
+            "runs_drives_title": "Does the car run and drive?",
+            "runs_drives_yes": "Yes, it runs and drives",
+            "runs_drives_no": "No, it does not run/drive",
+            "yes": "Yes",
+            "no": "No",
+            "dont_know": "I don't know",
+            "continue": "Continue"
+        },
+        "description": {
+            "title": "Description",
+            "hint": "Write any extra details about your Car."
+        },
+        "body_panel_tab": {
+            "title": "Are there any minor defects or damages to the body panels?",
+            "yes": "Yes",
+            "no": "No",
+            "dont_know": "I don't know",
+            "continue": "Continue"
+        },
+        "paint_condition_tab": {
+            "title": "What is the paint condition?",
+            "continue": "CONTINUE"
+        },
+        "end_tab": {
+            "proceed_payment": "PROCEED WITH PAYMENT"
+        },
+        "engine_tab": {
+            "title": "Select Your Car Engine",
+            "other": "Other"
+        },
+        "transmission_tab": {
+            "title": "Select Your Car Transmission",
+            "manual": "Manual",
+            "automatic": "Automatic",
+            "continue": "Continue"
+        },
+        "additional_info": {
+            "features_title": "Select your car features",
+            "feature_your_car": "Feature your car",
+            "feature_description": "Featuring your car will allow more people see it and will be sold quickly.",
+            "one_week": "1 week",
+            "two_weeks": "2 weeks",
+            "one_month": "1 month",
+            "total_price": "Total Price : ",
+            "saving": "SAVING...",
+            "submit_listing": "SUBMIT LISTING",
+            "listing_created": "Listing Created Successfully!",
+            "listing_saved": "Your car listing has been saved.\nListing ID: {id}",
+            "done": "Done"
+        },
+        "service_sections": {
+            "all_services": "All Services",
+            "sell_your_car": "Sell your Car",
+            "sell_a_car": "Sell a Car",
+            "buy_a_car": "Buy a Car",
+            "good_condition_car": "Good Condition Car",
+            "damaged_car": "Damaged Car",
+            "open_an_auction": "Open an Auction",
+            "fast_track_car_sale": "Fast Track Car Sale",
+            "lorem_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor tempor"
+        },
+        "duration_tab": {
+            "title": "Choose Duration of auction",
+            "auction_start": "Auction should start from",
+            "starting_price": "Starting Price",
+            "feature_auction": "Feature your auction",
+            "feature_description": "Feature Your Auction to Maximize Visibility and Competitive Bidding!",
+            "total_price": "Total price : ",
+            "days_3": "3 days",
+            "days_5": "5 days",
+            "days_7": "7 days",
+            "continue": "CONTINUE",
+            "proceed_payment": "PROCEED WITH PAYMENT"
+        },
+        "ft_duration": {
+            "title": "Choose when do you want to have your cash?",
+            "hours_label": "within {hours} hours - {discount}% lower than market price",
+            "fallback_tooltip": "Using default options - backend unavailable",
+            "failed_load": "Failed to load duration options",
+            "retry": "Retry",
+            "submit_request": "SUBMIT REQUEST",
+            "total_price": "Total Price : "
+        },
+        "duration": {
+            "title": "Auction Duration",
+            "one_day": "1 Day",
+            "three_days": "3 Days",
+            "seven_days": "7 Days",
+            "continue": "CONTINUE"
+        }
+    },
+    "vendor_dashboard": {
+        "profile": {
+            "not_found_title": "Profile Not Found",
+            "not_found_description": "Your vendor profile has not been set up yet. Please contact support to complete your registration.",
+            "error_loading_title": "Error Loading Profile",
+            "retry": "Retry",
+            "verified": "Verified",
+            "reviews": "reviews",
+            "vendor_profile": "Vendor Profile",
+            "profile_not_set_up": "Profile not set up",
+            "unable_to_load_profile": "Unable to load profile"
+        },
+        "orders": {
+            "screen_title": "All Orders",
+            "tab_title": "Orders",
+            "tab_subtitle": "Manage your business",
+            "live_badge": "{count} orders",
+            "search_hint": "Search orders...",
+            "filter_all": "All",
+            "filter_services": "Services",
+            "filter_products": "Products",
+            "tab_all": "All",
+            "tab_new": "New",
+            "tab_processing": "Processing",
+            "tab_completed": "Completed",
+            "empty_search_title": "No Results Found",
+            "empty_search_subtitle": "Try adjusting your search terms.",
+            "empty_tab": "No {tabName} Orders",
+            "empty_tab_subtitle": "Orders will appear here once available.",
+            "error_loading": "Error Loading Orders"
+        },
+        "request_details": {
+            "screen_title": "ORDER DETAILS",
+            "order_accepted": "Order accepted successfully",
+            "accept_failed": "Failed to accept order: {error}",
+            "status_on_the_way": "Status updated: On the way",
+            "status_arrived": "Status updated: Arrived at location",
+            "service_started": "Service started",
+            "action_failed": "Failed: {error}",
+            "error": "Error: {error}",
+            "service_fallback": "Service",
+            "order_ref": "Order Ref",
+            "amount": "Amount",
+            "created": "Created",
+            "scheduled": "Scheduled",
+            "route": "Route",
+            "location": "Location",
+            "pickup": "Pickup",
+            "dropoff": "Dropoff",
+            "address": "Address",
+            "no_address": "No address provided",
+            "open_in_maps": "Open in Maps",
+            "order_details": "Order Details",
+            "base_amount": "Base Amount",
+            "total": "Total",
+            "service_specifications": "Service Specifications",
+            "customer_information": "Customer Information",
+            "attributes": "Attributes",
+            "customer": "Customer",
+            "rejection_reason": "Rejection Reason",
+            "no_reason": "No reason provided",
+            "cancellation_details": "Cancellation Details",
+            "cancellation_reason_label": "Reason: {reason}",
+            "penalty_fee": "Penalty Fee: {fee} KWD",
+            "documents": "Documents",
+            "document_fallback": "Document",
+            "reject": "Reject",
+            "accept": "Accept",
+            "assign_operator": "Assign Operator",
+            "start_travel": "Start Travel",
+            "mark_arrived": "Mark Arrived",
+            "start_service": "Start Service",
+            "complete": "Complete"
+        },
+        "schedule": {
+            "screen_title": "Schedule",
+            "error_loading": "Error loading orders",
+            "no_appointments": "No appointments",
+            "no_scheduled_for_date": "No scheduled orders for {date}",
+            "appointment_singular": "appointment",
+            "appointment_plural": "appointments",
+            "service_fallback": "Service",
+            "customer_fallback": "Customer",
+            "status_pending": "Pending",
+            "status_accepted": "Accepted",
+            "status_en_route": "En Route",
+            "status_arrived": "Arrived",
+            "status_active": "Active",
+            "status_done": "Done",
+            "status_cancelled": "Cancelled",
+            "status_unknown": "Unknown"
+        },
+        "support": {
+            "screen_title": "Support",
+            "faq_title": "FAQ's",
+            "contact_us": "CONTACT US",
+            "contact_description": "Reach out to us through live chat or email for quick assistance.",
+            "email_us": "Email US",
+            "chat": "CHAT",
+            "or": "or",
+            "submit_ticket": "SUBMIT A TICKET",
+            "faq_1_question": "1. How can I register as a vendor?",
+            "faq_1_answer": "To register, click on the \"Vendor Sign-Up\" option, complete the registration form with your business details, and submit the required documents for verification.",
+            "faq_2_question": "2. Is there a fee for listing my services?",
+            "faq_3_question": "3. How will I receive payments?",
+            "faq_4_question": "4. Can I edit my service listings?",
+            "faq_5_question": "5. How do I contact customer support?"
+        },
+        "wallet": {
+            "screen_title": "Motiva Wallet",
+            "total_label": "Total (KWD):",
+            "withdraw": "withDrew",
+            "tabs": {
+                "daily": "Daily",
+                "weekly": "Weekly",
+                "monthly": "Monthly"
+            },
+            "completed_jobs": "Completed Jobs",
+            "history": "History",
+            "stats": {
+                "total_sales": "Total Sales",
+                "total_earnings": "Total Earnings",
+                "average_rating": "Average Rating",
+                "cancellation_rate": "Cancellation Rate"
+            },
+            "history_status": {
+                "in_progress": "Under Progress",
+                "rejected": "Rejected"
+            },
+            "id_label": "Id: {id}",
+            "payout_request": {
+                "title": "Withdraw Funds",
+                "amount_label": "Amount (KWD)",
+                "amount_hint": "Enter amount to withdraw",
+                "bank_details": "Bank Details",
+                "bank_name": "Bank Name",
+                "account_number": "Account Number",
+                "account_holder": "Account Holder",
+                "kuwait_code": "Kuwait Code",
+                "update_bank_details": "Update Bank Details",
+                "submit": "Submit Payout Request",
+                "insufficient_balance": "Insufficient wallet balance",
+                "invalid_amount": "Please enter a valid amount",
+                "success": "Payout request submitted successfully",
+                "error": "Failed to submit payout request",
+                "no_bank_details": "No bank details found. Please add bank details first."
+            },
+            "coming_soon_message": "Wallet balance can be used for payments — coming soon!",
+            "no_transactions": "No transactions yet",
+            "error_loading": "Failed to load wallet data",
+            "retry": "Retry",
+            "payout_status": {
+                "pending": "Pending",
+                "processed": "Processed",
+                "rejected": "Rejected"
+            },
+            "payout_request_card_title": "Payout Request",
+            "available_balance": "Available Balance",
+            "failed_to_load_balance": "Failed to load balance",
+            "submitting": "SUBMITTING...",
+            "months": {
+                "jan": "Jan", "feb": "Feb", "mar": "Mar", "apr": "Apr",
+                "may": "May", "jun": "Jun", "jul": "Jul", "aug": "Aug",
+                "sep": "Sep", "oct": "Oct", "nov": "Nov", "dec": "Dec"
+            },
+            "reference_types": {
+                "order": "Order Payment",
+                "refund": "Refund",
+                "voucher": "Voucher Redemption",
+                "adjustment": "Adjustment",
+                "admin": "Admin Credit",
+                "payout_hold": "Payout Hold",
+                "payout_release": "Payout Released",
+                "product_order": "Product Order"
+            }
+        },
+        "operators": {
+            "screen_title": "Operators",
+            "active": "Active",
+            "inactive": "Inactive",
+            "empty_title": "No Operators Yet",
+            "empty_subtitle": "Add your first operator to get started",
+            "error_loading": "Error Loading Operators",
+            "add_new": "Add New Operator"
+        },
+        "add_operator": {
+            "screen_title": "Add New Operator",
+            "success": "Operator added successfully",
+            "email_exists": "This email is already registered",
+            "phone_exists": "This phone number is already registered",
+            "failed": "Failed to add operator",
+            "section_title": "Operator Information",
+            "full_name": "Full Name",
+            "name_error": "Please enter the operator name",
+            "phone_number": "Phone Number",
+            "phone_error": "Please enter the operator phone number",
+            "email_address": "Email Address",
+            "email_error": "Please enter the operator email",
+            "password": "Password",
+            "password_error": "Please enter a password",
+            "password_min_error": "Password must be at least 8 characters",
+            "loading": "loading",
+            "add_operator_button": "Add Operator"
+        },
+        "settings": {
+            "screen_title": "SETTINGS",
+            "search_hint": "Search settings",
+            "not_found": "No settings found",
+            "menu": {
+                "uploaded_documents": "Uploaded Documents",
+                "service_area": "Service Area",
+                "business_logo": "Business Logo",
+                "cover_image": "Cover Image",
+                "working_hours": "Working Hours",
+                "notifications": "Notifications",
+                "language": "Language",
+                "app_mode": "App Mode",
+                "logout": "Logout",
+                "delete_account": "Delete Account"
+            },
+            "delete_account_confirm": {
+                "title": "Delete Account?",
+                "message": "Are you sure you want to delete your account? This action is permanent and cannot be undone.",
+                "confirm": "Delete",
+                "cancel": "Cancel",
+                "error": "Failed to delete account. Please try again."
+            }
+        },
+        "working_hours": {
+            "screen_title": "Working hours",
+            "schedule_exceptions": "Schedule Exceptions",
+            "starting_hour": "Starting Hour",
+            "closing_hour": "Closing Hour",
+            "off_days": "Off days",
+            "saving": "Saving...",
+            "save": "Save",
+            "update_success": "Working hours updated successfully",
+            "update_failed": "Failed to update working hours",
+            "select_off_days": "Select Off Days",
+            "done": "Done",
+            "error": "Error: {error}"
+        },
+        "documents": {
+            "screen_title": "Documents",
+            "commercial_license": "Commercial License",
+            "civil_id": "Civil Id",
+            "upload_success": "Upload Successful",
+            "re_upload_note": "Re-uploads require admin approval.",
+            "browse": "Browse",
+            "your_file": "your File",
+            "max_size": "Max 10 MB files are allowed"
+        },
+        "business_logo": {
+            "screen_title": "Business logo",
+            "instructions_title": "General Upload Instructions",
+            "instructions_text": "When uploading your logo, ensure it meets the recommended dimensions of 500x500 pixels or larger for optimal quality.\nUse PNG or JPEG formats with a maximum file size of 2 MB.\nFor PNG files, a transparent background is ideal, while JPEG files should have a plain backdrop.\nMake sure the logo is clear and free from pixelation to maintain a professional appearance.",
+            "logo_updated": "Logo updated successfully"
+        },
+        "cover_image": {
+            "screen_title": "Cover Image",
+            "updated_success": "Cover image updated successfully",
+            "guidelines_title": "Cover Image Guidelines",
+            "guidelines_text": "Your cover image is displayed at the top of your vendor page.\n\nRecommended dimensions: 1200 x 400 pixels or larger.\nUse PNG or JPEG formats with a maximum file size of 10 MB.\n\nTips:\n• Use a high-quality image that represents your business\n• Avoid text-heavy images as they may be hard to read on mobile\n• Make sure the image is not pixelated or blurry"
+        },
+        "service_area": {
+            "screen_title": "Cities of Service",
+            "search_hint": "Search City"
+        },
+        "service_categories": {
+            "screen_title": "Service Categories",
+            "add_new": "add new",
+            "oil_filters": "Oil Filters",
+            "fix_my_car": "Fix my Car",
+            "car_batteries": "Car Batteries"
+        },
+        "schedule_exceptions": {
+            "screen_title": "Schedule Exceptions",
+            "load_failed": "Failed to load schedule exceptions",
+            "retry": "Retry",
+            "empty_title": "No schedule exceptions",
+            "empty_subtitle": "Add exceptions for holidays or special days",
+            "add_button": "Add Exception",
+            "delete_tooltip": "Delete exception",
+            "fully_closed": "Fully Closed",
+            "modified_hours": "Modified Hours",
+            "hours_label": "Hours: {start} - {end}",
+            "reason_label": "Reason: {reason}",
+            "delete_dialog_title": "Delete Exception",
+            "delete_dialog_message": "Are you sure you want to delete this schedule exception?",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "delete_success": "Exception deleted successfully",
+            "delete_failed": "Failed to delete exception",
+            "add_dialog_title": "Add Schedule Exception",
+            "date_label": "Date",
+            "fully_closed_switch": "Fully Closed",
+            "start_time": "Start Time",
+            "select_time": "Select",
+            "end_time": "End Time",
+            "reason_optional": "Reason (optional)",
+            "select_times_error": "Please select start and end times",
+            "add_success": "Exception added successfully",
+            "add_failed": "Failed to add exception",
+            "add_button_dialog": "Add",
+            "error": "Error: {error}"
+        },
+        "recent_completed": {
+            "title": "Recent Completed",
+            "see_all": "See all",
+            "empty": "No completed orders yet",
+            "service_fallback": "Service",
+            "customer_fallback": "Customer"
+        },
+        "todays_schedule": {
+            "title": "Today's Schedule",
+            "view_calendar": "View Calendar",
+            "view_full_calendar": "View Full Calendar",
+            "empty": "No appointments today",
+            "asap": "ASAP",
+            "service_fallback": "Service"
+        },
+        "request_cards": {
+            "order_ref": "Order Ref",
+            "amount": "Amount",
+            "completed": "Completed",
+            "time": "Time",
+            "status": "Status",
+            "view_details": "VIEW DETAILS",
+            "view_details_normal": "View Details",
+            "proceed": "Proceed",
+            "service_fallback": "Service",
+            "customer_fallback": "Customer"
+        },
+        "promo_banner": {
+            "title": "Save upTo KD 5",
+            "description": "Limited time offer on specific\nservices"
+        },
+        "profile_menu": {
+            "all_orders": "All Orders",
+            "my_listings": "My Listings",
+            "inventory_history": "Inventory History",
+            "wallet": "Wallet",
+            "faqs": "FAQs"
+        },
+        "unified_order_card": {
+            "service_order": "Service Order",
+            "product_order": "Product Order",
+            "service_fallback": "Service",
+            "customer_fallback": "Customer",
+            "item_singular": "item",
+            "item_plural": "items",
+            "reference": "Reference",
+            "amount": "Amount",
+            "time": "Time",
+            "status": "Status",
+            "date": "Date"
+        }
+    },
+    "vendor_listings": {
+        "screen_title": "MY LISTINGS",
+        "search_hint": "Search listings...",
+        "filter_all": "All",
+        "filter_product": "Product",
+        "filter_service": "Service",
+        "snackbar": {
+            "product_deactivated": "Product deactivated",
+            "product_activated": "Product activated",
+            "update_status_failed": "Failed to update product status",
+            "product_deleted": "Product deleted successfully",
+            "delete_failed": "Failed to delete product",
+            "service_archived": "Service archived successfully",
+            "archive_failed": "Failed to archive service",
+            "service_restored": "Service restored successfully",
+            "restore_failed": "Failed to restore service"
+        },
+        "dialog": {
+            "delete_product_title": "Delete Product",
+            "delete_product_message": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
+            "delete_confirm": "Delete",
+            "archive_service_title": "Archive Service",
+            "archive_service_message": "Are you sure you want to archive \"{name}\"? It will be hidden from customers.",
+            "archive_confirm": "Archive"
+        },
+        "empty": {
+            "no_results": "No Results Found",
+            "no_products": "No Products Yet",
+            "no_services": "No Services Yet",
+            "no_listings": "No Listings Yet",
+            "adjust_search": "Try adjusting your search terms.",
+            "create_product_prompt": "Create your first product to start selling.",
+            "create_service_prompt": "Create your first service to start receiving orders.",
+            "create_listing_prompt": "Create your first listing to start receiving orders.",
+            "create_listing_button": "Create Listing"
+        },
+        "error": {
+            "title": "Error Loading Listings",
+            "message": "Something went wrong. Please try again.",
+            "retry": "Retry"
+        },
+        "bottom_sheet": {
+            "title": "Create New",
+            "product_label": "Product",
+            "product_description": "Add a new product to your catalog",
+            "service_label": "Service",
+            "service_description": "Add a new service offering"
+        },
+        "card": {
+            "type_product": "Product",
+            "type_service": "Service",
+            "stock_label": "Stock: {count}",
+            "status_active": "Active",
+            "status_inactive": "Inactive",
+            "status_archived": "Archived",
+            "currency_suffix": " KWD"
+        },
+        "tooltip": {
+            "activate": "Activate",
+            "deactivate": "Deactivate",
+            "archive": "Archive",
+            "restore": "Restore",
+            "edit": "Edit",
+            "delete": "Delete"
+        },
+        "category": {
+            "active": "active",
+            "inactive": "inactive",
+            "services_fallback": "Services",
+            "products_fallback": "Products"
+        }
+    },
+    "vendor_products": {
+        "screen_title": "MY PRODUCTS",
+        "search_hint": "Search Products...",
+        "filter_all": "All",
+        "filter_active": "Active",
+        "filter_inactive": "Inactive",
+        "empty": {
+            "no_results": "No Results Found",
+            "no_products": "No Products Yet",
+            "no_inactive_products": "No Inactive Products",
+            "inactive_subtitle": "Inactive products will appear here.",
+            "adjust_search": "Try adjusting your search terms.",
+            "create_product_prompt": "Create your first product to start selling.",
+            "create_product_button": "Create Product"
+        },
+        "dialog": {
+            "delete_title": "Delete Product",
+            "delete_message": "Are you sure you want to delete \"{name}\"? This action cannot be undone.",
+            "cancel": "Cancel",
+            "delete": "Delete"
+        },
+        "snackbar": {
+            "product_deleted": "Product deleted successfully",
+            "delete_failed": "Failed to delete product",
+            "product_deactivated": "Product deactivated",
+            "product_activated": "Product activated",
+            "update_status_failed": "Failed to update product status"
+        },
+        "error": {
+            "title": "Error Loading Products",
+            "message": "Something went wrong. Please try again.",
+            "retry": "Retry"
+        },
+        "card": {
+            "inactive": "Inactive",
+            "stock_label": "Stock: {count}",
+            "type_accessory": "Accessory",
+            "type_spare_part": "Spare Part"
+        },
+        "tooltip": {
+            "activate": "Activate",
+            "deactivate": "Deactivate",
+            "edit": "Edit",
+            "delete": "Delete"
+        },
+        "create_product": {
+            "app_bar_new": "New Product",
+            "app_bar_edit": "Edit Product",
+            "field_name_label": "Product Name",
+            "field_name_hint": "e.g., Brake Pads",
+            "field_description_label": "Description (Optional)",
+            "field_description_hint": "Describe your product",
+            "field_price_label": "Price (KWD)",
+            "field_price_hint": "0.00",
+            "field_stock_label": "Stock Quantity",
+            "field_stock_hint": "10",
+            "product_type_label": "Product Type",
+            "product_type_accessory": "Accessory",
+            "product_type_spare_part": "Spare Part",
+            "images_title": "Product Images",
+            "images_subtitle": "Upload images to showcase your product",
+            "add_image_button": "Add",
+            "button_create": "Create Product",
+            "button_save": "Save Changes",
+            "snackbar_created": "Product created successfully",
+            "snackbar_updated": "Product updated successfully",
+            "snackbar_create_failed": "Failed to create product. Please check your inputs and try again.",
+            "snackbar_update_failed": "Failed to update product. Please check your inputs and try again.",
+            "validation_required": "{field} is required",
+            "validation_valid_number": "Enter a valid {field}",
+            "spare_part_section_title": "Spare Part Specifications",
+            "part_number_label": "Part Number",
+            "brand_label": "Brand",
+            "warranty_label": "Warranty (months)",
+            "compatibility_label": "Compatibility",
+            "compatibility_empty": "No compatibility entries",
+            "compatibility_make": "Make",
+            "compatibility_model": "Model",
+            "compatibility_year_from": "Year from",
+            "compatibility_year_to": "Year to",
+            "compatibility_add": "Add"
+        }
+    },
+    "inventory": {
+        "screen_title": "INVENTORY HISTORY",
+        "filter_all": "All",
+        "filter_stock_in": "Stock In",
+        "filter_stock_out": "Stock Out",
+        "filter_adjustment": "Adjustment",
+        "filter_refund": "Refund",
+        "empty": {
+            "title": "No Transactions Found",
+            "filtered_subtitle": "Try adjusting your filters.",
+            "subtitle": "Inventory transactions will appear here."
+        },
+        "error": {
+            "title": "Error Loading Transactions",
+            "message": "Something went wrong. Please try again.",
+            "retry": "Retry"
+        },
+        "card": {
+            "before": "Before:",
+            "after": "After:",
+            "reason": "Reason:"
+        },
+        "from_date": "From {date}",
+        "until_date": "Until {date}",
+        "transaction_type": {
+            "sale": "Stock Out",
+            "restock": "Stock In",
+            "adjustment": "Adjustment",
+            "refund": "Refund"
+        }
+    },
+    "vendor_services": {
+        "screen": {
+            "title": "MY SERVICES",
+            "search_hint": "Search Services... "
+        },
+        "filter": {
+            "all": "All",
+            "active": "Active",
+            "archived": "Archived"
+        },
+        "empty": {
+            "search": {
+                "title": "No Results Found",
+                "subtitle": "Try adjusting your search terms."
+            },
+            "archived": {
+                "title": "No Archived Services",
+                "subtitle": "Archived services will appear here."
+            },
+            "no_services": {
+                "title": "No Services Yet",
+                "subtitle": "Create your first service to start receiving orders.",
+                "action": "Create Service"
+            }
+        },
+        "error": {
+            "title": "Error Loading Services",
+            "subtitle": "Something went wrong. Please try again.",
+            "retry": "Retry"
+        },
+        "create_screen": {
+            "app_bar": {
+                "new_title": "New Service",
+                "edit": "Edit Service"
+            },
+            "form": {
+                "service_name": {
+                    "label": "Service Name",
+                    "hint": "e.g., Premium Car Wash",
+                    "required": "{field} is required"
+                },
+                "description": {
+                    "label": "Description (Optional)",
+                    "hint": "Describe your service"
+                },
+                "base_price": {
+                    "label": "Base Price (KWD)",
+                    "hint": "0.00"
+                },
+                "radius": {
+                    "label": "Service Radius (km)",
+                    "hint": "20"
+                }
+            },
+            "image_upload": {
+                "title": "Service Image",
+                "subtitle": "Upload an image to showcase your service",
+                "uploading": "Uploading...",
+                "change": "Change Image",
+                "placeholder_title": "Tap to upload service image",
+                "placeholder_subtitle": "Recommended: 800x600 pixels"
+            },
+            "attributes": {
+                "title": "Service Attributes",
+                "required_badge": "Required",
+                "subtitle": "Fill in the details specific to this service type",
+                "hint": "Enter {field}"
+            },
+            "customer_questions": {
+                "title": "Customer Questions",
+                "subtitle": "Define questions customers must answer when booking this service.",
+                "add_button": "Add Customer Question",
+                "required_suffix": " *"
+            },
+            "button": {
+                "save": "Save Changes",
+                "create": "Create Service",
+                "restore": "Restore Service"
+            },
+            "snackbar": {
+                "create_success": "Service created successfully",
+                "update_success": "Service updated successfully",
+                "create_failed": "Failed to create service. Please check your inputs and try again.",
+                "update_failed": "Failed to update service. Please check your inputs and try again.",
+                "archive_success": "Service archived successfully",
+                "archive_failed": "Failed to archive service",
+                "restore_success": "Service restored successfully",
+                "restore_failed": "Failed to restore service",
+                "question_added": "Customer question added"
+            },
+            "dialog": {
+                "archive_title": "Archive Service",
+                "archive_message": "Are you sure you want to archive \"{name}\"? It will be hidden from customers.",
+                "archive_confirm": "Archive",
+                "add_question_title": "Add Customer Question",
+                "label": "Label",
+                "label_hint": "e.g., Vehicle Photo",
+                "type": "Type",
+                "required": "Required",
+                "options_label": "Options (comma-separated)",
+                "options_hint": "e.g., comprehensive, third_party, theft_fire",
+                "min": "Min",
+                "max": "Max",
+                "cancel": "Cancel",
+                "add": "Add"
+            },
+            "error": {
+                "no_category": "No service category available. Please contact support.",
+                "load_category": "Failed to load category schema"
+            }
+        },
+        "select_category": {
+            "title": "SELECT CATEGORY",
+            "search_hint": "Search categories...",
+            "empty": {
+                "title": "No Categories Available",
+                "subtitle": "Service categories have not been configured yet. Please contact support."
+            },
+            "search_empty": {
+                "title": "No Categories Found",
+                "subtitle": "Try a different search term."
+            },
+            "error": {
+                "title": "Failed to Load Categories",
+                "subtitle": "Something went wrong. Please try again.",
+                "retry": "Retry"
+            }
+        },
+        "service_card": {
+            "archived_badge": "Archived",
+            "price_format": "{price} KWD",
+            "radius_format": "{radius} km",
+            "tooltip": {
+                "edit": "Edit",
+                "archive": "Archive"
+            },
+            "action": {
+                "restore": "Restore"
+            }
+        },
+        "category_section": {
+            "fallback_name": "Services",
+            "status": "{active} active",
+            "status_with_archived": "{active} active • {archived} archived",
+            "dialog": {
+                "archive_title": "Archive Service",
+                "archive_message": "Are you sure you want to archive \"{name}\"? It will be hidden from customers.",
+                "archive_confirm": "Archive",
+                "restore_title": "Restore Service",
+                "restore_message": "Restore \"{name}\"? It will be visible to customers again.",
+                "restore_confirm": "Restore"
+            },
+            "snackbar": {
+                "archive_success": "Service archived successfully",
+                "archive_failed": "Failed to archive service",
+                "restore_success": "Service restored successfully",
+                "restore_failed": "Failed to restore service"
+            }
+        }
+    },
+    "vendor_product_analytics": {
+        "screen_title": "Analytics",
+        "stock": "Stock",
+        "metrics": {
+            "total_views": "Total Views",
+            "conversion": "Conversion",
+            "total_orders": "Total Orders"
+        },
+        "time_period": {
+            "7d": "7D",
+            "30d": "30D",
+            "90d": "90D"
+        },
+        "charts": {
+            "revenue_over_time": "Revenue Over Time",
+            "top_products": "Top Products",
+            "sales": "{count} sales"
+        },
+        "empty": {
+            "no_revenue_data": "No revenue data available",
+            "no_product_sales_data": "No product sales data available"
+        },
+        "error": {
+            "title": "Error Loading Analytics",
+            "message": "Something went wrong. Please try again.",
+            "retry": "Retry"
+        }
+    }
+}

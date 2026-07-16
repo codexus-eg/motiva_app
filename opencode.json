@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "figma-desktop": {
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/mcp",
+      "enabled": true
+    },
+    "flutter-dart": {
+      "type": "local",
+      "command": ["dart", "mcp-server"],
+      "enabled": true
+    },
+    "flutter-inspector": {
+      "type": "local",
+      "command": [
+        "/Volumes/MacExtend/Tajera/Motive/app/mcp_flutter/mcp_server_dart/build/flutter_inspector_mcp",
+        "--dart-vm-host=localhost",
+        "--dart-vm-port=8181",
+        "--no-resources",
+        "--images"
+      ],
+      "environment": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  }
+}

@@ -1,0 +1,2234 @@
+{
+    "general": {
+        "app_name": "تطبيق موتيفا"
+    },
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "loading": "جاري تسجيل الدخول...",
+            "do_not_have_account": "ليس لديك حساب؟ ",
+            "create_account": "إنشاء حساب"
+        },
+        "register_as": {
+            "title": "التسجيل كـ",
+            "select_user_type": "اختر نوع المستخدم",
+            "business_owner": "صاحب عمل",
+            "customer": "عميل",
+            "driver": "سائق"
+        },
+        "register_vendor": {
+            "business_name": "اسم النشاط التجاري",
+            "business_email": "البريد الإلكتروني للعمل",
+            "representative_name": "اسم المفوض",
+            "commercial_license": "رقم السجل التجاري (اختياري)"
+        },
+        "register_customer": {
+            "name": "الاسم",
+            "email": "البريد الإلكتروني",
+            "country": "الدولة",
+            "kuwait": "الكويت",
+            "saudi_arabia": "المملكة العربية السعودية",
+            "uae": "الإمارات العربية المتحدة",
+            "city": "المدينة",
+            "kuwait_city": "مدينة الكويت",
+            "al_jahra": "الجهراء",
+            "hawalli": "حولي"
+        },
+        "verify": {
+            "title": "التحقق من\nرقم الهاتف",
+            "description": "لقد أرسلنا الرمز إلى",
+            "loading": "جاري التحقق...",
+            "button": "تحقق",
+            "resend": "إعادة إرسال",
+            "resend_in": "إعادة الإرسال خلال",
+            "did_not_receive_code": "لم تستلم الرمز؟ "
+        },
+        "category": {
+            "title": "اختر الفئة",
+            "select_category": "اختر الفئة",
+            "loading": "جاري التسجيل...",
+            "error": {
+                "null_category": "يرجى اختيار فئة",
+                "no_categories": "لا توجد فئات متاحة",
+                "failed_to_load": "فشل تحميل الفئات",
+                "button": "إعادة المحاولة",
+                "registration_failed": "فشل التسجيل. يرجى المحاولة مرة أخرى."
+            },
+            "registration_success": "تم إرسال طلب التسجيل! حسابك يحتاج إلى موافقة المشرف قبل أن تتمكن من تسجيل الدخول."
+        },
+        "splash": {
+            "vendor": {
+                "title": "جاري التحقق من الملف الشخصي...",
+                "login_error": "فشل التحقق من ملف البائع الشخصي",
+                "logout_error": "ملف البائع الشخصي غير مكتمل أو لم يتم العثور عليه.\nيرجى التواصل مع الدعم أو إكمال التسجيل للمتابعة."
+            },
+            "error": {
+                "splash_failed": "خطأ في المصادقة عند التشغيل",
+                "auth_failed": "فشلت المصادقة. يرجى تسجيل الدخول مرة أخرى."
+            },
+            "initializing": "جاري التهيئة...",
+            "loading": "جاري التحميل...",
+            "checking_auth": "جاري التحقق من المصادقة..."
+        },
+        "phone_number": "رقم الهاتف",
+        "password": "كلمة المرور",
+        "confirm_password": "تأكيد كلمة المرور",
+        "continue_button": "متابعة",
+        "get_started": "ابدأ",
+        "loading": "جاري إرسال رمز التحقق...",
+        "already_have_account": "لديك حساب بالفعل؟ ",
+        "login_button": "تسجيل الدخول"
+    },
+    "booking": {
+        "booking_screen": {
+            "title": "حجز خدمة",
+            "service_details": "تفاصيل الخدمة",
+            "location": {
+                "title": "موقع الخدمة",
+                "selected": "تم الاختيار",
+                "tap_to_select": "اضغط للاختيار",
+                "tap_to_select_location": "اضغط لاختيار الموقع على الخريطة",
+                "pick": "اختيار",
+                "pick_location": "اختيار الموقع",
+                "additional_details": "تفاصيل العنوان الإضافية (اختياري)",
+                "pickup": "موقع الاستلام",
+                "drop_off": "موقع التسليم",
+                "location_selected": "تم اختيار الموقع",
+                "success": "تم الاختيار بنجاح",
+                "success_location": "تم اختيار الموقع بنجاح",
+                "null_location": "يرجى اختيار موقعك",
+                "null_pickup": "يرجى اختيار موقع الاستلام",
+                "null_drop_off": "يرجى اختيار موقع التسليم"
+            },
+            "scheduling": {
+                "title": "جدولة",
+                "date": "اختر التاريخ",
+                "jan": "يناير",
+                "feb": "فبراير",
+                "mar": "مارس",
+                "apr": "أبريل",
+                "may": "مايو",
+                "jun": "يونيو",
+                "jul": "يوليو",
+                "aug": "أغسطس",
+                "sep": "سبتمبر",
+                "oct": "أكتوبر",
+                "nov": "نوفمبر",
+                "dec": "ديسمبر",
+                "time": "الوقت المتاح",
+                "clear": "مسح",
+                "null_time": "لا توجد أوقات متاحة لهذا التاريخ. يرجى اختيار تاريخ آخر.",
+                "select_time": "يرجى اختيار وقت",
+                "error_time": "لا يوجد وقت متاح",
+                "next_available": "التالي المتاح",
+                "select_next_available": "اختر هذا اليوم"
+            },
+            "order": {
+                "title": "ملخص الطلب",
+                "base_amount": "المبلغ الأساسي",
+                "description": "سيتم تأكيد المبلغ النهائي من قبل البائع"
+            },
+            "button": {
+                "title": "تأكيد الحجز",
+                "error_location": "يرجى اختيار موقعك للمتابعة",
+                "error_pickup": "يرجى اختيار موقع الاستلام",
+                "error_drop_off": "يرجى اختيار موقع التسليم"
+            }
+        },
+        "order_confirmation": {
+            "title": "تم إرسال الحجز!",
+            "order": "الطلب:",
+            "status": {
+                "title": "تم تأكيد الحجز",
+                "description": "تم قبول حجزك وتأكيده تلقائيًا بنجاح."
+            },
+            "info": {
+                "service": "الخدمة",
+                "vendor": "البائع",
+                "base_amount": "المبلغ الأساسي",
+                "scheduled": "المجدول",
+                "location": "الموقع"
+            },
+            "button": {
+                "primary": "العودة إلى الرئيسية",
+                "secondary": "الذهاب إلى طلباتي"
+            }
+        }
+    },
+    "home": {
+        "services_grid": {
+            "spare_parts": "قطع غيار"
+        },
+        "customer": {
+            "search": "البحث عن منتجات",
+            "active_orders": {
+                "empty": {
+                    "title": "لا توجد طلبات نشطة",
+                    "description": "ستظهر طلباتك النشطة هنا"
+                },
+                "order": {
+                    "title": "الطلبات النشطة",
+                    "more_orders": "طلبات إضافية",
+                    "view_all": "عرض جميع الطلبات",
+                    "order_card": {
+                        "service": "الخدمة",
+                        "scheduled": "المجدول",
+                        "asap": "في أقرب وقت",
+                        "status": {
+                            "pending": "معلق",
+                            "accepted": "مقبول",
+                            "en_route": "في الطريق",
+                            "arrived": "وصل",
+                            "active": "نشط"
+                        }
+                    }
+                }
+            },
+            "premium_banner": {
+                "title": "ترقية إلى بريميوم\nللحصول على مزايا\nحصرية!",
+                "button": "ترقية الآن"
+            },
+            "ad_banner": {
+                "title": "مساعدة الطريق\nبخصم 10% - احجز الآن!"
+            },
+            "services_grid": {
+                "title": "الخدمات المتاحة",
+                "view_all": "عرض الكل",
+                "error_category": "فشل تحميل فئات الخدمات",
+                "error": {
+                    "title": "فشل تحميل الخدمات",
+                    "retry": "إعادة المحاولة"
+                },
+                "empty": {
+                    "title": "لا توجد خدمات متاحة",
+                    "refresh": "تحديث"
+                }
+            },
+            "buy_sell_card": {
+                "buy": "شراء سيارة",
+                "sell": "بيع سيارتك",
+                "tap": "اضغط هنا"
+            },
+            "promo_banner": {
+                "title": "وفر حتى 5 د.ك",
+                "description": "عرض محدود على خدمات\nمحددة"
+            },
+            "listing": {
+                "popular_today": "الأكثر شيوعًا اليوم",
+                "top_vendors": "أفضل البائعين",
+                "new_vendors": "بائعون جدد"
+            }
+        },
+        "vendor": {
+            "services_grid": {
+                "messages": "الرسائل",
+                "support": "الدعم",
+                "requests": "الطلبات",
+                "orders": "الطلبات",
+                "add_services": "إضافة خدمات",
+                "current_services": "الخدمات الحالية"
+            },
+            "stats": {
+                "today": "اليوم",
+                "weekly": "أسبوعي",
+                "monthly": "شهري",
+                "this_weekly": "هذا الأسبوع",
+                "this_monthly": "هذا الشهر",
+                "stats_card": {
+                    "title": "الإحصائيات",
+                    "earnings": "الأرباح",
+                    "orders": "الطلبات",
+                    "rating": "التقييم",
+                    "sales": "المبيعات"
+                }
+            },
+            "completed_jobs": "المهام المنجزة",
+            "availability_capacity": {
+                "title": "التوفر والسعة",
+                "availability": {
+                    "title": "قبول طلبات جديدة",
+                    "available": "متاح",
+                    "not_available": "غير متاح"
+                },
+                "status": {
+                    "title": "حالة البائع",
+                    "open": "مفتوح",
+                    "busy": "مشغول"
+                },
+                "capacity": {
+                    "title": "سعة الطلبات",
+                    "description": "الحد الأقصى للطلبات المتزامنة"
+                }
+            },
+            "active_orders": {
+                "title": "الطلبات النشطة",
+                "all": "الكل",
+                "en_route": "في الطريق",
+                "arrived": "وصل",
+                "in_progress": "قيد التنفيذ",
+                "empty": "لا توجد طلبات",
+                "service": "الخدمة",
+                "customer": "العميل",
+                "asap": "في أقرب وقت"
+            },
+            "checkout_orders": {
+                "title": "طلبات المنتجات",
+                "all": "الكل",
+                "pending": "معلق",
+                "processing": "قيد المعالجة",
+                "confirmed": "مؤكد",
+                "shipped": "تم الشحن",
+                "empty": "لا توجد طلبات منتجات",
+                "order_number": "طلب #",
+                "items_count": "عناصر",
+                "item": "عنصر",
+                "payment_method": "الدفع: نقدًا عند التسليم",
+                "cancel": "إلغاء",
+                "ship": "تحديد كمشحون",
+                "deliver": "تحديد كمسلم",
+                "product_order": "طلب منتج",
+                "placed": "تم الطلب",
+                "total": "الإجمالي",
+                "status_timeline": "الجدول الزمني للحالة",
+                "timeline": {
+                    "pending": "معلق",
+                    "pending_sublabel": "تم الاستلام",
+                    "processing": "قيد المعالجة",
+                    "processing_sublabel": "قيد التحضير",
+                    "shipped": "تم الشحن",
+                    "shipped_sublabel": "في الطريق",
+                    "delivered": "تم التسليم",
+                    "delivered_sublabel": "تم"
+                },
+                "status": {
+                    "pending": "معلق",
+                    "processing": "قيد المعالجة",
+                    "confirmed": "مؤكد",
+                    "shipped": "تم الشحن",
+                    "delivered": "تم التسليم",
+                    "cancelled": "ملغى"
+                },
+                "customer": "العميل",
+                "order_items": "عناصر الطلب",
+                "delivery": "التوصيل",
+                "delivery_address": "عنوان التوصيل",
+                "no_address_provided": "لم يتم تقديم عنوان",
+                "payment": "الدفع",
+                "payment_status": "الحالة",
+                "payment_paid": "مدفوع",
+                "payment_pending": "معلق",
+                "order_info": "معلومات الطلب",
+                "order_id": "رقم الطلب",
+                "placed_on": "تم الطلب في",
+                "last_updated": "آخر تحديث",
+                "est_delivery": "التسليم المتوقع",
+                "cancellation": "الإلغاء",
+                "cancellation_reason": "سبب الإلغاء",
+                "no_reason_provided": "لم يتم تقديم سبب",
+                "loading_order": "جاري تحميل الطلب...",
+                "failed_to_load": "فشل التحميل",
+                "try_again": "حاول مرة أخرى",
+                "mark_shipped": "تحديد كمشحون",
+                "mark_delivered": "تم التسليم",
+                "order_shipped_success": "تم شحن الطلب!",
+                "order_delivered_success": "تم تسليم الطلب!",
+                "failed": "فشل",
+                "not_specified": "غير محدد",
+                "cash_on_delivery": "الدفع عند التسليم",
+                "credit_debit_card": "بطاقة ائتمان/خصم"
+            },
+            "empty": "لم يتم العثور على الملف الشخصي",
+            "error": "خطأ في تحميل البيانات"
+        },
+        "operator": {
+            "incoming_requests": "الطلبات الواردة",
+            "accepted_requests": "الطلبات المقبولة",
+            "rides_history": "سجل الرحلات"
+        }
+    },
+    "cart": {
+        "title": "سلة التسوق",
+        "error_loading": "فشل تحميل السلة:",
+        "empty": {
+            "title": "سلة التسوق فارغة",
+            "subtitle": "تصفح خدماتنا واحجز موعدك القادم",
+            "browse_button": "تصفح الخدمات"
+        },
+        "delivering_from": "التوصيل من",
+        "all_items": "جميع العناصر",
+        "special_request": "طلب خاص",
+        "special_request_hint": "اكتب أي طلب خاص بخصوص الطلب.",
+        "price": "السعر",
+        "items": "عناصر",
+        "promo_code": "رمز الترويجي",
+        "total_amount": "المبلغ الإجمالي",
+        "you_saved": "لقد وفرت",
+        "order": "في هذا الطلب",
+        "checkout_button": "إتمام الشراء",
+        "vendor_subtitle": "نحن جاهزون لخدمتك في أي وقت"
+    },
+    "checkout": {
+        "title": "الدفع",
+        "order_summary": "ملخص الطلب",
+        "subtotal": "المجموع الفرعي",
+        "delivery_fee": "رسوم التوصيل",
+        "voucher_discount": "خصم القسيمة",
+        "wallet_used": "المحفظة المستخدمة",
+        "total": "الإجمالي",
+        "delivery_address": "عنوان التوصيل",
+        "add_new_address": "إضافة عنوان جديد",
+        "save_address": "حفظ العنوان",
+        "voucher_code": "رمز القسيمة",
+        "enter_voucher": "أدخل رمز القسيمة",
+        "apply": "تطبيق",
+        "voucher_applied": "تم تطبيق القسيمة بنجاح!",
+        "wallet_balance": "رصيد المحفظة",
+        "payment_methods": "طرق الدفع",
+        "pay": "ادفع",
+        "processing": "جاري المعالجة...",
+        "order_confirmed": "تم تأكيد الطلب!",
+        "order_placed": "تم تقديم طلبك بنجاح.",
+        "total_payment": "إجمالي الدفع",
+        "order_number": "رقم الطلب #",
+        "payment_time": "وقت الدفع",
+        "payment_method": "طريقة الدفع",
+        "items": "العناصر",
+        "estimated_delivery": "التوصيل المتوقع",
+        "track_order": "تتبع الطلب",
+        "back_home": "العودة إلى الرئيسية",
+        "continue_shopping": "مواصلة التسوق",
+        "motiva_wallet": "محفظة موتيفا",
+        "balance": "الرصيد:",
+        "fill_required_fields": "يرجى ملء الحقول المطلوبة",
+        "address_label_hint": "التسمية (مثال: المنزل، العمل)",
+        "street": "الشارع *",
+        "area": "المنطقة *",
+        "block": "القطعة *",
+        "building": "المبنى",
+        "floor": "الدور",
+        "apartment": "الشقة",
+        "notes": "ملاحظات",
+        "default_address_label": "العنوان",
+        "block_label": "قطعة",
+        "building_label": "مبنى",
+        "floor_label": "الدور",
+        "apartment_label": "شقة"
+    },
+    "public_services": {
+        "category_vendors": {
+            "description": "اعثر على أفضل الخدمات",
+            "search": "البحث عن بائعين",
+            "all_vendors": "جميع البائعين",
+            "error_vendor": "فشل تحميل البائعين",
+            "null_vendor": "لم يتم العثور على بائعين",
+            "vendor_card": {
+                "sub_title": "خدمات متاحة",
+                "badge_title": "موثق"
+            }
+        },
+        "vendor_services": {
+            "services": "الخدمات",
+            "reviews": "التقييمات",
+            "most_popular": "الأكثر شيوعًا",
+            "search": "البحث عن خدمة",
+            "error_service": "فشل تحميل الخدمات",
+            "null_service": "لم يتم العثور على خدمات",
+            "all_services": "جميع الخدمات",
+            "service_card": {
+                "description": "خدمة احترافية",
+                "button": "عرض التفاصيل"
+            }
+        },
+        "services_details": {
+            "title": "عن هذه الخدمة",
+            "min": "دقيقة",
+            "description": {
+                "title": "الوصف",
+                "dec": "خدمة احترافية من"
+            },
+            "service_details": "تفاصيل الخدمة",
+            "provider": "مزود الخدمة",
+            "services": "الخدمات",
+            "reviews": "التقييمات",
+            "working_hours": {
+                "title": "ساعات العمل",
+                "closed": "مغلق",
+                "open": "مفتوح"
+            },
+            "days": {
+                "Monday": "الإثنين",
+                "Tuesday": "الثلاثاء",
+                "Wednesday": "الأربعاء",
+                "Thursday": "الخميس",
+                "Friday": "الجمعة",
+                "Saturday": "السبت",
+                "Sunday": "الأحد"
+            },
+            "button": {
+                "title": "اطلب الآن",
+                "null_service": "جاري تحميل تفاصيل الخدمة...",
+                "error_service": "تتطلب هذه الخدمة عرض سعر. يرجى التواصل مع البائع مباشرة."
+            }
+        }
+    },
+    "public_marketplace": {
+        "category_screen": {
+            "title_accessories": "اكسسوارات",
+            "title_spare_parts": "قطع غيار",
+            "subtitle": "اعثر على أفضل الخدمات",
+            "search_hint": "البحث عن بائع",
+            "all_supplies": "جميع المنتجات",
+            "no_vendors_match_search": "لا يوجد بائعون يطابقون بحثك",
+            "no_vendors_found": "لم يتم العثور على بائعين",
+            "label_accessories": "اكسسوارات",
+            "label_spare_parts": "قطع غيار",
+            "verified": "موثق",
+            "error_loading": "فشل تحميل البائعين"
+        },
+        "details_screen": {
+            "app_bar_title": "عن هذه الخدمة",
+            "product_not_found": "لم يتم العثور على المنتج",
+            "description": "الوصف",
+            "no_description": "لا يوجد وصف متاح.",
+            "quantity": "الكمية",
+            "added_to_cart": "تمت الإضافة إلى سلة التسوق",
+            "add_to_cart_button": "أضف إلى السلة",
+            "reviews": "التقييمات",
+            "load_more_reviews": "تحميل المزيد من التقييمات",
+            "similar_products": "منتجات مماثلة",
+            "months_ago": "شهر/أشهر مضت"
+        },
+        "vendor_details_screen": {
+            "search_hint": "البحث عن خدمة",
+            "most_popular": "الأكثر شيوعًا",
+            "all_services": "جميع الخدمات",
+            "reviews": "التقييمات",
+            "no_services_found": "لم يتم العثور على خدمات",
+            "professional_service": "خدمة احترافية",
+            "add_to_cart": "أضف إلى السلة",
+            "services": "خدمات",
+            "reviews_label": "تقييمات"
+        },
+        "spare_parts": {
+            "title": "قطع غيار",
+            "details_screen": {
+                "specifications": "المواصفات",
+                "brand": "الماركة",
+                "part_number": "رقم القطعة",
+                "warranty": "الضمان",
+                "warranty_months_suffix": "{months} شهر ضمان",
+                "compatibility": "التوافق",
+                "compatibility_empty": "لا توجد معلومات توافق",
+                "no_value": "—"
+            },
+            "category_screen": {
+                "title": "قطع غيار",
+                "filter_button_tooltip": "تصفية قطع الغيار",
+                "chip_make": "الشركة: {value}",
+                "chip_model": "الطراز: {value}",
+                "chip_year_from": "السنة {value}+",
+                "chip_year_to": "إلى {value}",
+                "chip_brand": "الماركة: {value}",
+                "chip_min_price": "الحد الأدنى: {value}",
+                "chip_max_price": "الحد الأقصى: {value}",
+                "chip_clear_all": "مسح الكل"
+            },
+            "filter_sheet": {
+                "title": "تصفية قطع الغيار",
+                "make_label": "الشركة المصنعة",
+                "model_label": "الطراز",
+                "year_from_label": "السنة من",
+                "year_to_label": "السنة إلى",
+                "brand_label": "الماركة",
+                "min_price_label": "السعر الأدنى (د.ك)",
+                "max_price_label": "السعر الأقصى (د.ك)",
+                "apply": "تطبيق",
+                "reset": "إعادة تعيين",
+                "cancel": "إلغاء"
+            }
+        }
+    },
+    "services": {
+        "screen": {
+            "title": "جميع الخدمات",
+            "search_hint": "البحث عن خدمات"
+        },
+        "all_services_grid": {
+            "error": {
+                "title": "فشل تحميل الخدمات",
+                "retry": "إعادة المحاولة"
+            },
+            "empty": {
+                "title": "لم يتم العثور على خدمات لبحثك"
+            },
+            "static": {
+                "buy_a_car": "شراء سيارة",
+                "sell_your_car": "بيع سيارتك",
+                "car_accessories": "اكسسوارات السيارات",
+                "spare_parts": "قطع غيار"
+            }
+        }
+    },
+    "buy_a_car": {
+        "screen": {
+            "title": "شراء سيارات",
+            "subtitle": "لدينا عروض بانتظارك"
+        },
+        "service_section": {
+            "good_condition_cars": "سيارات بحالة جيدة",
+            "damaged_cars": "سيارات تالفة",
+            "approved_cars": "سيارات معتمدة",
+            "good_condition_description": "تصفح مجموعتنا الواسعة من السيارات بحالة ممتازة.",
+            "damaged_cars_description": "اعثر على سيارات تالفة لقطع الغيار أو مشاريع الإصلاح.",
+            "approved_cars_description": "تسوق سيارات معتمدة ومعتمدة مع تقارير فحص كاملة."
+        },
+        "good_condition_screen": {
+            "title": "استكشف السيارات",
+            "search_hint": "البحث عن سيارات حسب الماركة والموديل...",
+            "all_cars": "جميع السيارات",
+            "no_cars_found": "لم يتم العثور على سيارات مطابقة",
+            "no_cars_available": "لا توجد سيارات متاحة",
+            "failed_to_load": "فشل تحميل السيارات",
+            "retry": "إعادة المحاولة"
+        },
+        "approved_cars_screen": {
+            "title": "سيارات معتمدة",
+            "search_hint": "البحث عن سيارات معتمدة...",
+            "all_approved_cars": "جميع السيارات المعتمدة",
+            "no_cars_found": "لم يتم العثور على سيارات مطابقة",
+            "no_approved_cars_available": "لا توجد سيارات معتمدة متاحة",
+            "failed_to_load": "فشل تحميل السيارات",
+            "retry": "إعادة المحاولة"
+        },
+        "damaged_cars_screen": {
+            "title": "سيارات تالفة",
+            "search_hint": "البحث عن سيارات تالفة...",
+            "all_damaged_cars": "جميع السيارات التالفة",
+            "no_cars_found": "لم يتم العثور على سيارات مطابقة",
+            "no_damaged_cars_available": "لا توجد سيارات تالفة متاحة",
+            "failed_to_load": "فشل تحميل السيارات",
+            "retry": "إعادة المحاولة"
+        },
+        "details_screen": {
+            "about_this_car": "عن هذه السيارة",
+            "failed_to_load_listing": "فشل تحميل الإعلان",
+            "retry": "إعادة المحاولة",
+            "price_on_request": "السعر عند الطلب",
+            "car_details": "تفاصيل السيارة",
+            "location_not_specified": "لم يتم تحديد الموقع",
+            "featured": "مميز",
+            "inspected": "تم الفحص",
+            "view_details": "عرض التفاصيل",
+            "inspection_report": {
+                "title": "تقرير الفحص",
+                "description": "قم بتنزيل وعرض\n تقرير الفحص لهذه السيارة.",
+                "view_report": "عرض تقرير الفحص"
+            },
+            "specifications": "المواصفات",
+            "spec_labels": {
+                "make": "الشركة المصنعة",
+                "model": "الموديل",
+                "trim": "الفئة",
+                "year": "السنة",
+                "mileage": "المسافة المقطوعة",
+                "transmission": "ناقل الحركة",
+                "engine": "المحرك",
+                "color": "اللون"
+            },
+            "na": "غير متاح",
+            "description": "الوصف",
+            "no_description": "لا يوجد وصف متاح.",
+            "location": "الموقع",
+            "call_now": "اتصل الآن",
+            "chat": "دردشة",
+            "condition": {
+                "excellent": "ممتازة",
+                "good": "جيدة",
+                "fair": "مقبولة",
+                "poor": "ضعيفة",
+                "damaged": "تالفة"
+            },
+            "error_open_report": "تعذر فتح تقرير الفحص"
+        },
+        "car_chat": {
+            "title": "تويوتا لاند كروزر 300",
+            "this_message_relates_to": "هذه الرسالة تتعلق بـ:",
+            "buy_a_car": "شراء سيارة",
+            "inspection_report_pdf": "تقريرالفحص.pdf",
+            "size_kb": "487 كيلوبايت",
+            "download": "تحميل",
+            "inspection_report_message": "يرجى الاطلاع على تقرير الفحص هذا.",
+            "sender_initial": "ر",
+            "sender_name": "برايم كار كير",
+            "you": "أنت",
+            "type_message": "اكتب رسالة"
+        },
+        "listing_card": {
+            "featured": "مميز",
+            "inspected": "تم الفحص",
+            "not_inspected": "لم يتم الفحص"
+        },
+        "filters": {
+            "clear_all": "مسح الكل",
+            "make": "الشركة المصنعة",
+            "model": "الموديل",
+            "trim": "الفئة",
+            "year": "السنة",
+            "mileage": "المسافة المقطوعة",
+            "transmission": "ناقل الحركة",
+            "automatic": "أوتوماتيك",
+            "manual": "يدوي",
+            "search_makes": "البحث عن الشركات المصنعة...",
+            "no_makes_found": "لم يتم العثور على شركات مصنعة",
+            "failed_to_load_makes": "فشل تحميل الشركات المصنعة",
+            "select_make_first": "يرجى اختيار شركة مصنعة أولاً",
+            "search_models": "البحث عن الموديلات...",
+            "no_models_found": "لم يتم العثور على موديلات",
+            "failed_to_load_models": "فشل تحميل الموديلات",
+            "select_model_first": "يرجى اختيار موديل أولاً",
+            "search_trims": "البحث عن الفئات...",
+            "no_trims_available": "لا توجد فئات متاحة",
+            "no_trims_found": "لم يتم العثور على فئات",
+            "failed_to_load_trims": "فشل تحميل الفئات",
+            "from_year": "من سنة",
+            "to_year": "إلى سنة",
+            "select_year": "اختر السنة",
+            "any": "أي",
+            "failed_to_load_years": "فشل تحميل السنوات",
+            "mileage_any": "أي",
+            "under_50k": "أقل من 50,000 كم",
+            "range_50k_100k": "50,000 - 100,000 كم",
+            "range_100k_150k": "100,000 - 150,000 كم",
+            "over_150k": "150,000+ كم"
+        }
+    },
+    "reviews": {
+        "screen_title": "إرسال تقييم",
+        "rate_service": "قيم الخدمة",
+        "your_review": "تقييمك",
+        "review_placeholder": "شارك تجربتك مع هذه الخدمة...",
+        "character_count": "/5000",
+        "submit_review": "إرسال التقييم",
+        "submitting": "جاري الإرسال...",
+        "success_message": "تم إرسال التقييم بنجاح!",
+        "error_already_reviewed": "لقد قمت بالفعل بتقييم هذا الطلب",
+        "error_validation": "يرجى التحقق من إدخالك والمحاولة مرة أخرى",
+        "error_network": "خطأ في الشبكة. يرجى المحاولة مرة أخرى",
+        "display": {
+            "title": "التقييمات",
+            "review": "التقييم",
+            "filter_all": "الكل",
+            "filter_5_stars": "5★",
+            "filter_4_stars": "4★",
+            "filter_3_stars": "3★",
+            "filter_2_stars": "2★",
+            "filter_1_star": "1★",
+            "sort_most_recent": "الأحدث",
+            "sort_highest": "الأعلى",
+            "sort_lowest": "الأقل",
+            "verified_badge": "موثق",
+            "empty_state_title": "لا توجد تقييمات بعد",
+            "empty_state_message": "كن أول من يترك تقييمًا!",
+            "load_more": "تحميل المزيد"
+        }
+    },
+    "user_dashboard": {
+        "profile": {
+            "greeting": "مرحبًا {name}!",
+            "guest": "ضيف",
+            "guest_initial": "ض",
+            "location": "الكويت"
+        },
+        "menu": {
+            "wallet": "المحفظة",
+            "orders": "الطلبات",
+            "listings": "الإعلانات",
+            "loyalty_program": "برنامج الولاء"
+        },
+        "wallet": {
+            "screen_title": "محفظة موتيفا",
+            "encrypted": "جميع البيانات مشفرة",
+            "total": "الإجمالي (د.ك):",
+            "use_now": "استخدمها الآن",
+            "history": "السجل",
+            "use_reward_balance": "استخدم رصيد المكافآت",
+            "coming_soon": "قريباً",
+            "coming_soon_message": "يمكن استخدام رصيد المحفظة للمدفوعات — قريباً!",
+            "no_transactions": "لا توجد معاملات بعد",
+            "error_loading": "فشل تحميل بيانات المحفظة",
+            "available_balance": "الرصيد المتاح",
+            "failed_to_load_balance": "فشل تحميل الرصيد",
+            "credit": "دائن",
+            "debit": "مدين",
+            "balance_available": "الرصيد المتاح",
+            "retry": "إعادة المحاولة",
+            "reference_types": {
+                "order": "دفعة الطلب",
+                "refund": "استرداد",
+                "voucher": "استرداد القسيمة",
+                "adjustment": "تعديل",
+                "admin": "رصيد إداري",
+                "payout_hold": "حجز السحب",
+                "payout_release": "إلغاء حجز السحب",
+                "product_order": "طلب منتج"
+            },
+            "transaction_details": {
+                "description": "الوصف",
+                "reference_id": "رقم المرجع",
+                "type": "النوع",
+                "date": "التاريخ"
+            },
+            "reward_cards": {
+                "buy_a_car": "شراء سيارة",
+                "car_accessories": "اكسسوارات السيارات",
+                "spare_parts": "قطع الغيار"
+            },
+            "transaction": {
+                "compensation": "تعويض",
+                "used": "مستخدم"
+            },
+            "months": {
+                "jan": "يناير", "feb": "فبراير", "mar": "مارس", "apr": "أبريل",
+                "may": "مايو", "jun": "يونيو", "jul": "يوليو", "aug": "أغسطس",
+                "sep": "سبتمبر", "oct": "أكتوبر", "nov": "نوفمبر", "dec": "ديسمبر"
+            },
+            "detail_labels": {
+                "service_type": "نوع الخدمة",
+                "vendor_name": "اسم البائع",
+                "liters": "لترات",
+                "order_id": "رقم الطلب",
+                "status": "الحالة"
+            }
+        },
+        "orders": {
+            "screen_title": "الطلبات",
+            "search_hint": "البحث عن طلبات...",
+            "filter_all": "الكل",
+            "filter_service": "خدمة",
+            "filter_product": "منتج",
+            "tab_all": "الكل",
+            "tab_active": "نشط",
+            "tab_completed": "مكتمل",
+            "service_details": "تفاصيل الخدمة متاحة في العرض الكامل",
+            "empty": {
+                "no_results": "لم يتم العثور على نتائج",
+                "no_tab_orders": "لا توجد طلبات {tabName}",
+                "adjust_search": "حاول تعديل مصطلحات البحث.",
+                "orders_appear_here": "ستظهر الطلبات هنا بمجرد توفرها."
+            },
+            "error": {
+                "title": "خطأ في تحميل الطلبات",
+                "retry": "إعادة المحاولة"
+            },
+            "card": {
+                "service_order": "طلب خدمة",
+                "product_order": "طلب منتج",
+                "fallback_service": "خدمة",
+                "fallback_vendor": "بائع",
+                "item": "عنصر",
+                "items": "عناصر",
+                "reference": "المرجع",
+                "amount": "المبلغ",
+                "time": "الوقت",
+                "order_id": "رقم الطلب",
+                "date": "التاريخ",
+                "delivery_address": "عنوان التوصيل",
+                "order_summary": "ملخص الطلب",
+                "download_receipt": "تحميل الإيصال",
+                "subtotal": "المجموع الفرعي",
+                "total": "الإجمالي",
+                "payment_method": "طريقة الدفع",
+                "failed_details": "فشل تحميل التفاصيل: {error}",
+                "more_items": "+ {count} إضافي",
+                "view_details": "عرض التفاصيل",
+                "add_review": "إضافة تقييم"
+            },
+            "status": {
+                "pending": "معلق",
+                "accepted": "مقبول",
+                "on_the_way": "في الطريق",
+                "arrived": "وصل",
+                "in_progress": "قيد التنفيذ",
+                "completed": "مكتمل",
+                "rejected": "مرفوض",
+                "cancelled": "ملغى",
+                "processing": "قيد المعالجة",
+                "confirmed": "مؤكد",
+                "shipped": "تم الشحن",
+                "delivered": "تم التسليم"
+            },
+            "details": {
+                "screen_title": "تفاصيل الطلب",
+                "service_specifications": "مواصفات الخدمة",
+                "your_details": "تفاصيلك",
+                "failed_to_load": "فشل تحميل الطلب",
+                "unknown_service": "خدمة غير معروفة",
+                "unknown_vendor": "بائع غير معروف",
+                "order_information": "معلومات الطلب",
+                "order_reference": "الرقم المرجعي",
+                "service": "الخدمة",
+                "vendor": "البائع",
+                "base_amount": "المبلغ الأساسي",
+                "total_amount": "المبلغ الإجمالي",
+                "scheduled_date_time": "التاريخ والوقت المجدول",
+                "date": "التاريخ",
+                "time": "الوقت",
+                "service_location": "موقع الخدمة",
+                "open_in_maps": "فتح في الخرائط",
+                "timeline": "الجدول الزمني",
+                "order_placed": "تم تقديم الطلب",
+                "vendor_accepted": "قبول البائع",
+                "service_completed": "اكتمال الخدمة",
+                "order_cancelled": "تم إلغاء الطلب",
+                "documents": "المستندات",
+                "document": "مستند",
+                "rejection_reason": "سبب الرفض",
+                "cancellation_reason": "سبب الإلغاء",
+                "call_vendor": "اتصل بالبائع",
+                "write_review": "كتابة تقييم",
+                "book_again": "حجز مرة أخرى",
+                "phone_not_available": "رقم هاتف البائع غير متوفر",
+                "could_not_launch_dialer": "تعذر فتح برنامج الاتصال",
+                "review_coming_soon": "ميزة التقييم قريباً",
+                "screen_title_product": "تفاصيل الطلب",
+                "order_date": "تاريخ الطلب",
+                "order_items": "عناصر الطلب",
+                "quantity_label": "الكمية: {qty}",
+                "payment_summary": "ملخص الدفع",
+                "order_updated": "تم تحديث الطلب"
+            }
+        },
+        "active_orders_preview": {
+            "empty_title": "لا توجد طلبات نشطة",
+            "empty_subtitle": "ستظهر طلبات الخدمة النشطة هنا.",
+            "section_title": "طلباتي النشطة",
+            "view_all": "عرض الكل",
+            "unknown_service": "خدمة غير معروفة",
+            "unknown_vendor": "بائع غير معروف",
+            "time_ago": {
+                "just_now": "الآن",
+                "minutes_ago": "{n}د مضت",
+                "hours_ago": "{n}س مضت",
+                "days_ago": "{n}ي مضت"
+            }
+        },
+        "loyalty": {
+            "screen_title": "برنامج الولاء",
+            "points_balance": "رصيد النقاط",
+            "points": "نقاط",
+            "progress_to_reward": "التقدم نحو المكافأة",
+            "of_points_to_reward": "{current} من {total} نقطة للمكافأة التالية",
+            "redeem_points": "استبدال النقاط",
+            "transactions": "المعاملات",
+            "earn": "كسب",
+            "redeem": "استبدال",
+            "expire": "انتهاء",
+            "adjust": "تعديل",
+            "empty_title": "لا توجد معاملات بعد",
+            "empty_subtitle": "ستظهر معاملات الولاء هنا.",
+            "error_title": "فشل التحميل",
+            "retry": "إعادة المحاولة"
+        },
+        "listings": {
+            "screen_title": "الإعلانات",
+            "search_hint": "البحث عن سيارة معلنة",
+            "error": {
+                "failed_to_load": "فشل تحميل الإعلانات",
+                "retry": "إعادة المحاولة"
+            },
+            "empty": {
+                "no_results": "لم يتم العثور على نتائج",
+                "no_listings_yet": "لا توجد إعلانات بعد",
+                "no_match": "لا توجد إعلانات مطابقة.",
+                "appear_here": "ستظهر إعلانات سياراتك هنا"
+            },
+            "card": {
+                "featured": "مميز",
+                "inspected": "تم الفحص",
+                "not_inspected": "لم يتم الفحص"
+            }
+        },
+        "listing_details": {
+            "screen_title": "عن هذه السيارة",
+            "featured": "مميز",
+            "price_on_request": "السعر عند الطلب",
+            "inspected": "تم الفحص",
+            "not_inspected": "لم يتم الفحص",
+            "view_details": "عرض التفاصيل",
+            "unknown_location": "موقع غير معروف",
+            "time_ago": {
+                "just_now": "الآن",
+                "minutes_ago": "{n} دقيقة/دقائق مضت",
+                "hours_ago": "{n} ساعة/ساعات مضت",
+                "days_ago": "{n} يوم/أيام مضت",
+                "months_ago": "{n} شهر/أشهر مضت"
+            },
+            "inspection": {
+                "title": "تقرير الفحص",
+                "has_report_desc": "قم بتنزيل وعرض\n تقرير الفحص لهذه السيارة.",
+                "no_report_desc": "لا يوجد تقرير فحص\n متاح لهذه السيارة.",
+                "view_report": "عرض تقرير الفحص"
+            },
+            "specifications": {
+                "title": "المواصفات",
+                "edit": "تعديل",
+                "labels": {
+                    "make": "الشركة المصنعة",
+                    "model": "الموديل",
+                    "trim": "الفئة",
+                    "year": "السنة",
+                    "mileage": "المسافة المقطوعة",
+                    "transmission": "ناقل الحركة",
+                    "engine": "المحرك",
+                    "color": "اللون"
+                },
+                "na": "غير متاح"
+            },
+            "description": {
+                "title": "الوصف",
+                "no_description": "لا يوجد وصف متاح.",
+                "edit_dialog_title": "تعديل الوصف",
+                "edit_dialog_hint": "أدخل وصفًا جديدًا...",
+                "cancel": "إلغاء",
+                "save": "حفظ"
+            },
+            "save_button": "حفظ"
+        },
+        "edit_specs": {
+            "screen_title": "تعديل المواصفات",
+            "steps": {
+                "make": "الشركة المصنعة",
+                "model": "الموديل",
+                "trim": "الفئة",
+                "year": "السنة",
+                "mileage": "المسافة المقطوعة",
+                "transmission": "ناقل الحركة",
+                "color": "اللون"
+            },
+            "save_button_loading": "جاري الحفظ...",
+            "save_button": "حفظ التغييرات",
+            "validation": {
+                "complete_all_fields": "يرجى إكمال جميع الحقول"
+            }
+        },
+        "notifications": {
+            "screen_title": "الإشعارات",
+            "read_all": "قراءة الكل",
+            "tab_all": "الكل",
+            "tab_orders": "الطلبات",
+            "tab_offers": "العروض",
+            "tab_system": "النظام",
+            "empty": {
+                "title": "ليس هناك جديد!",
+                "subtitle": "لا توجد إشعارات جديدة للعرض."
+            }
+        },
+        "settings": {
+            "screen_title": "الإعدادات",
+            "search_hint": "البحث في الإعدادات",
+            "not_found": "لم يتم العثور على إعدادات",
+            "menu": {
+                "account_info": "معلومات الحساب",
+                "saved_addresses": "العناوين المحفوظة",
+                "change_email": "تغيير البريد الإلكتروني",
+                "change_password": "تغيير كلمة المرور",
+                "country": "الدولة",
+                "notifications": "الإشعارات",
+                "language": "اللغة",
+                "app_mode": "وضع التطبيق",
+                "logout": "تسجيل الخروج",
+                "delete_account": "حذف الحساب"
+            },
+            "delete_account_confirm": {
+                "title": "حذف الحساب؟",
+                "message": "هل أنت متأكد من أنك تريد حذف حسابك؟ هذا الإجراء دائم ولا يمكن التراجع عنه.",
+                "confirm": "حذف",
+                "cancel": "إلغاء",
+                "error": "فشل حذف الحساب. يرجى المحاولة مرة أخرى."
+            },
+            "account_info": {
+                "screen_title": "معلومات الحساب",
+                "edit": "تعديل",
+                "fields": {
+                    "first_name": "الاسم الأول",
+                    "last_name": "اسم العائلة",
+                    "email": "البريد الإلكتروني",
+                    "date_of_birth": "تاريخ الميلاد",
+                    "phone_number": "رقم الهاتف"
+                },
+                "gender": {
+                    "title": "الجنس",
+                    "male": "ذكر",
+                    "female": "أنثى"
+                },
+                "preferences": {
+                    "receive_offers": "نعم، أريد تلقي العروض والخصومات",
+                    "newsletter": "الاشتراك في النشرة الإخبارية"
+                },
+                "delete_account": "حذف الحساب"
+            },
+            "change_email": {
+                "screen_title": "تغيير البريد الإلكتروني",
+                "field_hint": "عنوان البريد الإلكتروني الجديد",
+                "validation_error": "يرجى إدخال عنوان بريد إلكتروني صالح",
+                "confirm_button_loading": "جاري التأكيد...",
+                "confirm_button": "تأكيد",
+                "success": "تم تحديث البريد الإلكتروني بنجاح",
+                "error": "فشل تحديث البريد الإلكتروني. يرجى المحاولة مرة أخرى."
+            },
+            "change_password": {
+                "screen_title": "تغيير كلمة المرور",
+                "fields": {
+                    "current_password": "كلمة المرور الحالية",
+                    "new_password": "كلمة المرور الجديدة",
+                    "confirm_password": "تأكيد كلمة المرور الجديدة"
+                },
+                "validation": {
+                    "current_required": "كلمة المرور الحالية مطلوبة",
+                    "min_length": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+                    "match": "كلمات المرور غير متطابقة"
+                },
+                "button_loading": "جاري التغيير...",
+                "button": "تغيير كلمة المرور",
+                "success": "تم تغيير كلمة المرور بنجاح.",
+                "error": "فشل تغيير كلمة المرور. يرجى المحاولة مرة أخرى."
+            },
+            "language": {
+                "title": "اللغة",
+                "english": "الإنجليزية",
+                "arabic": "العربية"
+            },
+            "app_mode": {
+                "title": "وضع التطبيق",
+                "dark": "داكن",
+                "light": "فاتح"
+            },
+            "country": {
+                "title": "الدولة",
+                "kuwait": "الكويت",
+                "bahrain": "البحرين",
+                "uae": "الإمارات العربية المتحدة",
+                "oman": "عمان",
+                "qatar": "قطر",
+                "saudi_arabia": "المملكة العربية السعودية"
+            },
+            "saved_addresses": {
+                "screen_title": "العناوين",
+                "add_button": "إضافة",
+                "empty_title": "لا توجد عناوين محفوظة",
+                "add_new_button": "إضافة عنوان جديد"
+            },
+            "notification_preferences": {
+                "screen_title": "تفضيلات الإشعارات",
+                "order_updates": "تحديثات الطلبات",
+                "promotions": "العروض الترويجية"
+            },
+            "verify_email_otp": {
+                "title": "التحقق من البريد الإلكتروني",
+                "sent_code": "لقد أرسلنا رمزًا إلى ",
+                "otp_error": "يرجى إدخال رمز التحقق الكامل",
+                "verify_button_loading": "جاري التحقق...",
+                "verify_button": "تحقق",
+                "success": "تم تحديث البريد الإلكتروني بنجاح",
+                "error": "فشل تحديث البريد الإلكتروني. يرجى المحاولة مرة أخرى.",
+                "otp_sent": "تم إرسال الرمز بنجاح",
+                "resend": {
+                    "did_not_receive": "لم تستلم الرمز؟ ",
+                    "resend_in": "إعادة الإرسال خلال {time}",
+                    "resend_button": "إعادة إرسال"
+                }
+            },
+            "edit_address": {
+                "edit_title": "تعديل العنوان",
+                "add_title": "إضافة عنوان",
+                "delete": "حذف",
+                "delete_dialog": {
+                    "title": "حذف العنوان",
+                    "description": "هل أنت متأكد أنك تريد حذف هذا العنوان؟",
+                    "yes": "نعم",
+                    "no": "لا"
+                },
+                "validation": {
+                    "required_fields": "يرجى ملء الحقول المطلوبة"
+                },
+                "area": {
+                    "label": "المنطقة",
+                    "hint": "اضغط تغيير لتحديد المنطقة",
+                    "change_button": "تغيير",
+                    "dialog_title": "المنطقة",
+                    "dialog_hint": "أدخل المنطقة",
+                    "cancel": "إلغاء",
+                    "ok": "موافق"
+                },
+                "property_types": {
+                    "apartment": "شقة",
+                    "house": "منزل",
+                    "office": "مكتب"
+                },
+                "fields": {
+                    "address_title": "عنوان العنوان",
+                    "building_name": "اسم المبنى",
+                    "apt_number": "رقم الشقة",
+                    "street": "الشارع",
+                    "block": "القطعة",
+                    "avenue_optional": "الجادة (اختياري)",
+                    "directions_optional": "اتجاهات إضافية (اختياري)",
+                    "phone_number": "رقم الهاتف",
+                    "address_label_optional": "تسمية العنوان (اختياري)"
+                },
+                "save_button": "حفظ العنوان",
+                "default_label": "عنوان"
+            },
+            "address_tile": {
+                "block": "قطعة {n}",
+                "building": "مبنى {n}",
+                "apt": "شقة {n}",
+                "mobile_number": "رقم الجوال: {n}"
+            }
+        }
+    },
+    "bottom_nav": {
+        "customer": {
+            "home": "الرئيسية",
+            "services": "الخدمات",
+            "offers": "العروض",
+            "cart": "السلة",
+            "profile": "الملف الشخصي"
+        },
+        "vendor": {
+            "home": "الرئيسية",
+            "listings": "القوائم",
+            "orders": "الطلبات",
+            "operator": "المشغل",
+            "profile": "الملف الشخصي"
+        },
+        "operator": {
+            "home": "الرئيسية",
+            "orders": "الطلبات",
+            "profile": "الملف الشخصي"
+        }
+    },
+    "sell_your_car": {
+        "screens": {
+            "condition_car": {
+                "title": "بيع سياراتك",
+                "subtitle": "لدينا عروض بانتظارك"
+            },
+            "sell_a_car": {
+                "title": "بيع سيارة",
+                "subtitle": "لدينا عروض بانتظارك"
+            },
+            "sell_or_buy_car": {
+                "title": "بيع أو شراء سياراتك",
+                "subtitle": "بيع وشراء سيارتك بسرعة وسهولة"
+            },
+            "fast_track_condition": {
+                "title": "بيع سريع للسيارة",
+                "subtitle": "لدينا عروض بانتظارك"
+            },
+            "fast_track_sale": {
+                "title": "بيع سريع للسيارة",
+                "subtitle": "لدينا عروض بانتظارك",
+                "description_title": "الوصف",
+                "description": "تم تصميم البيع السريع للسيارة لأولئك الذين يحتاجون لبيع سيارتهم بسرعة وكفاءة. من خلال الإدراج بسعر مخفض، يمكن بيع سيارتك في غضون 15 ساعة. بمجرد موافقتك على العرض، سيتولى فريقنا العملية، مما يضمن معاملة سلسة وسهلة. سيتواصل معك أحد الممثلين لإنهاء البيع بعد موافقتك.",
+                "terms_title": "الشروط والأحكام",
+                "terms_intro": "باستخدام خدمات إدراج السيارات لدينا، فإنك توافق على الشروط والأحكام التالية:",
+                "bullet_1": "يجب أن تكون السيارات المدرجة ضمن البيع السريع مخفضة بنسبة 30% عن أقل قيمة سوقية.",
+                "bullet_2": "رسوم الإدراج غير قابلة للاسترداد.",
+                "bullet_3": "تخضع المعاملات لرسوم 5% على كل من البائع والمشتري.",
+                "bullet_4": "يجب على البائع الموافقة على العرض والشروط قبل المتابعة.",
+                "bullet_5": "تصبح القوائم والعروض سارية فقط بعد موافقة موتيفا.",
+                "approve_checkbox": "نعم، أوافق على شروط وأحكام موتيفا الخاصة بالبيع السريع للسيارة.",
+                "continue": "متابعة"
+            },
+            "open_an_auction": {
+                "title": "افتح مزاد",
+                "subtitle": "بيع سريع من خلال المزاد",
+                "description_title": "الوصف",
+                "description": "أدرج سيارتك للبيع بسهولة باستخدام منصتنا. اختر من بين خيارات العادي، أو المزاد، أو البيع السريع للعثور على مشترين بسرعة وأمان. اختر الإضافات مثل تقرير الفحص لتعزيز مصداقية إدراجك. يضمن البيع السريع بيعًا مضمونًا في غضون 15 ساعة بسعر أقل بنسبة 30% من أقل سعر سوقي.",
+                "terms_title": "الشروط والأحكام",
+                "terms_intro": "باستخدام خدمات إدراج السيارات لدينا، فإنك توافق على الشروط والأحكام التالية:",
+                "bullet_1": "يجب أن تكون جميع تفاصيل السيارة دقيقة ومحدثة.",
+                "bullet_2": "رسوم الإدراج غير قابلة للاسترداد وتختلف حسب نوع الخدمة.",
+                "bullet_3": "تتطلب المبيعات السريعة خصمًا بنسبة 30% على أقل سعر سوقي.",
+                "bullet_4": "تنطبق رسوم معاملة 5% على كل من البائع والمشتري في حالات البيع الناجحة.",
+                "bullet_5": "يجب أن تكون تقارير الفحص صالحة ودقيقة.",
+                "approve_checkbox": "نعم، أوافق على شروط وأحكام موتيفا الخاصة بفتح المزاد.",
+                "continue": "متابعة"
+            },
+            "car_details": {
+                "title": "تفاصيل السيارة",
+                "submitting_listing": "جاري إرسال إدراجك...",
+                "submitting_request": "جاري إرسال طلبك..."
+            },
+            "success_dialog": {
+                "title": "نجاح!",
+                "damaged_car_message": "تم إرسال إدراج سيارتك التالفة بنجاح.",
+                "listing_created": "تم إنشاء الإدراج بنجاح!",
+                "listing_saved": "تم حفظ إدراج سيارتك.",
+                "ok": "موافق",
+                "done": "تم"
+            },
+            "request_received_dialog": {
+                "title": "تم استلام الطلب!",
+                "message": "تم إرسال الطلب إلى مسؤولي موتيفا — سنتواصل معك بعرض"
+            },
+            "error_dialog": {
+                "title": "خطأ"
+            }
+        },
+        "steps": {
+            "make": "الشركة المصنعة",
+            "model": "الموديل",
+            "trim": "الفئة",
+            "year": "السنة",
+            "mileage": "المسافة المقطوعة",
+            "selling_price": "سعر البيع",
+            "car_specs": "مواصفات السيارة",
+            "car_condition": "حالة السيارة",
+            "colors": "الألوان",
+            "images": "الصور",
+            "location": "الموقع",
+            "additional_info": "معلومات إضافية",
+            "duration": "المدة",
+            "color": "اللون",
+            "image": "صورة"
+        },
+        "make_tab": {
+            "title": "اختر شركة السيارة",
+            "search_hint": "ابحث عن شركة السيارة",
+            "no_available": "لا توجد شركات متاحة",
+            "no_found": "لم يتم العثور على شركات",
+            "retry": "إعادة المحاولة"
+        },
+        "model_tab": {
+            "title": "اختر موديل السيارة",
+            "search_hint": "ابحث عن موديل السيارة",
+            "select_make_first": "يرجى اختيار الشركة المصنعة أولاً",
+            "no_available": "لا توجد موديلات متاحة",
+            "no_found": "لم يتم العثور على موديلات",
+            "retry": "إعادة المحاولة"
+        },
+        "trim_tab": {
+            "title": "اختر فئة السيارة",
+            "search_hint": "ابحث عن فئة السيارة",
+            "select_model_first": "يرجى اختيار الموديل أولاً",
+            "no_available": "لا توجد فئات متاحة",
+            "no_found": "لم يتم العثور على فئات",
+            "retry": "إعادة المحاولة"
+        },
+        "year_tab": {
+            "title": "أدخل سنة الموديل",
+            "error": "يرجى إدخال سنة بين 1900 و {year}"
+        },
+        "mileage_tab": {
+            "title": "أدخل المسافة المقطوعة",
+            "unit": "كم",
+            "continue": "متابعة"
+        },
+        "selling_price_tab": {
+            "title": "أدخل سعر البيع",
+            "unit": "د.ك",
+            "continue": "متابعة"
+        },
+        "colors_tab": {
+            "title": "اختر ألوان سيارتك",
+            "exterior_title": "اختر لون الهيكل الخارجي",
+            "interior_title": "اختر لون المقاعد الداخلي",
+            "view_more": "عرض المزيد",
+            "continue": "متابعة"
+        },
+        "car_color": {
+            "white": "أبيض",
+            "black": "أسود",
+            "orange": "برتقالي",
+            "blue": "أزرق",
+            "red": "أحمر",
+            "green": "أخضر",
+            "purple": "بنفسجي",
+            "yellow": "أصفر",
+            "aqua": "أزرق مائي",
+            "snow": "ثلجي",
+            "beige": "بيج",
+            "dim_gray": "رمادي داكن"
+        },
+        "images_tab": {
+            "car_images_title": "تحميل صور السيارة",
+            "car_images_hint": "أضف صور لسيارتك (الخارج، الداخل، المحرك)",
+            "damage_images_title": "تحميل صور الأضرار",
+            "damage_images_hint": "أضف صور تبين مناطق الضرر",
+            "camera": "الكاميرا",
+            "gallery": "المعرض",
+            "add_photo": "إضافة صورة",
+            "select_source": "اختر مصدر الصورة",
+            "uploading": "جاري رفع الصور...",
+            "skip": "تخطي",
+            "continue": "متابعة",
+            "car_label": "سيارة",
+            "damage_label": "ضرر",
+            "image_label": "صورة {number}"
+        },
+        "location_tab": {
+            "pick_location": "اختر موقعك",
+            "select_location_title": "اختر الموقع",
+            "select": "اختيار",
+            "cancel": "إلغاء",
+            "country": "الدولة",
+            "city": "المدينة",
+            "continue": "متابعة",
+            "failed_picker": "فشل فتح محدد الموقع"
+        },
+        "inspection_report": {
+            "title": "هل لديك تقرير فحص حديث؟",
+            "browse": "تصفح ",
+            "your_file": "ملفك",
+            "max_size": "يسمح بملفات حتى 10 ميجابايت",
+            "file_types": "PDF, JPG, PNG",
+            "uploaded_success": "تم الرفع بنجاح",
+            "no_report": "لا، ليس لدي",
+            "inspect_question": "هل تريد منا فحص سيارتك؟",
+            "inspect_description": "احصل على فحص احترافي لسيارتك لراحة البال. أضف هذه الخدمة للتحقق الشامل من أنها في أفضل حالة.",
+            "inspect_price": "20 د.ك   + 3 نجوم",
+            "dialog_title": "أدخل رابط تقرير الفحص",
+            "cancel": "إلغاء",
+            "upload": "رفع",
+            "continue": "متابعة",
+            "uploading": "جاري رفع الملف...",
+            "file_size_error": "يجب أن يكون حجم الملف أقل من 10 ميجابايت",
+            "pick_error": "خطأ في اختيار الملف: {error}",
+            "upload_error": "فشل رفع الملف. يرجى المحاولة مرة أخرى.",
+            "upload_error_generic": "خطأ في رفع الملف: {error}"
+        },
+        "car_condition": {
+            "chassis_title": "هل هناك أي مشاكل في الهيكل؟",
+            "mechanical_title": "هل هناك أي مشاكل ميكانيكية في السيارة؟",
+            "warning_lights_title": "هل هناك أي أضواء تحذيرية مضاءة؟",
+            "tires_title": "ما هي حالة الإطارات؟",
+            "tires_new": "جديد",
+            "tires_good": "جيد",
+            "tires_needs_change": "يحتاج تغيير",
+            "runs_drives_title": "هل السيارة تعمل وتسير؟",
+            "runs_drives_yes": "نعم، تعمل وتسير",
+            "runs_drives_no": "لا، لا تعمل/تسير",
+            "yes": "نعم",
+            "no": "لا",
+            "dont_know": "لا أعرف",
+            "continue": "متابعة"
+        },
+        "description": {
+            "title": "الوصف",
+            "hint": "اكتب أي تفاصيل إضافية عن سيارتك."
+        },
+        "body_panel_tab": {
+            "title": "هل هناك أي عيوب أو أضرار طفيفة في ألواح الجسم؟",
+            "yes": "نعم",
+            "no": "لا",
+            "dont_know": "لا أعرف",
+            "continue": "متابعة"
+        },
+        "paint_condition_tab": {
+            "title": "ما هي حالة الدهان؟",
+            "continue": "متابعة"
+        },
+        "end_tab": {
+            "proceed_payment": "المتابعة إلى الدفع"
+        },
+        "engine_tab": {
+            "title": "اختر محرك سيارتك",
+            "other": "أخرى"
+        },
+        "transmission_tab": {
+            "title": "اختر ناقل حركة سيارتك",
+            "manual": "يدوي",
+            "automatic": "أوتوماتيك",
+            "continue": "متابعة"
+        },
+        "additional_info": {
+            "features_title": "اختر ميزات سيارتك",
+            "feature_your_car": "مميزة سيارتك",
+            "feature_description": "تمييز سيارتك سيسمح لمزيد من الأشخاص برؤيتها وبيعها بسرعة.",
+            "one_week": "أسبوع واحد",
+            "two_weeks": "أسبوعان",
+            "one_month": "شهر واحد",
+            "total_price": "السعر الإجمالي : ",
+            "saving": "جاري الحفظ...",
+            "submit_listing": "إرسال الإدراج",
+            "listing_created": "تم إنشاء الإدراج بنجاح!",
+            "listing_saved": "تم حفظ إدراج سيارتك.\nرقم الإدراج: {id}",
+            "done": "تم"
+        },
+        "service_sections": {
+            "all_services": "جميع الخدمات",
+            "sell_your_car": "بيع سيارتك",
+            "sell_a_car": "بيع سيارة",
+            "buy_a_car": "شراء سيارة",
+            "good_condition_car": "سيارة بحالة جيدة",
+            "damaged_car": "سيارة تالفة",
+            "open_an_auction": "افتح مزاد",
+            "fast_track_car_sale": "بيع سريع للسيارة",
+            "lorem_description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إليت، سيد دو إيسيمود تيمبور تيمبور"
+        },
+        "duration_tab": {
+            "title": "اختر مدة المزاد",
+            "auction_start": "يجب أن يبدأ المزاد من",
+            "starting_price": "السعر الابتدائي",
+            "feature_auction": "تميز مزادك",
+            "feature_description": "تميز مزادك لزيادة الظهور والمزايدة التنافسية!",
+            "total_price": "السعر الإجمالي : ",
+            "days_3": "3 أيام",
+            "days_5": "5 أيام",
+            "days_7": "7 أيام",
+            "continue": "متابعة",
+            "proceed_payment": "الاستمرار في الدفع"
+        },
+        "ft_duration": {
+            "title": "اختر متى تريد استلام نقودك؟",
+            "hours_label": "خلال {hours} ساعة - {discount}% أقل من سعر السوق",
+            "fallback_tooltip": "استخدام الخيارات الافتراضية - الخادم غير متاح",
+            "failed_load": "فشل تحميل خيارات المدة",
+            "retry": "إعادة المحاولة",
+            "submit_request": "إرسال الطلب",
+            "total_price": "السعر الإجمالي : "
+        },
+        "duration": {
+            "title": "مدة المزاد",
+            "one_day": "يوم واحد",
+            "three_days": "3 أيام",
+            "seven_days": "7 أيام",
+            "continue": "متابعة"
+        }
+    },
+    "vendor_dashboard": {
+        "profile": {
+            "not_found_title": "لم يتم العثور على الملف الشخصي",
+            "not_found_description": "لم يتم إعداد ملفك الشخصي بعد. يرجى التواصل مع الدعم لإكمال تسجيلك.",
+            "error_loading_title": "خطأ في تحميل الملف الشخصي",
+            "retry": "إعادة المحاولة",
+            "verified": "تم التحقق",
+            "reviews": "تقييم",
+            "vendor_profile": "ملف البائع الشخصي",
+            "profile_not_set_up": "لم يتم إعداد الملف الشخصي",
+            "unable_to_load_profile": "تعذر تحميل الملف الشخصي"
+        },
+        "orders": {
+            "screen_title": "جميع الطلبات",
+            "tab_title": "الطلبات",
+            "tab_subtitle": "إدارة عملك",
+            "live_badge": "{count} طلب",
+            "search_hint": "البحث في الطلبات...",
+            "filter_all": "الكل",
+            "filter_services": "خدمات",
+            "filter_products": "منتجات",
+            "tab_all": "الكل",
+            "tab_new": "جديد",
+            "tab_processing": "قيد المعالجة",
+            "tab_completed": "مكتمل",
+            "empty_search_title": "لم يتم العثور على نتائج",
+            "empty_search_subtitle": "حاول تعديل مصطلحات البحث.",
+            "empty_tab": "لا توجد طلبات {tabName}",
+            "empty_tab_subtitle": "ستظهر الطلبات هنا بمجرد توفرها.",
+            "error_loading": "خطأ في تحميل الطلبات"
+        },
+        "request_details": {
+            "screen_title": "تفاصيل الطلب",
+            "order_accepted": "تم قبول الطلب بنجاح",
+            "accept_failed": "فشل قبول الطلب: {error}",
+            "status_on_the_way": "تم تحديث الحالة: في الطريق",
+            "status_arrived": "تم تحديث الحالة: وصل إلى الموقع",
+            "service_started": "بدأت الخدمة",
+            "action_failed": "فشل: {error}",
+            "error": "خطأ: {error}",
+            "service_fallback": "خدمة",
+            "order_ref": "رقم الطلب",
+            "amount": "المبلغ",
+            "created": "تم الإنشاء",
+            "scheduled": "مجدول",
+            "route": "المسار",
+            "location": "الموقع",
+            "pickup": "الاستلام",
+            "dropoff": "التسليم",
+            "address": "العنوان",
+            "no_address": "لم يتم توفير عنوان",
+            "open_in_maps": "فتح في الخرائط",
+            "order_details": "تفاصيل الطلب",
+            "base_amount": "المبلغ الأساسي",
+            "total": "الإجمالي",
+            "service_specifications": "مواصفات الخدمة",
+            "customer_information": "معلومات العميل",
+            "attributes": "السمات",
+            "customer": "العميل",
+            "rejection_reason": "سبب الرفض",
+            "no_reason": "لم يتم تقديم سبب",
+            "cancellation_details": "تفاصيل الإلغاء",
+            "cancellation_reason_label": "السبب: {reason}",
+            "penalty_fee": "رسوم الإلغاء: {fee} د.ك",
+            "documents": "المستندات",
+            "document_fallback": "مستند",
+            "reject": "رفض",
+            "accept": "قبول",
+            "assign_operator": "تعيين مشغل",
+            "start_travel": "بدء التنقل",
+            "mark_arrived": "تحديد الوصول",
+            "start_service": "بدء الخدمة",
+            "complete": "إكمال"
+        },
+        "schedule": {
+            "screen_title": "الجدول",
+            "error_loading": "خطأ في تحميل الطلبات",
+            "no_appointments": "لا توجد مواعيد",
+            "no_scheduled_for_date": "لا توجد طلبات مجدولة لـ {date}",
+            "appointment_singular": "موعد",
+            "appointment_plural": "مواعيد",
+            "service_fallback": "خدمة",
+            "customer_fallback": "عميل",
+            "status_pending": "معلق",
+            "status_accepted": "مقبول",
+            "status_en_route": "في الطريق",
+            "status_arrived": "وصل",
+            "status_active": "نشط",
+            "status_done": "تم",
+            "status_cancelled": "ملغى",
+            "status_unknown": "غير معروف"
+        },
+        "support": {
+            "screen_title": "الدعم",
+            "faq_title": "الأسئلة الشائعة",
+            "contact_us": "اتصل بنا",
+            "contact_description": "تواصل معنا عبر الدردشة المباشرة أو البريد الإلكتروني للحصول على مساعدة سريعة.",
+            "email_us": "راسلنا",
+            "chat": "دردشة",
+            "or": "أو",
+            "submit_ticket": "إرسال تذكرة",
+            "faq_1_question": "1. كيف يمكنني التسجيل كبائع؟",
+            "faq_1_answer": "للتسجيل، انقر على خيار \"التسجيل كبائع\"، وأكمل استمارة التسجيل بتفاصيل عملك، وأرسل المستندات المطلوبة للتحقق.",
+            "faq_2_question": "2. هل هناك رسوم لإدراج خدماتي؟",
+            "faq_3_question": "3. كيف سأتلقى المدفوعات؟",
+            "faq_4_question": "4. هل يمكنني تعديل قائمة خدماتي؟",
+            "faq_5_question": "5. كيف أتواصل مع دعم العملاء؟"
+        },
+        "wallet": {
+            "screen_title": "محفظة موتيفا",
+            "total_label": "الإجمالي (د.ك):",
+            "withdraw": "سحب",
+            "tabs": {
+                "daily": "يومي",
+                "weekly": "أسبوعي",
+                "monthly": "شهري"
+            },
+            "completed_jobs": "الوظائف المكتملة",
+            "history": "السجل",
+            "stats": {
+                "total_sales": "إجمالي المبيعات",
+                "total_earnings": "إجمالي الأرباح",
+                "average_rating": "متوسط التقييم",
+                "cancellation_rate": "معدل الإلغاء"
+            },
+            "history_status": {
+                "in_progress": "قيد التنفيذ",
+                "rejected": "مرفوض"
+            },
+            "id_label": "رقم: {id}",
+            "payout_request": {
+                "title": "سحب الأموال",
+                "amount_label": "المبلغ (د.ك)",
+                "amount_hint": "أدخل المبلغ المراد سحبه",
+                "bank_details": "تفاصيل البنك",
+                "bank_name": "اسم البنك",
+                "account_number": "رقم الحساب",
+                "account_holder": "صاحب الحساب",
+                "kuwait_code": "رمز الكويت",
+                "update_bank_details": "تحديث تفاصيل البنك",
+                "submit": "إرسال طلب السحب",
+                "insufficient_balance": "رصيد المحفظة غير كافٍ",
+                "invalid_amount": "يرجى إدخال مبلغ صحيح",
+                "success": "تم إرسال طلب السحب بنجاح",
+                "error": "فشل إرسال طلب السحب",
+                "no_bank_details": "لم يتم العثور على تفاصيل البنك. يرجى إضافة تفاصيل البنك أولاً."
+            },
+            "coming_soon_message": "يمكن استخدام رصيد المحفظة للمدفوعات — قريباً!",
+            "no_transactions": "لا توجد معاملات بعد",
+            "error_loading": "فشل تحميل بيانات المحفظة",
+            "retry": "إعادة المحاولة",
+            "payout_status": {
+                "pending": "قيد الانتظار",
+                "processed": "تمت المعالجة",
+                "rejected": "مرفوض"
+            },
+            "payout_request_card_title": "طلب سحب",
+            "available_balance": "الرصيد المتاح",
+            "failed_to_load_balance": "فشل تحميل الرصيد",
+            "submitting": "جارٍ الإرسال...",
+            "months": {
+                "jan": "يناير", "feb": "فبراير", "mar": "مارس", "apr": "أبريل",
+                "may": "مايو", "jun": "يونيو", "jul": "يوليو", "aug": "أغسطس",
+                "sep": "سبتمبر", "oct": "أكتوبر", "nov": "نوفمبر", "dec": "ديسمبر"
+            },
+            "reference_types": {
+                "order": "دفعة الطلب",
+                "refund": "استرداد",
+                "voucher": "استرداد القسيمة",
+                "adjustment": "تعديل",
+                "admin": "رصيد إداري",
+                "payout_hold": "حجز السحب",
+                "payout_release": "إلغاء حجز السحب",
+                "product_order": "طلب منتج"
+            }
+        },
+        "operators": {
+            "screen_title": "المشغلون",
+            "active": "نشط",
+            "inactive": "غير نشط",
+            "empty_title": "لا يوجد مشغلون بعد",
+            "empty_subtitle": "أضف أول مشغل للبدء",
+            "error_loading": "خطأ في تحميل المشغلين",
+            "add_new": "إضافة مشغل جديد"
+        },
+        "add_operator": {
+            "screen_title": "إضافة مشغل جديد",
+            "success": "تمت إضافة المشغل بنجاح",
+            "email_exists": "هذا البريد الإلكتروني مسجل بالفعل",
+            "phone_exists": "رقم الهاتف مسجل بالفعل",
+            "failed": "فشل إضافة المشغل",
+            "section_title": "معلومات المشغل",
+            "full_name": "الاسم الكامل",
+            "name_error": "الرجاء إدخال اسم المشغل",
+            "phone_number": "رقم الهاتف",
+            "phone_error": "الرجاء إدخال رقم هاتف المشغل",
+            "email_address": "عنوان البريد الإلكتروني",
+            "email_error": "الرجاء إدخال البريد الإلكتروني للمشغل",
+            "password": "كلمة المرور",
+            "password_error": "الرجاء إدخال كلمة مرور",
+            "password_min_error": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+            "loading": "جاري التحميل",
+            "add_operator_button": "إضافة مشغل"
+        },
+        "settings": {
+            "screen_title": "الإعدادات",
+            "search_hint": "البحث في الإعدادات",
+            "not_found": "لم يتم العثور على إعدادات",
+            "menu": {
+                "uploaded_documents": "الوثائق المرفوعة",
+                "service_area": "منطقة الخدمة",
+                "business_logo": "شعار النشاط",
+                "cover_image": "صورة الغلاف",
+                "working_hours": "ساعات العمل",
+                "notifications": "الإشعارات",
+                "language": "اللغة",
+                "app_mode": "وضع التطبيق",
+                "logout": "تسجيل الخروج",
+                "delete_account": "حذف الحساب"
+            },
+            "delete_account_confirm": {
+                "title": "حذف الحساب؟",
+                "message": "هل أنت متأكد من أنك تريد حذف حسابك؟ هذا الإجراء دائم ولا يمكن التراجع عنه.",
+                "confirm": "حذف",
+                "cancel": "إلغاء",
+                "error": "فشل حذف الحساب. يرجى المحاولة مرة أخرى."
+            }
+        },
+        "working_hours": {
+            "screen_title": "ساعات العمل",
+            "schedule_exceptions": "استثناءات الجدول",
+            "starting_hour": "ساعة البدء",
+            "closing_hour": "ساعة الإغلاق",
+            "off_days": "أيام العطلة",
+            "saving": "جاري الحفظ...",
+            "save": "حفظ",
+            "update_success": "تم تحديث ساعات العمل بنجاح",
+            "update_failed": "فشل تحديث ساعات العمل",
+            "select_off_days": "اختر أيام العطلة",
+            "done": "تم",
+            "error": "خطأ: {error}"
+        },
+        "documents": {
+            "screen_title": "المستندات",
+            "commercial_license": "السجل التجاري",
+            "civil_id": "البطاقة المدنية",
+            "upload_success": "تم الرفع بنجاح",
+            "re_upload_note": "إعادة الرفع تتطلب موافقة المشرف.",
+            "browse": "تصفح",
+            "your_file": "ملفك",
+            "max_size": "الحد الأقصى 10 ميغابايت"
+        },
+        "business_logo": {
+            "screen_title": "شعار النشاط",
+            "instructions_title": "تعليمات الرفع العامة",
+            "instructions_text": "عند رفع الشعار، تأكد من أنه يتوافق مع الأبعاد الموصى بها 500×500 بكسل أو أكبر للحصول على أفضل جودة.\nاستخدم صيغ PNG أو JPEG بحد أقصى 2 ميغابايت.\nبالنسبة لملفات PNG، الخلفية الشفافة هي المثلى، بينما يجب أن يكون خلفية JPEG بسيطة.\nتأكد من أن الشعار واضح وخالي من التشويش للحفاظ على مظهر احترافي.",
+            "logo_updated": "تم تحديث الشعار بنجاح"
+        },
+        "cover_image": {
+            "screen_title": "صورة الغلاف",
+            "updated_success": "تم تحديث صورة الغلاف بنجاح",
+            "guidelines_title": "إرشادات صورة الغلاف",
+            "guidelines_text": "يتم عرض صورة الغلاف أعلى صفحة البائع.\n\nالأبعاد الموصى بها: 1200 × 400 بكسل أو أكبر.\nاستخدم صيغ PNG أو JPEG بحد أقصى 10 ميغابايت.\n\nنصائح:\n• استخدم صورة عالية الجودة تمثل عملك\n• تجنب الصور ذات النص الكثيف لأنها قد يصعب قراءتها على الجوال\n• تأكد من أن الصورة غير مشوشة أو ضبابية",
+            "delete": "حذف"
+        },
+        "service_area": {
+            "screen_title": "مدن الخدمة",
+            "search_hint": "البحث عن مدينة"
+        },
+        "service_categories": {
+            "screen_title": "فئات الخدمة",
+            "add_new": "إضافة جديدة",
+            "oil_filters": "فلاتر الزيت",
+            "fix_my_car": "أصلح سيارتي",
+            "car_batteries": "بطاريات السيارات"
+        },
+        "schedule_exceptions": {
+            "screen_title": "استثناءات الجدول",
+            "load_failed": "فشل تحميل استثناءات الجدول",
+            "retry": "إعادة المحاولة",
+            "empty_title": "لا توجد استثناءات",
+            "empty_subtitle": "أضف استثناءات للعطلات أو الأيام الخاصة",
+            "add_button": "إضافة استثناء",
+            "delete_tooltip": "حذف الاستثناء",
+            "fully_closed": "مغلق بالكامل",
+            "modified_hours": "ساعات معدلة",
+            "hours_label": "الساعات: {start} - {end}",
+            "reason_label": "السبب: {reason}",
+            "delete_dialog_title": "حذف الاستثناء",
+            "delete_dialog_message": "هل أنت متأكد أنك تريد حذف هذا الاستثناء؟",
+            "cancel": "إلغاء",
+            "delete": "حذف",
+            "delete_success": "تم حذف الاستثناء بنجاح",
+            "delete_failed": "فشل حذف الاستثناء",
+            "add_dialog_title": "إضافة استثناء للجدول",
+            "date_label": "التاريخ",
+            "fully_closed_switch": "مغلق بالكامل",
+            "start_time": "وقت البدء",
+            "select_time": "اختر",
+            "end_time": "وقت الانتهاء",
+            "reason_optional": "السبب (اختياري)",
+            "select_times_error": "الرجاء اختيار أوقات البدء والانتهاء",
+            "add_success": "تمت إضافة الاستثناء بنجاح",
+            "add_failed": "فشل إضافة الاستثناء",
+            "add_button_dialog": "إضافة",
+            "error": "خطأ: {error}"
+        },
+        "recent_completed": {
+            "title": "مكتملة حديثاً",
+            "see_all": "عرض الكل",
+            "empty": "لا توجد طلبات مكتملة بعد",
+            "service_fallback": "خدمة",
+            "customer_fallback": "عميل"
+        },
+        "todays_schedule": {
+            "title": "جدول اليوم",
+            "view_calendar": "عرض التقويم",
+            "view_full_calendar": "عرض التقويم الكامل",
+            "empty": "لا توجد مواعيد اليوم",
+            "asap": "فوري",
+            "service_fallback": "خدمة"
+        },
+        "request_cards": {
+            "order_ref": "رقم الطلب",
+            "amount": "المبلغ",
+            "completed": "مكتمل",
+            "time": "الوقت",
+            "status": "الحالة",
+            "view_details": "عرض التفاصيل",
+            "view_details_normal": "عرض التفاصيل",
+            "proceed": "متابعة",
+            "service_fallback": "خدمة",
+            "customer_fallback": "عميل"
+        },
+        "promo_banner": {
+            "title": "وفّر حتى 5 د.ك",
+            "description": "عرض لفترة محدودة على\nخدمات محددة"
+        },
+        "profile_menu": {
+            "all_orders": "جميع الطلبات",
+            "my_listings": "قوائمي",
+            "inventory_history": "سجل المخزون",
+            "wallet": "المحفظة",
+            "faqs": "الأسئلة الشائعة"
+        },
+        "unified_order_card": {
+            "service_order": "طلب خدمة",
+            "product_order": "طلب منتج",
+            "service_fallback": "خدمة",
+            "customer_fallback": "عميل",
+            "item_singular": "عنصر",
+            "item_plural": "عناصر",
+            "reference": "المرجع",
+            "amount": "المبلغ",
+            "time": "الوقت",
+            "status": "الحالة",
+            "date": "التاريخ"
+        }
+    },
+    "vendor_listings": {
+        "screen_title": "قوائمي",
+        "search_hint": "البحث في القوائم...",
+        "filter_all": "الكل",
+        "filter_product": "منتج",
+        "filter_service": "خدمة",
+        "snackbar": {
+            "product_deactivated": "تم إلغاء تفعيل المنتج",
+            "product_activated": "تم تفعيل المنتج",
+            "update_status_failed": "فشل تحديث حالة المنتج",
+            "product_deleted": "تم حذف المنتج بنجاح",
+            "delete_failed": "فشل حذف المنتج",
+            "service_archived": "تم أرشفة الخدمة بنجاح",
+            "archive_failed": "فشل أرشفة الخدمة",
+            "service_restored": "تم استعادة الخدمة بنجاح",
+            "restore_failed": "فشل استعادة الخدمة"
+        },
+        "dialog": {
+            "delete_product_title": "حذف المنتج",
+            "delete_product_message": "هل أنت متأكد أنك تريد حذف \"{name}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+            "delete_confirm": "حذف",
+            "archive_service_title": "أرشفة الخدمة",
+            "archive_service_message": "هل أنت متأكد أنك تريد أرشفة \"{name}\"؟ سيتم إخفاؤها عن العملاء.",
+            "archive_confirm": "أرشفة"
+        },
+        "empty": {
+            "no_results": "لم يتم العثور على نتائج",
+            "no_products": "لا توجد منتجات بعد",
+            "no_services": "لا توجد خدمات بعد",
+            "no_listings": "لا توجد قوائم بعد",
+            "adjust_search": "حاول تعديل مصطلحات البحث.",
+            "create_product_prompt": "أنشئ منتجك الأول لبدء البيع.",
+            "create_service_prompt": "أنشئ خدمتك الأولى لبدء استقبال الطلبات.",
+            "create_listing_prompt": "أنشئ قائمتك الأولى لبدء استقبال الطلبات.",
+            "create_listing_button": "إنشاء قائمة"
+        },
+        "error": {
+            "title": "خطأ في تحميل القوائم",
+            "message": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            "retry": "إعادة المحاولة"
+        },
+        "bottom_sheet": {
+            "title": "إنشاء جديد",
+            "product_label": "منتج",
+            "product_description": "أضف منتجًا جديدًا إلى كتالوجك",
+            "service_label": "خدمة",
+            "service_description": "أضف خدمة جديدة"
+        },
+        "card": {
+            "type_product": "منتج",
+            "type_service": "خدمة",
+            "stock_label": "المخزون: {count}",
+            "status_active": "نشط",
+            "status_inactive": "غير نشط",
+            "status_archived": "مؤرشف",
+            "currency_suffix": " د.ك"
+        },
+        "tooltip": {
+            "activate": "تفعيل",
+            "deactivate": "إلغاء التفعيل",
+            "archive": "أرشفة",
+            "restore": "استعادة",
+            "edit": "تعديل",
+            "delete": "حذف"
+        },
+        "category": {
+            "active": "نشط",
+            "inactive": "غير نشط",
+            "services_fallback": "خدمات",
+            "products_fallback": "منتجات"
+        }
+    },
+    "vendor_products": {
+        "screen_title": "منتجاتي",
+        "search_hint": "البحث في المنتجات...",
+        "filter_all": "الكل",
+        "filter_active": "نشط",
+        "filter_inactive": "غير نشط",
+        "empty": {
+            "no_results": "لم يتم العثور على نتائج",
+            "no_products": "لا توجد منتجات بعد",
+            "no_inactive_products": "لا توجد منتجات غير نشطة",
+            "inactive_subtitle": "ستظهر المنتجات غير النشطة هنا.",
+            "adjust_search": "حاول تعديل مصطلحات البحث.",
+            "create_product_prompt": "أنشئ منتجك الأول لبدء البيع.",
+            "create_product_button": "إنشاء منتج"
+        },
+        "dialog": {
+            "delete_title": "حذف المنتج",
+            "delete_message": "هل أنت متأكد أنك تريد حذف \"{name}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+            "cancel": "إلغاء",
+            "delete": "حذف"
+        },
+        "snackbar": {
+            "product_deleted": "تم حذف المنتج بنجاح",
+            "delete_failed": "فشل حذف المنتج",
+            "product_deactivated": "تم إلغاء تفعيل المنتج",
+            "product_activated": "تم تفعيل المنتج",
+            "update_status_failed": "فشل تحديث حالة المنتج"
+        },
+        "error": {
+            "title": "خطأ في تحميل المنتجات",
+            "message": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            "retry": "إعادة المحاولة"
+        },
+        "card": {
+            "inactive": "غير نشط",
+            "stock_label": "المخزون: {count}",
+            "type_accessory": "إكسسوار",
+            "type_spare_part": "قطع غيار"
+        },
+        "tooltip": {
+            "activate": "تفعيل",
+            "deactivate": "إلغاء التفعيل",
+            "edit": "تعديل",
+            "delete": "حذف"
+        },
+        "create_product": {
+            "app_bar_new": "منتج جديد",
+            "app_bar_edit": "تعديل المنتج",
+            "field_name_label": "اسم المنتج",
+            "field_name_hint": "مثال: فرامل",
+            "field_description_label": "الوصف (اختياري)",
+            "field_description_hint": "صف منتجك",
+            "field_price_label": "السعر (د.ك)",
+            "field_price_hint": "0.00",
+            "field_stock_label": "كمية المخزون",
+            "field_stock_hint": "10",
+            "product_type_label": "نوع المنتج",
+            "product_type_accessory": "إكسسوار",
+            "product_type_spare_part": "قطع غيار",
+            "images_title": "صور المنتج",
+            "images_subtitle": "قم بتحميل صور لعرض منتجك",
+            "add_image_button": "إضافة",
+            "button_create": "إنشاء منتج",
+            "button_save": "حفظ التغييرات",
+            "snackbar_created": "تم إنشاء المنتج بنجاح",
+            "snackbar_updated": "تم تحديث المنتج بنجاح",
+            "snackbar_create_failed": "فشل إنشاء المنتج. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+            "snackbar_update_failed": "فشل تحديث المنتج. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+            "validation_required": "{field} مطلوب",
+            "validation_valid_number": "أدخل {field} صالح",
+            "spare_part_section_title": "مواصفات قطعة الغيار",
+            "part_number_label": "رقم القطعة",
+            "brand_label": "الماركة",
+            "warranty_label": "الضمان (بالأشهر)",
+            "compatibility_label": "التوافق",
+            "compatibility_empty": "لا توجد إدخالات توافق",
+            "compatibility_make": "الشركة المصنعة",
+            "compatibility_model": "الطراز",
+            "compatibility_year_from": "السنة من",
+            "compatibility_year_to": "السنة إلى",
+            "compatibility_add": "إضافة"
+        }
+    },
+    "inventory": {
+        "screen_title": "سجل المخزون",
+        "filter_all": "الكل",
+        "filter_stock_in": "إضافة مخزون",
+        "filter_stock_out": "سحب مخزون",
+        "filter_adjustment": "تسوية",
+        "filter_refund": "استرداد",
+        "empty": {
+            "title": "لم يتم العثور على معاملات",
+            "filtered_subtitle": "حاول تعديل عوامل التصفية.",
+            "subtitle": "ستظهر معاملات المخزون هنا."
+        },
+        "error": {
+            "title": "خطأ في تحميل المعاملات",
+            "message": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            "retry": "إعادة المحاولة"
+        },
+        "card": {
+            "before": "قبل:",
+            "after": "بعد:",
+            "reason": "السبب:"
+        },
+        "from_date": "من {date}",
+        "until_date": "حتى {date}",
+        "transaction_type": {
+            "sale": "سحب مخزون",
+            "restock": "إضافة مخزون",
+            "adjustment": "تسوية",
+            "refund": "استرداد"
+        }
+    },
+    "vendor_services": {
+        "screen": {
+            "title": "خدماتي",
+            "search_hint": "ابحث في الخدمات... "
+        },
+        "filter": {
+            "all": "الكل",
+            "active": "نشط",
+            "archived": "مؤرشف"
+        },
+        "empty": {
+            "search": {
+                "title": "لم يتم العثور على نتائج",
+                "subtitle": "حاول تعديل مصطلحات البحث."
+            },
+            "archived": {
+                "title": "لا توجد خدمات مؤرشفة",
+                "subtitle": "ستظهر الخدمات المؤرشفة هنا."
+            },
+            "no_services": {
+                "title": "لا توجد خدمات بعد",
+                "subtitle": "أنشئ خدمتك الأولى لبدء استلام الطلبات.",
+                "action": "إنشاء خدمة"
+            }
+        },
+        "error": {
+            "title": "خطأ في تحميل الخدمات",
+            "subtitle": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            "retry": "إعادة المحاولة"
+        },
+        "create_screen": {
+            "app_bar": {
+                "new_title": "خدمة جديدة",
+                "edit": "تعديل الخدمة"
+            },
+            "form": {
+                "service_name": {
+                    "label": "اسم الخدمة",
+                    "hint": "مثال: غسيل السيارة المتميز",
+                    "required": "{field} مطلوب"
+                },
+                "description": {
+                    "label": "الوصف (اختياري)",
+                    "hint": "صف خدمتك"
+                },
+                "base_price": {
+                    "label": "السعر الأساسي (د.ك)",
+                    "hint": "0.00"
+                },
+                "radius": {
+                    "label": "نطاق الخدمة (كم)",
+                    "hint": "20"
+                }
+            },
+            "image_upload": {
+                "title": "صورة الخدمة",
+                "subtitle": "ارفع صورة لعرض خدمتك",
+                "uploading": "جاري الرفع...",
+                "change": "تغيير الصورة",
+                "placeholder_title": "اضغط لرفع صورة الخدمة",
+                "placeholder_subtitle": "مُوصى به: 800x600 بكسل"
+            },
+            "attributes": {
+                "title": "خصائص الخدمة",
+                "required_badge": "مطلوب",
+                "subtitle": "املأ التفاصيل الخاصة بنوع هذه الخدمة",
+                "hint": "أدخل {field}"
+            },
+            "customer_questions": {
+                "title": "أسئلة العملاء",
+                "subtitle": "حدد الأسئلة التي يجب على العملاء الإجابة عليها عند حجز هذه الخدمة.",
+                "add_button": "إضافة سؤال للعميل",
+                "required_suffix": " *"
+            },
+            "button": {
+                "save": "حفظ التغييرات",
+                "create": "إنشاء خدمة",
+                "restore": "استعادة الخدمة"
+            },
+            "snackbar": {
+                "create_success": "تم إنشاء الخدمة بنجاح",
+                "update_success": "تم تحديث الخدمة بنجاح",
+                "create_failed": "فشل إنشاء الخدمة. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+                "update_failed": "فشل تحديث الخدمة. يرجى التحقق من المدخلات والمحاولة مرة أخرى.",
+                "archive_success": "تم أرشفة الخدمة بنجاح",
+                "archive_failed": "فشل أرشفة الخدمة",
+                "restore_success": "تم استعادة الخدمة بنجاح",
+                "restore_failed": "فشل استعادة الخدمة",
+                "question_added": "تم إضافة سؤال العميل"
+            },
+            "dialog": {
+                "archive_title": "أرشفة الخدمة",
+                "archive_message": "هل أنت متأكد من أرشفة \"{name}\"؟ سيتم إخفاؤها عن العملاء.",
+                "archive_confirm": "أرشفة",
+                "add_question_title": "إضافة سؤال للعميل",
+                "label": "التسمية",
+                "label_hint": "مثال: صورة المركبة",
+                "type": "النوع",
+                "required": "مطلوب",
+                "options_label": "الخيارات (مفصولة بفاصلة)",
+                "options_hint": "مثال: شامل، ضد الغير، سرقة_حرق",
+                "min": "الحد الأدنى",
+                "max": "الحد الأقصى",
+                "cancel": "إلغاء",
+                "add": "إضافة"
+            },
+            "error": {
+                "no_category": "لا توجد فئة خدمة متاحة. يرجى التواصل مع الدعم.",
+                "load_category": "فشل تحميل مخطط الفئة"
+            }
+        },
+        "select_category": {
+            "title": "اختيار الفئة",
+            "search_hint": "ابحث في الفئات...",
+            "empty": {
+                "title": "لا توجد فئات متاحة",
+                "subtitle": "لم يتم تكوين فئات الخدمات بعد. يرجى التواصل مع الدعم."
+            },
+            "search_empty": {
+                "title": "لم يتم العثور على فئات",
+                "subtitle": "جرب مصطلح بحث مختلف."
+            },
+            "error": {
+                "title": "فشل تحميل الفئات",
+                "subtitle": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+                "retry": "إعادة المحاولة"
+            }
+        },
+        "service_card": {
+            "archived_badge": "مؤرشف",
+            "price_format": "{price} د.ك",
+            "radius_format": "{radius} كم",
+            "tooltip": {
+                "edit": "تعديل",
+                "archive": "أرشفة"
+            },
+            "action": {
+                "restore": "استعادة"
+            }
+        },
+        "category_section": {
+            "fallback_name": "الخدمات",
+            "status": "{active} نشط",
+            "status_with_archived": "{active} نشط • {archived} مؤرشف",
+            "dialog": {
+                "archive_title": "أرشفة الخدمة",
+                "archive_message": "هل أنت متأكد من أرشفة \"{name}\"؟ سيتم إخفاؤها عن العملاء.",
+                "archive_confirm": "أرشفة",
+                "restore_title": "استعادة الخدمة",
+                "restore_message": "استعادة \"{name}\"؟ سيكون مرئياً للعملاء مرة أخرى.",
+                "restore_confirm": "استعادة"
+            },
+            "snackbar": {
+                "archive_success": "تم أرشفة الخدمة بنجاح",
+                "archive_failed": "فشل أرشفة الخدمة",
+                "restore_success": "تم استعادة الخدمة بنجاح",
+                "restore_failed": "فشل استعادة الخدمة"
+            }
+        }
+    },
+    "vendor_product_analytics": {
+        "screen_title": "التحليلات",
+        "stock": "المخزون",
+        "metrics": {
+            "total_views": "إجمالي المشاهدات",
+            "conversion": "معدل التحويل",
+            "total_orders": "إجمالي الطلبات"
+        },
+        "time_period": {
+            "7d": "٧ي",
+            "30d": "٣٠ي",
+            "90d": "٩٠ي"
+        },
+        "charts": {
+            "revenue_over_time": "الإيرادات عبر الزمن",
+            "top_products": "أفضل المنتجات",
+            "sales": "{count} مبيعات"
+        },
+        "empty": {
+            "no_revenue_data": "لا توجد بيانات إيرادات متاحة",
+            "no_product_sales_data": "لا توجد بيانات مبيعات منتجات متاحة"
+        },
+        "error": {
+            "title": "خطأ في تحميل التحليلات",
+            "message": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            "retry": "إعادة المحاولة"
+        }
+    }
+}
