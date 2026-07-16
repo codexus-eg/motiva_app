@@ -11,8 +11,6 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      vars:
-        FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
       ios_signing:
         provisioning_profiles:
           - motiva_Manual_Profile
@@ -25,16 +23,16 @@ workflows:
           flutter clean
           flutter pub get
 
+      - name: Force Disable SPM in Xcode
+        script: |
+          # هذا الأمر يدخل داخل ملفات Xcode ويغلق ميزة SPM نهائياً من الجذور
+          sed -i '' 's/attributes = {/attributes = {\n\t\t\t\tDisableSwiftPackageIntegration = YES;/g' ios/Runner.xcodeproj/project.pbxproj
+
       - name: Prepare iOS Environment
         script: |
           cd ios
-          # إزالة ملفات قد تحفز محاولة الـ SPM
-          rm -rf Package.swift
-          rm -rf Packages
           rm -rf Pods
           rm -rf Podfile.lock
-
-          # تثبيت الـ Pods إجبارياً
           pod install
           cd ..
 
