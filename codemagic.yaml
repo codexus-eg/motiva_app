@@ -19,7 +19,7 @@ workflows:
           - ios_cert_manual
 
     scripts:
-      - name: Clean and Get Dependencies
+      - name: Clean Project
         script: |
           flutter clean
           flutter pub get
@@ -27,6 +27,11 @@ workflows:
       - name: Install Pods
         script: |
           cd ios
+          # تنظيف الملفات المؤقتة الخاصة بـ CocoaPods و SPM
+          rm -rf Pods
+          rm -rf Podfile.lock
+          rm -rf *.xcresult
+          # تثبيت الـ Pods من جديد
           pod install
           cd ..
 
@@ -35,7 +40,6 @@ workflows:
 
       - name: Build IPA
         script: |
-          # نقوم بالبناء بدون أي فلاج خاص بـ SPM
           flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
