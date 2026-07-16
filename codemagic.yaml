@@ -24,14 +24,16 @@ workflows:
           flutter clean
           flutter pub get
 
+      - name: Fix Swift Package Manager Header
+        script: |
+          # هذا السكربت يبحث عن أي ملف Package.swift ويضيف السطر المطلوب في أوله
+          find . -name "Package.swift" -exec sed -i '' '1s/^/\/\/ swift-tools-version: 5.9\n/' {} +
+
       - name: Install Pods
         script: |
           cd ios
-          # تنظيف الملفات المؤقتة الخاصة بـ CocoaPods و SPM
           rm -rf Pods
           rm -rf Podfile.lock
-          rm -rf *.xcresult
-          # تثبيت الـ Pods من جديد
           pod install
           cd ..
 
