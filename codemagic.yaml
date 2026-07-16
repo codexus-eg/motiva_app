@@ -24,12 +24,18 @@ workflows:
           flutter clean
           flutter pub get
 
+      # هذا الأمر هو الحل الأساسي لتعطيل محاولة الـ Swift Package Manager
+      - name: Disable Swift Package Manager
+        script: |
+          flutter config --no-enable-swift-package-manager
+
       - name: Apply Vault Profiles
         script: xcode-project use-profiles
 
       - name: Build IPA
         script: |
-          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
+          # إضافة flag لضمان عدم تفعيل SPM أثناء البناء
+          flutter build ipa --release --no-enable-swift-package-manager --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
       - build/ios/ipa/*.ipa
