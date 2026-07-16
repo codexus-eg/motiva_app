@@ -11,14 +11,13 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      # هذا هو المفتاح السحري لتعطيل SPM
-      FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
-
-    ios_signing:
-      provisioning_profiles:
-        - motiva_Manual_Profile
-      certificates:
-        - ios_cert_manual
+      vars:
+        FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
+      ios_signing:
+        provisioning_profiles:
+          - motiva_Manual_Profile
+        certificates:
+          - ios_cert_manual
 
     scripts:
       - name: Clean Project
@@ -29,7 +28,7 @@ workflows:
       - name: Prepare iOS Environment
         script: |
           cd ios
-          # حذف أي ملفات قد تحفز محاولة الـ SPM
+          # إزالة ملفات قد تحفز محاولة الـ SPM
           rm -rf Package.swift
           rm -rf Packages
           rm -rf Pods
@@ -44,7 +43,6 @@ workflows:
 
       - name: Build IPA
         script: |
-          # البناء باستخدام إعدادات تعتمد فقط على CocoaPods
           flutter build ipa --release --no-codesign --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
