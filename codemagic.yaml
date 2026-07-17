@@ -9,7 +9,7 @@ workflows:
 
     environment:
       flutter: stable
-      xcode: latest # أعد هذه القيمة إلى latest
+      xcode: latest
       cocoapods: default
       vars:
         FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
@@ -54,7 +54,8 @@ workflows:
 
       - name: Build IPA
         script: |
-          flutter build ipa --release --no-codesign --export-options-plist=/Users/builder/export_options.plist
+          # تم إزالة --no-codesign لاستخراج ملف الـ IPA بنجاح
+          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
       - build/ios/ipa/*.ipa
