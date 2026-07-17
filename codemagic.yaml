@@ -9,8 +9,10 @@ workflows:
 
     environment:
       flutter: stable
-      xcode: latest
+      xcode: 15.4
       cocoapods: default
+      vars:
+        FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
       ios_signing:
         provisioning_profiles:
           - motiva_Manual_Profile
@@ -25,11 +27,9 @@ workflows:
 
       - name: Force Disable SPM and Clean Cache
         script: |
-          # 1. مسح أي ملف Package.swift من مكتبات فلاتر لمنع Xcode من قراءتها
           find ~/.pub-cache -name "Package.swift" -type f -delete || true
           find $FLUTTER_ROOT/.pub-cache -name "Package.swift" -type f -delete || true
 
-          # 2. سكريبت بايثون دقيق لإغلاق ميزة SPM من جذور إعدادات الآيفون
           python3 -c "
           import os
           path = 'ios/Runner.xcodeproj/project.pbxproj'
