@@ -23,10 +23,23 @@ workflows:
           flutter clean
           flutter pub get
 
-      - name: Force Disable SPM in Xcode
+      - name: Force Disable SPM and Clean Cache
         script: |
-          # هذا الأمر يدخل داخل ملفات Xcode ويغلق ميزة SPM نهائياً من الجذور
-          sed -i '' 's/attributes = {/attributes = {\n\t\t\t\tDisableSwiftPackageIntegration = YES;/g' ios/Runner.xcodeproj/project.pbxproj
+          # 1. مسح أي ملف Package.swift من مكتبات فلاتر لمنع Xcode من قراءتها
+          find ~/.pub-cache -name "Package.swift" -type f -delete || true
+          find $FLUTTER_ROOT/.pub-cache -name "Package.swift" -type f -delete || true
+
+          # 2. سكريبت بايثون دقيق لإغلاق ميزة SPM من جذور إعدادات الآيفون
+          python3 -c "
+          import os
+          path = 'ios/Runner.xcodeproj/project.pbxproj'
+          if os.path.exists(path):
+              with open(path, 'r') as f:
+                  content = f.read()
+              content = content.replace('attributes = {', 'attributes = { DisableSwiftPackageIntegration = YES; ')
+              with open(path, 'w') as f:
+                  f.write(content)
+          "
 
       - name: Prepare iOS Environment
         script: |
