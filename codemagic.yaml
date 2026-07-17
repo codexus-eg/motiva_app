@@ -9,7 +9,7 @@ workflows:
 
     environment:
       flutter: stable
-      xcode: 15.4
+      xcode: latest # أعد هذه القيمة إلى latest
       cocoapods: default
       vars:
         FLUTTER_SKIP_SWIFT_PACKAGE_MANAGER: "true"
