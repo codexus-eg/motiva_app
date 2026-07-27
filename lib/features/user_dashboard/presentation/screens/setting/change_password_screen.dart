@@ -69,7 +69,8 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
     }
     if (value == currentPass) {
       setState(
-        () => _newPasswordError = "new password can't be the same as the old password",
+        () => _newPasswordError =
+            "new password can't be the same as the old password",
       );
       return;
     }
@@ -298,7 +299,7 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
               hintText: hint,
               hintStyle: GoogleFonts.poppins(
                 fontSize: 18,
-                color: theme.colorScheme.onSurface.withOpacity(0.5),
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
               ),
               filled: true,
               fillColor: theme.colorScheme.primaryContainer,
@@ -328,7 +329,7 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
               suffixIcon: IconButton(
                 icon: Icon(
                   obscureText ? Icons.visibility_off : Icons.visibility,
-                  color: theme.colorScheme.onSurface.withOpacity(0.5),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                   size: 22,
                 ),
                 onPressed: onToggleObscure,

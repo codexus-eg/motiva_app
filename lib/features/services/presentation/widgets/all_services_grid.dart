@@ -7,6 +7,7 @@ import 'package:app/features/public_services/presentation/providers/public_servi
 import 'package:app/features/sell_your_car/damaged_car/presentation/screens/sell_or_buy_car_screen.dart';
 import 'package:app/features/service-categories/domain/entities/service_category.dart';
 import 'package:app/i18n/strings.g.dart';
+import 'package:app/shared/ui/images/platform_image.dart';
 import 'package:app/shared/ui/shimmer/shimmer_skeletons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -262,11 +263,11 @@ class _DynamicServiceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl = category.imageUrl;
-    final iconUrl = category.iconUrl;
+    final imageUrl = FallbackImages.resolveUrl(category.imageUrl);
+    final iconUrl = FallbackImages.resolveUrl(category.iconUrl);
     final fallbackIcon = FallbackImages.categoryIcon(category.slug);
-    final isNetworkImage = imageUrl != null && imageUrl.isNotEmpty;
-    final isIconImage = iconUrl != null && iconUrl.isNotEmpty;
+    final isNetworkImage = imageUrl.isNotEmpty;
+    final isIconImage = iconUrl.isNotEmpty;
     final theme = Theme.of(context);
 
     return GestureDetector(
@@ -288,45 +289,13 @@ class _DynamicServiceItem extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: isNetworkImage
-                  ? Image.network(
-                      imageUrl,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => isIconImage
-                          ? Image.network(
-                              iconUrl,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) =>
-                                  Image.asset(
-                                    fallbackIcon,
-                                    width: double.infinity,
-                                    fit: BoxFit.cover,
-                                  ),
-                            )
-                          : Image.asset(
-                              fallbackIcon,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
-                    )
-                  : isIconImage
-                  ? Image.network(
-                      iconUrl,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => Image.asset(
-                        fallbackIcon,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    )
-                  : Image.asset(
-                      fallbackIcon,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
+              child: _buildServiceImage(
+                imageUrl: imageUrl,
+                iconUrl: iconUrl,
+                fallbackIcon: fallbackIcon,
+                isNetworkImage: isNetworkImage,
+                isIconImage: isIconImage,
+              ),
             ),
             Expanded(
               flex: 1,
@@ -351,5 +320,58 @@ class _DynamicServiceItem extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Widget _buildServiceImage({
+    required String imageUrl,
+    required String iconUrl,
+    required String fallbackIcon,
+    required bool isNetworkImage,
+    required bool isIconImage,
+  }) {
+    if (isNetworkImage) {
+      return buildPlatformImage(
+        url: imageUrl,
+        width: double.infinity,
+        height: double.infinity,
+        fit: BoxFit.cover,
+        placeholder: _buildFallbackImage(iconUrl, fallbackIcon, isIconImage),
+      );
+    }
+    if (isIconImage) {
+      return buildPlatformImage(
+        url: iconUrl,
+        width: double.infinity,
+        height: double.infinity,
+        fit: BoxFit.cover,
+        placeholder: Image.asset(
+          fallbackIcon,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
+      );
+    }
+    return Image.asset(fallbackIcon, width: double.infinity, fit: BoxFit.cover);
+  }
+
+  Widget _buildFallbackImage(
+    String iconUrl,
+    String fallbackIcon,
+    bool isIconImage,
+  ) {
+    if (isIconImage) {
+      return buildPlatformImage(
+        url: iconUrl,
+        width: double.infinity,
+        height: double.infinity,
+        fit: BoxFit.cover,
+        placeholder: Image.asset(
+          fallbackIcon,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
+      );
+    }
+    return Image.asset(fallbackIcon, width: double.infinity, fit: BoxFit.cover);
   }
 }

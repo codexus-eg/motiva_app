@@ -123,7 +123,7 @@ class _VendorHomeScreenState extends ConsumerState<VendorHomeScreen> {
       index: _selectedIndex,
       children: [
         _buildHomeTab(),
-        const VendorListingsScreen(isHomePage: true,),
+        const VendorListingsScreen(isHomePage: true),
         const VendorOrdersTabScreen(),
         const VendorsOperatorsScreen(),
         const VendorProfileScreen(),
@@ -151,6 +151,8 @@ class _VendorHomeScreenState extends ConsumerState<VendorHomeScreen> {
     final completedAsync = ref.watch(vendorCompletedOrdersProvider);
     final statsAsync = ref.watch(vendorStatsProvider(profile.id));
     final checkoutAsync = ref.watch(vendorCheckoutOrdersProvider);
+    final servicesAsync = ref.watch(vendorServicesNotifierProvider);
+    final productsAsync = ref.watch(vendorProductsNotifierProvider);
     final theme = Theme.of(context).colorScheme;
     final profileNotifier = ref.read(vendorProfileProvider.notifier);
     final t = Translations.of(context).home.vendor;
@@ -233,24 +235,32 @@ class _VendorHomeScreenState extends ConsumerState<VendorHomeScreen> {
               }
             },
           ),
-          // const Gap(AppSpacing.xl),
-          // VendorStatusCard(
-          //   profile: profile,
-          //   isUpdating: false,
-          //   onStatusChanged: (status) async {
-          //     await profileNotifier.updateStatus(status);
-          //   },
-          // ),
           const Gap(AppSpacing.xl),
-          activeGroupedAsync.when(
-            data: (grouped) =>
-                ActiveOrdersSection(orders: grouped['all'] ?? []),
+          servicesAsync.when(
+            data: (servicesState) {
+              final hasServices = servicesState.services.isNotEmpty;
+              if (!hasServices) return const SizedBox.shrink();
+              return activeGroupedAsync.when(
+                data: (grouped) =>
+                    ActiveOrdersSection(orders: grouped['all'] ?? []),
+                loading: () => ShimmerSkeletons.listItemSkeleton(height: 90),
+                error: (_, _) => const SizedBox.shrink(),
+              );
+            },
             loading: () => ShimmerSkeletons.listItemSkeleton(height: 90),
             error: (_, _) => const SizedBox.shrink(),
           ),
           const Gap(AppSpacing.xl),
-          checkoutAsync.when(
-            data: (orders) => VendorCheckoutOrdersSection(orders: orders),
+          productsAsync.when(
+            data: (productsState) {
+              final hasProducts = productsState.products.isNotEmpty;
+              if (!hasProducts) return const SizedBox.shrink();
+              return checkoutAsync.when(
+                data: (orders) => VendorCheckoutOrdersSection(orders: orders),
+                loading: () => ShimmerSkeletons.listItemSkeleton(height: 90),
+                error: (_, _) => const SizedBox.shrink(),
+              );
+            },
             loading: () => ShimmerSkeletons.listItemSkeleton(height: 90),
             error: (_, _) => const SizedBox.shrink(),
           ),

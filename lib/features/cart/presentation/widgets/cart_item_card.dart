@@ -196,7 +196,11 @@ class _QuantityButton extends StatelessWidget {
               ? AppColors.secondary
               : theme.primaryContainer.withValues(alpha: 0.1),
         ),
-        child: Icon(icon, size: 14, color: isAdd ? Colors.white : theme.onSurface),
+        child: Icon(
+          icon,
+          size: 14,
+          color: isAdd ? Colors.white : theme.onSurface,
+        ),
       ),
     );
   }

@@ -67,10 +67,7 @@ class PublicMarketplaceRemoteDataSourceImpl
     try {
       final response = await _dioClient.dio.get(
         '/api/products/catalog',
-        queryParameters: {
-          'vendorId': vendorId,
-          ...?filter?.toQueryParams(),
-        },
+        queryParameters: {'vendorId': vendorId, ...?filter?.toQueryParams()},
       );
       final data = response.data;
       AppLogger.debug(

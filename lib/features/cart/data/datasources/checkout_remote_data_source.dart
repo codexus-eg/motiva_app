@@ -7,7 +7,10 @@ import 'package:app/features/cart/domain/failures/checkout_failure.dart';
 import 'package:dio/dio.dart';
 
 abstract class CheckoutRemoteDataSource {
-  Future<CheckoutResultModel> checkout({DeliveryAddressModel? address});
+  Future<CheckoutResultModel> checkout({
+    DeliveryAddressModel? address,
+    String? voucherCode,
+  });
 }
 
 class CheckoutRemoteDataSourceImpl implements CheckoutRemoteDataSource {
@@ -16,7 +19,10 @@ class CheckoutRemoteDataSourceImpl implements CheckoutRemoteDataSource {
   CheckoutRemoteDataSourceImpl(this._dioClient);
 
   @override
-  Future<CheckoutResultModel> checkout({DeliveryAddressModel? address}) async {
+  Future<CheckoutResultModel> checkout({
+    DeliveryAddressModel? address,
+    String? voucherCode,
+  }) async {
     try {
       final data = <String, dynamic>{};
       if (address != null) {
@@ -30,13 +36,18 @@ class CheckoutRemoteDataSourceImpl implements CheckoutRemoteDataSource {
           if (address.notes != null) 'notes': address.notes,
         };
       }
+      if (voucherCode != null) {
+        data['voucherCode'] = voucherCode;
+      }
 
       final response = await _dioClient.dio.post(
         '/api/checkout',
         data: data.isNotEmpty ? data : null,
       );
 
-      return CheckoutResultModel.fromJson(response.data as Map<String, dynamic>);
+      return CheckoutResultModel.fromJson(
+        response.data as Map<String, dynamic>,
+      );
     } on DioException catch (e, stackTrace) {
       AppLogger.error('checkout failed', error: e, stackTrace: stackTrace);
       throw _handleError(e);

@@ -379,6 +379,7 @@ class _TranslationsVendorListingsAr implements TranslationsVendorListingsEn {
 	@override String get filter_all => 'الكل';
 	@override String get filter_product => 'منتج';
 	@override String get filter_service => 'خدمة';
+	@override String get filter_car => 'سيارة';
 	@override late final _TranslationsVendorListingsSnackbarAr snackbar = _TranslationsVendorListingsSnackbarAr._(_root);
 	@override late final _TranslationsVendorListingsDialogAr dialog = _TranslationsVendorListingsDialogAr._(_root);
 	@override late final _TranslationsVendorListingsEmptyAr empty = _TranslationsVendorListingsEmptyAr._(_root);
@@ -2189,6 +2190,8 @@ class _TranslationsVendorListingsBottomSheetAr implements TranslationsVendorList
 	@override String get product_description => 'أضف منتجًا جديدًا إلى كتالوجك';
 	@override String get service_label => 'خدمة';
 	@override String get service_description => 'أضف خدمة جديدة';
+	@override String get car_label => 'سيارة';
+	@override String get car_description => 'أضف إعلان سيارة جديد';
 }
 
 // Path: vendor_listings.card
@@ -6006,6 +6009,7 @@ extension on TranslationsAr {
 			'vendor_listings.filter_all' => 'الكل',
 			'vendor_listings.filter_product' => 'منتج',
 			'vendor_listings.filter_service' => 'خدمة',
+			'vendor_listings.filter_car' => 'سيارة',
 			'vendor_listings.snackbar.product_deactivated' => 'تم إلغاء تفعيل المنتج',
 			'vendor_listings.snackbar.product_activated' => 'تم تفعيل المنتج',
 			'vendor_listings.snackbar.update_status_failed' => 'فشل تحديث حالة المنتج',
@@ -6038,6 +6042,8 @@ extension on TranslationsAr {
 			'vendor_listings.bottom_sheet.product_description' => 'أضف منتجًا جديدًا إلى كتالوجك',
 			'vendor_listings.bottom_sheet.service_label' => 'خدمة',
 			'vendor_listings.bottom_sheet.service_description' => 'أضف خدمة جديدة',
+			'vendor_listings.bottom_sheet.car_label' => 'سيارة',
+			'vendor_listings.bottom_sheet.car_description' => 'أضف إعلان سيارة جديد',
 			'vendor_listings.card.type_product' => 'منتج',
 			'vendor_listings.card.type_service' => 'خدمة',
 			'vendor_listings.card.stock_label' => 'المخزون: {count}',
@@ -6106,11 +6112,11 @@ extension on TranslationsAr {
 			'vendor_products.create_product.button_create' => 'إنشاء منتج',
 			'vendor_products.create_product.button_save' => 'حفظ التغييرات',
 			'vendor_products.create_product.snackbar_created' => 'تم إنشاء المنتج بنجاح',
+			_ => null,
+		} ?? switch (path) {
 			'vendor_products.create_product.snackbar_updated' => 'تم تحديث المنتج بنجاح',
 			'vendor_products.create_product.snackbar_create_failed' => 'فشل إنشاء المنتج. يرجى التحقق من المدخلات والمحاولة مرة أخرى.',
 			'vendor_products.create_product.snackbar_update_failed' => 'فشل تحديث المنتج. يرجى التحقق من المدخلات والمحاولة مرة أخرى.',
-			_ => null,
-		} ?? switch (path) {
 			'vendor_products.create_product.validation_required' => '{field} مطلوب',
 			'vendor_products.create_product.validation_valid_number' => 'أدخل {field} صالح',
 			'vendor_products.create_product.spare_part_section_title' => 'مواصفات قطعة الغيار',

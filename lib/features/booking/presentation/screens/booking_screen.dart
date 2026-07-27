@@ -96,7 +96,10 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
 
     if (nextAvailable != null) {
       final now = DateTime.now().toUtc();
-      final isToday = nextAvailable.year == now.year && nextAvailable.month == now.month && nextAvailable.day == now.day;
+      final isToday =
+          nextAvailable.year == now.year &&
+          nextAvailable.month == now.month &&
+          nextAvailable.day == now.day;
       setState(() {
         _selectedDate = nextAvailable;
         _nextAvailableDate = nextAvailable;
@@ -139,8 +142,17 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
     final workingHours = WorkingHours.fromJson(workingHoursJson);
     final now = DateTime.now().toUtc();
     // Start from today to look for the next available day
-    final todayIndex = now.weekday - 1; // weekday is 1-7 (Mon-Sun), array is 0-6
-    final days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    final todayIndex =
+        now.weekday - 1; // weekday is 1-7 (Mon-Sun), array is 0-6
+    final days = [
+      'monday',
+      'tuesday',
+      'wednesday',
+      'thursday',
+      'friday',
+      'saturday',
+      'sunday',
+    ];
 
     // Look ahead up to 30 days
     for (int i = 0; i < 30; i++) {
@@ -221,23 +233,24 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildServiceSummary(),
-            const Divider(color: Color(0xFF383A42), height: 1),
-            if (requiresGps) _buildLocationSection(),
-            if (requiresRoute) ...[
-              _buildRouteSection(isPickup: true),
-              _buildRouteSection(isPickup: false),
+              const Divider(color: Color(0xFF383A42), height: 1),
+              if (requiresGps) _buildLocationSection(),
+              if (requiresRoute) ...[
+                _buildRouteSection(isPickup: true),
+                _buildRouteSection(isPickup: false),
+              ],
+              if (allowsScheduling) _buildSchedulingSection(),
+              _buildVendorAttributesSection(),
+              _buildCustomerFieldsSection(),
+              _buildOrderSummary(),
+              if (submissionState.hasError)
+                _buildErrorCard(submissionState.error.toString()),
+              _buildBottomBar(bookingState, submissionState.isLoading),
             ],
-            if (allowsScheduling) _buildSchedulingSection(),
-            _buildVendorAttributesSection(),
-            _buildCustomerFieldsSection(),
-            _buildOrderSummary(),
-            if (submissionState.hasError)
-              _buildErrorCard(submissionState.error.toString()),
-            _buildBottomBar(bookingState, submissionState.isLoading),
-          ],
+          ),
         ),
       ),
-    ));
+    );
   }
 
   Widget _buildServiceSummary() {
@@ -712,14 +725,14 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
                 ),
               ),
             ),
-      if (_locationError != null)
-        Padding(
-          padding: const EdgeInsets.only(top: 6),
-          child: Text(
-            _locationError!,
-            style: GoogleFonts.poppins(fontSize: 12, color: Colors.red),
-          ),
-        ),
+            if (_locationError != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: Text(
+                  _locationError!,
+                  style: GoogleFonts.poppins(fontSize: 12, color: Colors.red),
+                ),
+              ),
           ],
         ),
       ),
@@ -757,7 +770,11 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
     );
   }
 
-  DateTime _selectedDate = DateTime.utc(DateTime.now().year, DateTime.now().month, DateTime.now().day);
+  DateTime _selectedDate = DateTime.utc(
+    DateTime.now().year,
+    DateTime.now().month,
+    DateTime.now().day,
+  );
   int _selectedSlotIndex = -1; // -1 means no selection (ASAP)
   DateTime? _nextAvailableDate; // Auto-detected next available day
   Map<String, dynamic>? _vendorWorkingHours;
@@ -937,8 +954,10 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
       var hour = int.parse(parts[0]);
       final minute = int.parse(parts[1].split(' ')[0]);
       final period = hour >= 12 ? 'PM' : 'AM';
-      if (hour == 0) hour = 12;
-      else if (hour > 12) hour = hour - 12;
+      if (hour == 0) {
+        hour = 12;
+      } else if (hour > 12)
+        hour = hour - 12;
       final minuteStr = minute.toString().padLeft(2, '0');
       final hourStr = hour.toString().padLeft(2, '0');
       return '$hourStr:$minuteStr $period';
@@ -1088,7 +1107,8 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
                     ),
                   ],
                 ),
-                if (_nextAvailableDate != null && !_isSameDay(_selectedDate, _nextAvailableDate!))
+                if (_nextAvailableDate != null &&
+                    !_isSameDay(_selectedDate, _nextAvailableDate!))
                   Padding(
                     padding: const EdgeInsets.only(top: 12),
                     child: Column(
@@ -1302,11 +1322,7 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
         children: [
           Row(
             children: [
-              const Icon(
-                Icons.edit_note,
-                color: Color(0xFFFE8C00),
-                size: 20,
-              ),
+              const Icon(Icons.edit_note, color: Color(0xFFFE8C00), size: 20),
               const Gap(AppSpacing.sm),
               Text(
                 'Your Details',
@@ -1420,13 +1436,15 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
   Widget _buildBottomBar(BookingState bookingState, bool isLoading) {
     final t = Translations.of(context).booking.booking_screen.button;
 
-    final hasLocationError = _locationError != null ||
+    final hasLocationError =
+        _locationError != null ||
         (requiresGps && bookingState.locationLat == null);
     final hasRouteError =
         _pickupError != null ||
         _dropOffError != null ||
         (requiresRoute &&
-            (bookingState.pickupLat == null || bookingState.dropOffLat == null));
+            (bookingState.pickupLat == null ||
+                bookingState.dropOffLat == null));
 
     String? errorMessage;
     if (_locationError != null) {
@@ -1471,7 +1489,10 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
                       borderRadius: 12,
                     )
                   : ElevatedButton(
-                      onPressed: (hasLocationError || hasRouteError || _slotError != null)
+                      onPressed:
+                          (hasLocationError ||
+                              hasRouteError ||
+                              _slotError != null)
                           ? () => _submitOrder()
                           : () => _submitOrder(),
                       style: ElevatedButton.styleFrom(
@@ -1636,7 +1657,8 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
       final errorMsg = ErrorDisplay.formatErrorMessage(
         ref.read(bookingSubmissionProvider).error!,
       );
-      final isSlotError = errorMsg.contains('Slot not available') ||
+      final isSlotError =
+          errorMsg.contains('Slot not available') ||
           errorMsg.contains('Slot already booked') ||
           errorMsg.contains('slot');
       if (isSlotError && allowsScheduling) {

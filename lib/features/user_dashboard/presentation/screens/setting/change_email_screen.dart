@@ -334,7 +334,7 @@ class _ChangeEmailScreenState extends ConsumerState<ChangeEmailScreen> {
           hintStyle: GoogleFonts.poppins(
             fontSize: 18,
 
-            color: theme.colorScheme.onSurface.withOpacity(0.5),
+            color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
           ),
 
           filled: true,

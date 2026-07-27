@@ -30,24 +30,33 @@ class LoyaltyRemoteDataSourceImpl implements LoyaltyRemoteDataSource {
     try {
       final response = await _dioClient.dio.get(
         '/api/loyalty/transactions',
-        queryParameters: {
-          if (type != null) 'type': type,
-          'page': page,
-          'limit': limit,
-        },
+        queryParameters: {'type': ?type, 'page': page, 'limit': limit},
       );
 
       final data = response.data as Map<String, dynamic>;
-      final items = (data['items'] ?? data['data'] ?? data['transactions'] ?? []) as List<dynamic>;
+      final items =
+          (data['items'] ?? data['data'] ?? data['transactions'] ?? [])
+              as List<dynamic>;
 
       return items
-          .map((item) => LoyaltyTransactionModel.fromJson(item as Map<String, dynamic>))
+          .map(
+            (item) =>
+                LoyaltyTransactionModel.fromJson(item as Map<String, dynamic>),
+          )
           .toList();
     } on DioException catch (e, stackTrace) {
-      AppLogger.error('getTransactions failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'getTransactions failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
       throw _handleError(e);
     } on Exception catch (e, stackTrace) {
-      AppLogger.error('getTransactions failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'getTransactions failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
       throw LoyaltyFailure.unknown(e.toString());
     }
   }
@@ -58,10 +67,18 @@ class LoyaltyRemoteDataSourceImpl implements LoyaltyRemoteDataSource {
       final response = await _dioClient.dio.get('/api/loyalty/balance');
       return LoyaltyConfigModel.fromJson(response.data as Map<String, dynamic>);
     } on DioException catch (e, stackTrace) {
-      AppLogger.error('getLoyaltyConfig failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'getLoyaltyConfig failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
       throw _handleError(e);
     } on Exception catch (e, stackTrace) {
-      AppLogger.error('getLoyaltyConfig failed', error: e, stackTrace: stackTrace);
+      AppLogger.error(
+        'getLoyaltyConfig failed',
+        error: e,
+        stackTrace: stackTrace,
+      );
       throw LoyaltyFailure.unknown(e.toString());
     }
   }

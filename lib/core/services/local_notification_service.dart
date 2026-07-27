@@ -1,14 +1,11 @@
-import 'package:app/core/navigation/navigation_service.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/material.dart';
-import 'package:toastification/toastification.dart';
 
 class LocalNotificationService {
   // static void showBasicNotification(RemoteMessage message) async {
   //   final context = NavigationService.navigatorKey.currentContext;
   //   if (context == null) return;
   //   final theme = Theme.of(context);
-  // 
+  //
   //   toastification.show(
   //     type: ToastificationType.success,
   //     style: ToastificationStyle.flat,

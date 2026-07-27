@@ -25,7 +25,13 @@ class VendorServiceRemoteDataSourceImpl
   Future<List<VendorService>> getServices() async {
     try {
       final response = await _dioClient.dio.get('/api/vendor-services');
-      return VendorServiceModel.fromJsonList(response.data as List<dynamic>);
+      AppLogger.info('Raw API response: ${response.data}');
+
+      // Handle paginated response - extract data field
+      final responseData = response.data as Map<String, dynamic>;
+      final servicesData = responseData['data'] as List<dynamic>;
+
+      return VendorServiceModel.fromJsonList(servicesData);
     } on DioException catch (e, stackTrace) {
       AppLogger.error('getServices failed', error: e, stackTrace: stackTrace);
       throw _handleError(e);

@@ -53,14 +53,14 @@ class PublicProductFilter {
     double? maxPrice,
   }) {
     return PublicProductFilter(
-      make: make ?? this.make,
-      model: model ?? this.model,
-      yearFrom: yearFrom ?? this.yearFrom,
-      yearTo: yearTo ?? this.yearTo,
-      brand: brand ?? this.brand,
-      partNumber: partNumber ?? this.partNumber,
-      minPrice: minPrice ?? this.minPrice,
-      maxPrice: maxPrice ?? this.maxPrice,
+      make: make,
+      model: model,
+      yearFrom: yearFrom,
+      yearTo: yearTo,
+      brand: brand,
+      partNumber: partNumber,
+      minPrice: minPrice,
+      maxPrice: maxPrice,
     );
   }
 
@@ -97,15 +97,15 @@ class PublicProductFilter {
 
   @override
   int get hashCode => Object.hash(
-        make,
-        model,
-        yearFrom,
-        yearTo,
-        brand,
-        partNumber,
-        minPrice,
-        maxPrice,
-      );
+    make,
+    model,
+    yearFrom,
+    yearTo,
+    brand,
+    partNumber,
+    minPrice,
+    maxPrice,
+  );
 
   @override
   String toString() =>

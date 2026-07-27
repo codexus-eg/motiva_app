@@ -196,13 +196,27 @@ class _MarketplaceDetailScreenState
             ),
           ),
           const Gap(AppSpacing.sm),
-          Text(
-            '${product.currency} ${_formatPrice(product.price)}',
-            style: GoogleFonts.inter(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFFFE8C00),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '${product.currency} ${_formatPrice(product.price)}',
+                style: GoogleFonts.inter(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFFFE8C00),
+                ),
+              ),
+              const Gap(AppSpacing.md),
+              Text(
+                'Stock: ${product.stockQuantity}',
+                style: GoogleFonts.inter(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+            ],
           ),
           const Gap(AppSpacing.lg),
         ],
@@ -289,7 +303,8 @@ class _MarketplaceDetailScreenState
                   ),
                 ),
                 const Spacer(),
-                if (product.warrantyMonths != null && product.warrantyMonths! > 0)
+                if (product.warrantyMonths != null &&
+                    product.warrantyMonths! > 0)
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 8,
@@ -353,7 +368,10 @@ class _MarketplaceDetailScreenState
         ),
         const Spacer(),
         Text(
-          value ?? Translations.of(context).public_marketplace.spare_parts.details_screen.no_value,
+          value ??
+              Translations.of(
+                context,
+              ).public_marketplace.spare_parts.details_screen.no_value,
           style: isMono
               ? GoogleFonts.jetBrainsMono(
                   fontSize: 12,
@@ -430,6 +448,7 @@ class _MarketplaceDetailScreenState
     final t = Translations.of(context).public_marketplace.details_screen;
     final addCartState = ref.watch(addCartItemNotifierProvider);
     final isAdding = addCartState.isLoading;
+    final cartAsync = ref.watch(cartProvider);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -437,6 +456,23 @@ class _MarketplaceDetailScreenState
         onTap: isAdding
             ? null
             : () async {
+                final cart = cartAsync.value;
+                if (cart != null &&
+                    cart.items.any((item) => item.productId == product.id)) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'You have already added to cart',
+                          style: GoogleFonts.poppins(),
+                        ),
+                        backgroundColor: Colors.red.shade700,
+                        duration: const Duration(seconds: 2),
+                      ),
+                    );
+                  }
+                  return;
+                }
                 try {
                   await ref
                       .read(addCartItemNotifierProvider.notifier)

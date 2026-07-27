@@ -41,10 +41,15 @@ class CheckoutNotifier extends AsyncNotifier<CheckoutResult> {
     throw UnimplementedError();
   }
 
-  Future<CheckoutResult> checkout({DeliveryAddress? address}) async {
+  Future<CheckoutResult> checkout({
+    DeliveryAddress? address,
+    String? voucherCode,
+  }) async {
     state = const AsyncValue.loading();
     final repository = ref.watch(checkoutRepositoryProvider);
-    state = await AsyncValue.guard(() => repository.checkout(address: address));
+    state = await AsyncValue.guard(
+      () => repository.checkout(address: address, voucherCode: voucherCode),
+    );
     return state.value!;
   }
 }

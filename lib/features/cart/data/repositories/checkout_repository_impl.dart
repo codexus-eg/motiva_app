@@ -12,11 +12,18 @@ class CheckoutRepositoryImpl implements CheckoutRepository {
   CheckoutRepositoryImpl(this._remoteDataSource);
 
   @override
-  Future<CheckoutResult> checkout({DeliveryAddress? address}) async {
+  Future<CheckoutResult> checkout({
+    DeliveryAddress? address,
+    String? voucherCode,
+  }) async {
     try {
-      final addressModel =
-          address != null ? DeliveryAddressModel.fromEntity(address) : null;
-      return await _remoteDataSource.checkout(address: addressModel);
+      final addressModel = address != null
+          ? DeliveryAddressModel.fromEntity(address)
+          : null;
+      return await _remoteDataSource.checkout(
+        address: addressModel,
+        voucherCode: voucherCode,
+      );
     } catch (e, stackTrace) {
       if (e is CheckoutFailure) rethrow;
       AppLogger.error('checkout failed', error: e, stackTrace: stackTrace);

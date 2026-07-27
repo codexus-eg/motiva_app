@@ -88,8 +88,9 @@ class RevenueLineChart extends StatelessWidget {
                     interval: _computeInterval(spots.length),
                     getTitlesWidget: (value, meta) {
                       final index = value.toInt();
-                      if (index < 0 || index >= data.length)
+                      if (index < 0 || index >= data.length) {
                         return const SizedBox.shrink();
+                      }
                       final date = data[index].date;
                       return Text(
                         '${date.day}/${date.month}',

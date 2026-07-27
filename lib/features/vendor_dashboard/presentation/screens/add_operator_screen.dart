@@ -230,8 +230,8 @@ class _AddOperatorScreenState extends ConsumerState<AddOperatorScreen> {
                     }
                     return null;
                   },
-                  onChanged: (_) {
-                    if (_emailError != null) {
+                  onChanged: (value) {
+                    if (_emailError != null && value.isNotEmpty) {
                       setState(() => _emailError = null);
                     }
                   },

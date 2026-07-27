@@ -34,8 +34,9 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
         if (!mounted) return;
         next.whenOrNull(
           data: (_) {
-            final t =
-                Translations.of(context).vendor_dashboard.wallet.payout_request;
+            final t = Translations.of(
+              context,
+            ).vendor_dashboard.wallet.payout_request;
             toastification.show(
               context: context,
               title: Text(t.success),
@@ -47,8 +48,9 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
             Navigator.pop(context);
           },
           error: (error, _) {
-            final t =
-                Translations.of(context).vendor_dashboard.wallet.payout_request;
+            final t = Translations.of(
+              context,
+            ).vendor_dashboard.wallet.payout_request;
             toastification.show(
               context: context,
               title: Text(t.error),
@@ -75,9 +77,9 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
 
     setState(() => _isSubmitting = true);
 
-    ref.read(createPayoutRequestProvider.notifier).createPayoutRequest(
-          _amountController.text.trim(),
-        );
+    ref
+        .read(createPayoutRequestProvider.notifier)
+        .createPayoutRequest(_amountController.text.trim());
   }
 
   @override
@@ -94,8 +96,11 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
         backgroundColor: theme.surface,
         elevation: 0,
         leading: IconButton(
-          icon:
-              Icon(Icons.arrow_back_ios_new, color: theme.onSurface, size: 18),
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: theme.onSurface,
+            size: 18,
+          ),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
@@ -119,7 +124,7 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
               balanceAsync.when(
                 data: (balance) => _balanceCard(context, balance.balance),
                 loading: () => _shimmerBalanceCard(context),
-                error: (_, __) => _errorBalanceCard(context),
+                error: (_, _) => _errorBalanceCard(context),
               ),
               const Gap(AppSpacing.xl),
 
@@ -137,7 +142,11 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
 
               // Submit Button
               GradientButton(
-                text: _isSubmitting ? Translations.of(context).vendor_dashboard.wallet.submitting : payoutT.submit,
+                text: _isSubmitting
+                    ? Translations.of(
+                        context,
+                      ).vendor_dashboard.wallet.submitting
+                    : payoutT.submit,
                 onTap: _isSubmitting ? null : _submitPayoutRequest,
                 height: 50,
                 textStyle: GoogleFonts.poppins(
@@ -248,8 +257,9 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
 
   Widget _bankDetailsSection(BuildContext context) {
     final theme = Theme.of(context).colorScheme;
-    final payoutT =
-        Translations.of(context).vendor_dashboard.wallet.payout_request;
+    final payoutT = Translations.of(
+      context,
+    ).vendor_dashboard.wallet.payout_request;
 
     return Container(
       width: double.infinity,
@@ -316,16 +326,14 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
     AsyncValue<WalletBalance> balanceAsync,
   ) {
     final theme = Theme.of(context).colorScheme;
-    final payoutT =
-        Translations.of(context).vendor_dashboard.wallet.payout_request;
+    final payoutT = Translations.of(
+      context,
+    ).vendor_dashboard.wallet.payout_request;
 
     return TextFormField(
       controller: _amountController,
       keyboardType: const TextInputType.numberWithOptions(decimal: true),
-      style: GoogleFonts.poppins(
-        color: theme.onSurface,
-        fontSize: 16,
-      ),
+      style: GoogleFonts.poppins(color: theme.onSurface, fontSize: 16),
       decoration: InputDecoration(
         hintText: payoutT.amount_hint,
         hintStyle: GoogleFonts.poppins(
@@ -344,8 +352,10 @@ class _PayoutRequestScreenState extends ConsumerState<PayoutRequestScreen> {
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide.none,
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 18,
+          vertical: 16,
+        ),
       ),
       validator: (value) {
         if (value == null || value.trim().isEmpty) {

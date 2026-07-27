@@ -230,10 +230,9 @@ class _MarketplaceCategoryScreenState
         final filter = ref.watch(publicProductFilterProvider);
         if (filter.isEmpty) return const SizedBox.shrink();
         final notifier = ref.read(publicProductFilterProvider.notifier);
-        final chips = Translations.of(context)
-            .public_marketplace
-            .spare_parts
-            .category_screen;
+        final chips = Translations.of(
+          context,
+        ).public_marketplace.spare_parts.category_screen;
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Wrap(
@@ -252,14 +251,18 @@ class _MarketplaceCategoryScreenState
                 ),
               if (filter.yearFrom != null)
                 _buildFilterChip(
-                  chips.chip_year_from
-                      .replaceAll('{value}', filter.yearFrom!.toString()),
+                  chips.chip_year_from.replaceAll(
+                    '{value}',
+                    filter.yearFrom!.toString(),
+                  ),
                   () => notifier.set(filter.copyWith(yearFrom: null)),
                 ),
               if (filter.yearTo != null)
                 _buildFilterChip(
-                  chips.chip_year_to
-                      .replaceAll('{value}', filter.yearTo!.toString()),
+                  chips.chip_year_to.replaceAll(
+                    '{value}',
+                    filter.yearTo!.toString(),
+                  ),
                   () => notifier.set(filter.copyWith(yearTo: null)),
                 ),
               if (filter.brand != null)
@@ -269,18 +272,25 @@ class _MarketplaceCategoryScreenState
                 ),
               if (filter.minPrice != null)
                 _buildFilterChip(
-                  chips.chip_min_price
-                      .replaceAll('{value}', filter.minPrice!.toString()),
+                  chips.chip_min_price.replaceAll(
+                    '{value}',
+                    filter.minPrice!.toString(),
+                  ),
                   () => notifier.set(filter.copyWith(minPrice: null)),
                 ),
               if (filter.maxPrice != null)
                 _buildFilterChip(
-                  chips.chip_max_price
-                      .replaceAll('{value}', filter.maxPrice!.toString()),
+                  chips.chip_max_price.replaceAll(
+                    '{value}',
+                    filter.maxPrice!.toString(),
+                  ),
                   () => notifier.set(filter.copyWith(maxPrice: null)),
                 ),
-              _buildFilterChip(chips.chip_clear_all, () => notifier.clear(),
-                  isClearAll: true),
+              _buildFilterChip(
+                chips.chip_clear_all,
+                () => notifier.clear(),
+                isClearAll: true,
+              ),
             ],
           ),
         );

@@ -1863,6 +1863,7 @@
         "filter_all": "الكل",
         "filter_product": "منتج",
         "filter_service": "خدمة",
+        "filter_car": "سيارة",
         "snackbar": {
             "product_deactivated": "تم إلغاء تفعيل المنتج",
             "product_activated": "تم تفعيل المنتج",
@@ -1903,7 +1904,9 @@
             "product_label": "منتج",
             "product_description": "أضف منتجًا جديدًا إلى كتالوجك",
             "service_label": "خدمة",
-            "service_description": "أضف خدمة جديدة"
+            "service_description": "أضف خدمة جديدة",
+            "car_label" : "سيارة",
+            "car_description" : "أضف إعلان سيارة جديد"
         },
         "card": {
             "type_product": "منتج",

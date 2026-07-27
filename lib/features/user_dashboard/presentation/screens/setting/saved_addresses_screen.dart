@@ -38,7 +38,7 @@ class SavedAddressesScreen extends ConsumerWidget {
                   return _buildAddressList(context, addresses);
                 },
                 loading: () => const Center(child: CircularProgressIndicator()),
-                error: (_, __) => _buildEmptyState(context),
+                error: (_, _) => _buildEmptyState(context),
               ),
             ],
           ),

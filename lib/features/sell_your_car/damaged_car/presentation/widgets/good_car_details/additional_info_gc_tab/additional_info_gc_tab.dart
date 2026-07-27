@@ -85,12 +85,15 @@ class _EndGCTabState extends ConsumerState<AdditionalInfoGCTab> {
 
   String _labelForPlan(ListingPlan plan) {
     final t = Translations.of(context).sell_your_car.additional_info;
-    if (plan.durationUnit == 'WEEKS' && plan.durationCount == 1)
+    if (plan.durationUnit == 'WEEKS' && plan.durationCount == 1) {
       return t.one_week;
-    if (plan.durationUnit == 'WEEKS' && plan.durationCount == 2)
+    }
+    if (plan.durationUnit == 'WEEKS' && plan.durationCount == 2) {
       return t.two_weeks;
-    if (plan.durationUnit == 'MONTHS' && plan.durationCount == 1)
+    }
+    if (plan.durationUnit == 'MONTHS' && plan.durationCount == 1) {
       return t.one_month;
+    }
     return plan.durationLabel;
   }
 
@@ -617,7 +620,7 @@ class _EndGCTabState extends ConsumerState<AdditionalInfoGCTab> {
 
     return plansAsync.when(
       loading: () => const SizedBox.shrink(),
-      error: (_, __) => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
       data: (response) {
         final plans = response.getForCondition('GOOD');
         final selectedPlan = plans

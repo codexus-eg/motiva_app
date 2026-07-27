@@ -94,10 +94,12 @@ class _NotificationsScreenState extends State<NotificationsScreen>
 
   List<NotificationItem> _getFilteredNotifications(int index) {
     if (index == 0) return _notifications; // All
-    if (index == 1)
+    if (index == 1) {
       return _notifications.where((n) => n.type == 'order').toList();
-    if (index == 2)
+    }
+    if (index == 2) {
       return _notifications.where((n) => n.type == 'offer').toList();
+    }
     return _notifications.where((n) => n.type == 'system').toList(); // System
   }
 

@@ -16,7 +16,7 @@ class AppConstants {
 class ApiConstants {
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://motiva-api-last.tajera.net',
+    defaultValue: 'https://motiva-api.tajhouse.net',
     // defaultValue: 'http://localhost:3000',
   );
 

@@ -553,6 +553,9 @@ class TranslationsVendorListingsEn {
 	/// en: 'Service'
 	String get filter_service => 'Service';
 
+	/// en: 'Car'
+	String get filter_car => 'Car';
+
 	late final TranslationsVendorListingsSnackbarEn snackbar = TranslationsVendorListingsSnackbarEn._(_root);
 	late final TranslationsVendorListingsDialogEn dialog = TranslationsVendorListingsDialogEn._(_root);
 	late final TranslationsVendorListingsEmptyEn empty = TranslationsVendorListingsEmptyEn._(_root);
@@ -3912,6 +3915,12 @@ class TranslationsVendorListingsBottomSheetEn {
 
 	/// en: 'Add a new service offering'
 	String get service_description => 'Add a new service offering';
+
+	/// en: 'Car'
+	String get car_label => 'Car';
+
+	/// en: 'Add a new car listing'
+	String get car_description => 'Add a new car listing';
 }
 
 // Path: vendor_listings.card
@@ -9418,6 +9427,7 @@ extension on Translations {
 			'vendor_listings.filter_all' => 'All',
 			'vendor_listings.filter_product' => 'Product',
 			'vendor_listings.filter_service' => 'Service',
+			'vendor_listings.filter_car' => 'Car',
 			'vendor_listings.snackbar.product_deactivated' => 'Product deactivated',
 			'vendor_listings.snackbar.product_activated' => 'Product activated',
 			'vendor_listings.snackbar.update_status_failed' => 'Failed to update product status',
@@ -9450,6 +9460,8 @@ extension on Translations {
 			'vendor_listings.bottom_sheet.product_description' => 'Add a new product to your catalog',
 			'vendor_listings.bottom_sheet.service_label' => 'Service',
 			'vendor_listings.bottom_sheet.service_description' => 'Add a new service offering',
+			'vendor_listings.bottom_sheet.car_label' => 'Car',
+			'vendor_listings.bottom_sheet.car_description' => 'Add a new car listing',
 			'vendor_listings.card.type_product' => 'Product',
 			'vendor_listings.card.type_service' => 'Service',
 			'vendor_listings.card.stock_label' => 'Stock: {count}',
@@ -9519,11 +9531,11 @@ extension on Translations {
 			'vendor_products.create_product.button_save' => 'Save Changes',
 			'vendor_products.create_product.snackbar_created' => 'Product created successfully',
 			'vendor_products.create_product.snackbar_updated' => 'Product updated successfully',
+			_ => null,
+		} ?? switch (path) {
 			'vendor_products.create_product.snackbar_create_failed' => 'Failed to create product. Please check your inputs and try again.',
 			'vendor_products.create_product.snackbar_update_failed' => 'Failed to update product. Please check your inputs and try again.',
 			'vendor_products.create_product.validation_required' => '{field} is required',
-			_ => null,
-		} ?? switch (path) {
 			'vendor_products.create_product.validation_valid_number' => 'Enter a valid {field}',
 			'vendor_products.create_product.spare_part_section_title' => 'Spare Part Specifications',
 			'vendor_products.create_product.part_number_label' => 'Part Number',

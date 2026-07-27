@@ -157,7 +157,7 @@ class _VendorScheduleExceptionsScreenState
 
     return ListView.separated(
       itemCount: sortedExceptions.length,
-      separatorBuilder: (_, __) => const Gap(AppSpacing.md),
+      separatorBuilder: (_, _) => const Gap(AppSpacing.md),
       itemBuilder: (context, index) {
         final exception = sortedExceptions[index];
         return _buildExceptionCard(exception);
@@ -292,13 +292,14 @@ class _VendorScheduleExceptionsScreenState
             ),
             TextButton(
               onPressed: () async {
+                final scaffoldMessenger = ScaffoldMessenger.of(context);
                 Navigator.pop(context);
                 final success = await ref
                     .read(scheduleExceptionsProvider.notifier)
                     .deleteScheduleException(exception.id);
 
                 if (mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
+                  scaffoldMessenger.showSnackBar(
                     SnackBar(
                       content: Text(
                         success
@@ -587,10 +588,10 @@ class _VendorScheduleExceptionsScreenState
                             isClosed: isClosed,
                             startTime: !isClosed && startTime != null
                                 ? _formatTimeOfDay(startTime!)
-                                : null,
+                                : '00:00',
                             endTime: !isClosed && endTime != null
                                 ? _formatTimeOfDay(endTime!)
-                                : null,
+                                : '00:00',
                             reason: reason.isNotEmpty ? reason : null,
                           );
 

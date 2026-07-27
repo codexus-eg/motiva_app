@@ -1862,6 +1862,7 @@
         "filter_all": "All",
         "filter_product": "Product",
         "filter_service": "Service",
+        "filter_car": "Car",
         "snackbar": {
             "product_deactivated": "Product deactivated",
             "product_activated": "Product activated",
@@ -1902,7 +1903,9 @@
             "product_label": "Product",
             "product_description": "Add a new product to your catalog",
             "service_label": "Service",
-            "service_description": "Add a new service offering"
+            "service_description": "Add a new service offering",
+            "car_label" : "Car",
+            "car_description" : "Add a new car listing"
         },
         "card": {
             "type_product": "Product",

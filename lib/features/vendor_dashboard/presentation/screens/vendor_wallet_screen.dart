@@ -67,7 +67,7 @@ class _VendorWalletScreenState extends ConsumerState<VendorWalletScreen> {
               balanceAsync.when(
                 data: (balance) => _walletSummaryCard(context, balance.balance),
                 loading: () => _shimmerBalanceCard(context),
-                error: (_, __) => _errorBalanceCard(context, t),
+                error: (_, _) => _errorBalanceCard(context, t),
               ),
               const Gap(AppSpacing.xl),
               _buildTabs(),
@@ -75,7 +75,7 @@ class _VendorWalletScreenState extends ConsumerState<VendorWalletScreen> {
               statsAsync.when(
                 data: (stats) => _statsGrid(context, stats),
                 loading: () => _shimmerStatsGrid(context),
-                error: (_, __) => _errorStatsGrid(context, t),
+                error: (_, _) => _errorStatsGrid(context, t),
               ),
               const Gap(AppSpacing.xl),
               _sectionTitle(context, t.vendor_dashboard.wallet.completed_jobs),
@@ -83,7 +83,7 @@ class _VendorWalletScreenState extends ConsumerState<VendorWalletScreen> {
               statsAsync.when(
                 data: (stats) => _completedJobsCard(context, stats),
                 loading: () => _shimmerCompletedJobsCard(context),
-                error: (_, __) => const SizedBox.shrink(),
+                error: (_, _) => const SizedBox.shrink(),
               ),
               const Gap(AppSpacing.xl),
               _sectionTitle(context, t.vendor_dashboard.wallet.history),
@@ -495,13 +495,13 @@ class _VendorWalletScreenState extends ConsumerState<VendorWalletScreen> {
                 );
               },
               loading: () => const SizedBox.shrink(),
-              error: (_, __) => const SizedBox.shrink(),
+              error: (_, _) => const SizedBox.shrink(),
             ),
           ],
         );
       },
       loading: () => _shimmerTransactionList(context),
-      error: (_, __) => _errorTransactionsWidget(context, t),
+      error: (_, _) => _errorTransactionsWidget(context, t),
     );
   }
 

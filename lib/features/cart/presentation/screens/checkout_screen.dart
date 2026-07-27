@@ -6,6 +6,7 @@ import 'package:app/features/cart/domain/entities/delivery_address.dart';
 import 'package:app/features/cart/data/models/delivery_address_model.dart';
 import 'package:app/features/cart/presentation/providers/cart_provider.dart';
 import 'package:app/features/cart/presentation/providers/checkout_provider.dart';
+import 'package:app/features/cart/presentation/providers/voucher_provider.dart';
 import 'package:app/features/cart/presentation/screens/order_completed_screen.dart';
 import 'package:app/features/cart/presentation/widgets/payment_method_tile.dart';
 import 'package:app/shared/ui/buttons/gradient_elevated_button.dart';
@@ -30,6 +31,9 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
   DeliveryAddress? _selectedAddress;
   final _voucherController = TextEditingController();
   bool _voucherApplied = false;
+  bool _isRedeeming = false;
+  String? _appliedVoucherCode;
+  double _voucherDiscount = 0.0;
   bool _useWallet = false;
 
   @override
@@ -49,6 +53,7 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
       next.whenOrNull(
         data: (result) {
           ref.read(clearCartNotifierProvider.notifier).clearCart();
+          ref.invalidate(voucherNotifierProvider);
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -147,7 +152,7 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                         const Gap(AppSpacing.xs),
                         _buildSummaryRow(
                           t.checkout.voucher_discount,
-                          '-KWD 1.00',
+                          '-KWD ${_formatPrice(_voucherDiscount.toStringAsFixed(2))}',
                           valueColor: AppColors.secondary,
                         ),
                       ],
@@ -204,7 +209,7 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                         },
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
-                        error: (_, __) => _buildAddAddressButton(),
+                        error: (_, _) => _buildAddAddressButton(),
                       ),
                       const Gap(AppSpacing.xl),
 
@@ -250,12 +255,9 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                           ),
                           const Gap(AppSpacing.sm),
                           ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                _voucherApplied =
-                                    _voucherController.text.isNotEmpty;
-                              });
-                            },
+                            onPressed: _isRedeeming
+                                ? null
+                                : () => _applyVoucher(),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.secondary,
                               foregroundColor: AppColors.white,
@@ -267,23 +269,50 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                                 vertical: AppSpacing.md,
                               ),
                             ),
-                            child: Text(
-                              'Apply',
-                              style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
+                            child: _isRedeeming
+                                ? const SizedBox(
+                                    width: 16,
+                                    height: 16,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        Colors.white,
+                                      ),
+                                    ),
+                                  )
+                                : Text(
+                                    'Apply',
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
                           ),
                         ],
                       ),
                       if (_voucherApplied) ...[
                         const Gap(AppSpacing.sm),
-                        Text(
-                          t.checkout.voucher_applied,
-                          style: GoogleFonts.poppins(
-                            fontSize: 12,
-                            color: AppColors.secondary,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              t.checkout.voucher_applied,
+                              style: GoogleFonts.poppins(
+                                fontSize: 12,
+                                color: AppColors.secondary,
+                              ),
+                            ),
+                            const Gap(AppSpacing.xs),
+                            GestureDetector(
+                              onTap: _removeVoucher,
+                              child: Text(
+                                'Remove',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  color: AppColors.textSecondary,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                       const Gap(AppSpacing.xl),
@@ -489,16 +518,93 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
     final total = double.tryParse(widget.cart.totalAmount) ?? 0;
     final delivery = 0.5;
     var finalTotal = total + delivery;
-    if (_voucherApplied) finalTotal -= 1.0;
+    if (_voucherApplied) finalTotal -= _voucherDiscount;
     if (_useWallet) finalTotal -= 2.5;
     if (finalTotal < 0) finalTotal = 0;
     return _formatPrice(finalTotal.toStringAsFixed(2));
   }
 
   void _placeOrder() {
+    if (_selectedAddress == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'you must choose address',
+            style: GoogleFonts.poppins(color: Colors.white),
+          ),
+          backgroundColor: Colors.red.shade800,
+        ),
+      );
+      return;
+    }
     ref
         .read(checkoutNotifierProvider.notifier)
-        .checkout(address: _selectedAddress);
+        .checkout(address: _selectedAddress, voucherCode: _appliedVoucherCode);
+  }
+
+  Future<void> _applyVoucher() async {
+    final code = _voucherController.text.trim();
+    if (code.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Please enter a voucher code',
+            style: GoogleFonts.poppins(color: Colors.white),
+          ),
+          backgroundColor: Colors.red.shade800,
+        ),
+      );
+      return;
+    }
+
+    setState(() => _isRedeeming = true);
+
+    try {
+      final result = await ref
+          .read(voucherNotifierProvider.notifier)
+          .redeem(code);
+
+      if (mounted) {
+        setState(() {
+          _voucherApplied = true;
+          _appliedVoucherCode = code;
+          _voucherDiscount = result.discountAmount;
+          _isRedeeming = false;
+        });
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              result.message,
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+            backgroundColor: Colors.green.shade800,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() => _isRedeeming = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              e.toString(),
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+            backgroundColor: Colors.red.shade800,
+          ),
+        );
+      }
+    }
+  }
+
+  void _removeVoucher() {
+    setState(() {
+      _voucherApplied = false;
+      _appliedVoucherCode = null;
+      _voucherDiscount = 0.0;
+      _voucherController.clear();
+    });
   }
 
   void _showAddAddressSheet() {

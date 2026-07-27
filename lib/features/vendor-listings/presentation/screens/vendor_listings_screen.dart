@@ -1,6 +1,8 @@
 import 'package:app/core/accessibility/semantic_labels.dart';
 import 'package:app/core/theme/app_colors.dart';
 import 'package:app/core/theme/spacing.dart';
+import 'package:app/core/utils/app_logger.dart';
+import 'package:app/features/sell_your_car/damaged_car/presentation/screens/good_car_details_screen.dart';
 import 'package:app/features/vendor-listings/domain/entities/vendor_listing_item.dart';
 import 'package:app/features/vendor-listings/presentation/widgets/listing_card.dart';
 import 'package:app/features/vendor-listings/presentation/widgets/listings_by_category_section.dart';
@@ -14,6 +16,9 @@ import 'package:app/features/vendor-services/presentation/providers/vendor_servi
 import 'package:app/features/vendor-services/presentation/providers/vendor_services_state.dart';
 import 'package:app/features/vendor-services/presentation/screens/create_service_screen.dart';
 import 'package:app/features/vendor-services/presentation/screens/select_category_screen.dart';
+import 'package:app/features/vendor-cars/presentation/providers/vendor_cars_provider.dart';
+import 'package:app/features/vendor-cars/presentation/providers/vendor_cars_state.dart';
+import 'package:app/features/vendor-cars/domain/entities/vendor_car.dart';
 import 'package:app/shared/ui/dialogs/confirmation_dialog.dart';
 import 'package:app/shared/ui/empty_states/empty_state_widget.dart';
 import 'package:app/shared/ui/inputs/custom_search_bar.dart';
@@ -24,7 +29,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-enum ListingFilter { all, product, service }
+enum ListingFilter { all, product, service, car }
 
 class VendorListingsScreen extends ConsumerStatefulWidget {
   final bool? isHomePage;
@@ -52,17 +57,21 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
   Widget build(BuildContext context) {
     final productsAsync = ref.watch(vendorProductsNotifierProvider);
     final servicesAsync = ref.watch(vendorServicesNotifierProvider);
+    final carsAsync = ref.watch(vendorCarsNotifierProvider);
     final theme = Theme.of(context).colorScheme;
 
     final isLoading =
         (productsAsync.isLoading && !productsAsync.hasValue) ||
-        (servicesAsync.isLoading && !servicesAsync.hasValue);
+        (servicesAsync.isLoading && !servicesAsync.hasValue) ||
+        (carsAsync.isLoading && !carsAsync.hasValue);
 
     final hasError =
         productsAsync.hasError &&
         servicesAsync.hasError &&
+        carsAsync.hasError &&
         !productsAsync.hasValue &&
-        !servicesAsync.hasValue;
+        !servicesAsync.hasValue &&
+        !carsAsync.hasValue;
 
     return Scaffold(
       backgroundColor: theme.surface,
@@ -80,7 +89,7 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
                   ? ShimmerSkeletons.cardSkeleton()
                   : hasError
                   ? _buildErrorState(context)
-                  : _buildListContent(productsAsync, servicesAsync),
+                  : _buildListContent(productsAsync, servicesAsync, carsAsync),
             ),
           ],
         ),
@@ -135,9 +144,11 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
   Widget _buildFilterChips() {
     final productsAsync = ref.watch(vendorProductsNotifierProvider);
     final servicesAsync = ref.watch(vendorServicesNotifierProvider);
+    final carsAsync = ref.watch(vendorCarsNotifierProvider);
 
     final products = productsAsync.valueOrNull?.products ?? [];
     final services = servicesAsync.valueOrNull?.services ?? [];
+    final cars = carsAsync.valueOrNull?.cars ?? [];
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -148,7 +159,7 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
             _buildFilterChip(
               label: t.vendor_listings.filter_all,
               filter: ListingFilter.all,
-              count: products.length + services.length,
+              count: products.length + services.length + cars.length,
             ),
             const Gap(AppSpacing.sm),
             _buildFilterChip(
@@ -161,6 +172,12 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
               label: t.vendor_listings.filter_service,
               filter: ListingFilter.service,
               count: services.length,
+            ),
+            const Gap(AppSpacing.sm),
+            _buildFilterChip(
+              label: t.vendor_listings.filter_car,
+              filter: ListingFilter.car,
+              count: cars.length,
             ),
           ],
         ),
@@ -230,18 +247,33 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
   Widget _buildListContent(
     AsyncValue<VendorProductsState> productsAsync,
     AsyncValue<VendorServicesState> servicesAsync,
+    AsyncValue<VendorCarsState> carsAsync,
   ) {
     final products = productsAsync.valueOrNull?.products ?? [];
     final services = servicesAsync.valueOrNull?.services ?? [];
+    final cars = carsAsync.valueOrNull?.cars ?? [];
+
+    AppLogger.info(
+      'VendorListingsScreen - Products: ${products.length}, Services: ${services.length}, Cars: ${cars.length}',
+    );
 
     final items = <VendorListingItem>[
       ...products.map(VendorListingItem.fromProduct),
       ...services.map(VendorListingItem.fromService),
+      ...cars.map(VendorListingItem.fromCar),
     ];
+
+    AppLogger.info(
+      'VendorListingsScreen - Total items after mapping: ${items.length}',
+    );
 
     items.sort((a, b) => b.createdAt.compareTo(a.createdAt));
 
     final filtered = _filterItems(items);
+
+    AppLogger.info(
+      'VendorListingsScreen - Items after filtering: ${filtered.length}, Filter: $_filter',
+    );
 
     if (filtered.isEmpty) {
       return _buildEmptyState();
@@ -253,6 +285,7 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
       onRefresh: () async {
         await ref.read(vendorProductsNotifierProvider.notifier).refresh();
         await ref.read(vendorServicesNotifierProvider.notifier).refresh();
+        await ref.read(vendorCarsNotifierProvider.notifier).refresh();
       },
       color: AppColors.primary,
       child: ListView.builder(
@@ -278,6 +311,8 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
       onEdit: () => _navigateToEdit(item),
       onDelete: item.type == ListingType.product
           ? () => _confirmDeleteProduct(item.product!)
+          : item.type == ListingType.car
+          ? () => _confirmDeleteCar(item.car!)
           : null,
       onToggleActive: item.type == ListingType.product
           ? () => _toggleProductActive(item.product!)
@@ -300,6 +335,8 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
     for (final item in items) {
       final typePrefix = item.type == ListingType.service
           ? 'service'
+          : item.type == ListingType.car
+          ? 'car'
           : 'product';
       final catId = item.categoryId ?? 'uncategorized';
       final key = '$typePrefix:$catId';
@@ -333,6 +370,11 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
             .where((item) => item.type == ListingType.service)
             .toList();
         break;
+      case ListingFilter.car:
+        filtered = filtered
+            .where((item) => item.type == ListingType.car)
+            .toList();
+        break;
       case ListingFilter.all:
         break;
     }
@@ -355,6 +397,12 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
           builder: (_) => CreateServiceScreen(existingService: item.service!),
         ),
       );
+    } else if (item.type == ListingType.car && item.car != null) {
+      // Navigate to car details - using GoodCarDetailsScreen as per existing pattern
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const GoodCarDetailsScreen()),
+      );
     }
   }
 
@@ -372,6 +420,12 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
         MaterialPageRoute(
           builder: (_) => CreateServiceScreen(existingService: item.service!),
         ),
+      );
+    } else if (item.type == ListingType.car && item.car != null) {
+      // Navigate to car edit - using GoodCarDetailsScreen as per existing pattern
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const GoodCarDetailsScreen()),
       );
     }
   }
@@ -482,6 +536,36 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
     }
   }
 
+  Future<void> _confirmDeleteCar(VendorCar car) async {
+    final confirmed = await ConfirmationDialog.show(
+      context: context,
+      title: 'Delete Car',
+      message:
+          'Are you sure you want to delete "${car.make} ${car.model} ${car.year}"? This action cannot be undone.',
+      confirmText: 'Delete',
+      confirmColor: AppColors.red,
+      icon: Icons.delete_outline,
+    );
+
+    if (confirmed == true && mounted) {
+      setState(() => _deleteLoadingIds.add(car.id));
+      final success = await ref
+          .read(vendorCarsNotifierProvider.notifier)
+          .deleteCar(car.id);
+      setState(() => _deleteLoadingIds.remove(car.id));
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              success ? 'Car deleted successfully' : 'Failed to delete car',
+            ),
+            backgroundColor: success ? AppColors.green : AppColors.red,
+          ),
+        );
+      }
+    }
+  }
+
   Widget _buildEmptyState() {
     final t = Translations.of(context);
     return EmptyStateWidget(
@@ -492,6 +576,8 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
           ? t.vendor_listings.empty.no_products
           : _filter == ListingFilter.service
           ? t.vendor_listings.empty.no_services
+          : _filter == ListingFilter.car
+          ? 'No Cars Yet'
           : t.vendor_listings.empty.no_listings,
       subtitle: _searchQuery.isNotEmpty
           ? t.vendor_listings.empty.adjust_search
@@ -499,6 +585,8 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
           ? t.vendor_listings.empty.create_product_prompt
           : _filter == ListingFilter.service
           ? t.vendor_listings.empty.create_service_prompt
+          : _filter == ListingFilter.car
+          ? 'Create your first car listing to start selling.'
           : t.vendor_listings.empty.create_listing_prompt,
       actionText: _searchQuery.isEmpty
           ? t.vendor_listings.empty.create_listing_button
@@ -552,6 +640,7 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
               onPressed: () {
                 ref.invalidate(vendorProductsNotifierProvider);
                 ref.invalidate(vendorServicesNotifierProvider);
+                ref.invalidate(vendorCarsNotifierProvider);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
@@ -635,6 +724,21 @@ class _VendorListingsScreenState extends ConsumerState<VendorListingsScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (_) => const SelectCategoryScreen(),
+                      ),
+                    );
+                  },
+                ),
+                const Gap(AppSpacing.md),
+                _buildBottomSheetOption(
+                  icon: Icons.car_repair,
+                  label: t.vendor_listings.bottom_sheet.car_label,
+                  description: t.vendor_listings.bottom_sheet.car_description,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const GoodCarDetailsScreen(),
                       ),
                     );
                   },

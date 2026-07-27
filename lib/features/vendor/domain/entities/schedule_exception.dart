@@ -7,7 +7,7 @@ class ScheduleException {
   final String? endTime;
   final String? reason;
   final DateTime createdAt;
-  final DateTime updatedAt;
+  final DateTime? updatedAt;
 
   const ScheduleException({
     required this.id,
@@ -18,7 +18,7 @@ class ScheduleException {
     this.endTime,
     this.reason,
     required this.createdAt,
-    required this.updatedAt,
+    this.updatedAt,
   });
 
   ScheduleException copyWith({
@@ -55,7 +55,7 @@ class ScheduleException {
       if (endTime != null) 'endTime': endTime,
       if (reason != null) 'reason': reason,
       'createdAt': createdAt.toIso8601String(),
-      'updatedAt': updatedAt.toIso8601String(),
+      if (updatedAt != null) 'updatedAt': updatedAt!.toIso8601String(),
     };
   }
 
@@ -69,7 +69,9 @@ class ScheduleException {
       endTime: json['endTime'] as String?,
       reason: json['reason'] as String?,
       createdAt: DateTime.parse(json['createdAt'] as String),
-      updatedAt: DateTime.parse(json['updatedAt'] as String),
+      updatedAt: json['updatedAt'] != null
+          ? DateTime.parse(json['updatedAt'] as String)
+          : null,
     );
   }
 

@@ -553,7 +553,9 @@ class _VendorServiceDetailScreenState
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
                             color: isClosed
-                                ? theme.colorScheme.onSurface.withOpacity(0.5)
+                                ? theme.colorScheme.onSurface.withValues(
+                                    alpha: 0.5,
+                                  )
                                 : theme.colorScheme.onSurface,
                           ),
                         ),
@@ -567,7 +569,9 @@ class _VendorServiceDetailScreenState
                           style: GoogleFonts.poppins(
                             fontSize: 13,
                             color: isClosed
-                                ? theme.colorScheme.onSurface.withOpacity(0.5)
+                                ? theme.colorScheme.onSurface.withValues(
+                                    alpha: 0.5,
+                                  )
                                 : theme.colorScheme.onSurface,
                           ),
                         ),

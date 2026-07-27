@@ -47,7 +47,7 @@ class RatingFilterChips extends StatelessWidget {
         onRatingSelected(selected ? rating : null);
       },
       backgroundColor: theme.colorScheme.surface,
-      selectedColor: theme.colorScheme.primary.withOpacity(0.1),
+      selectedColor: theme.colorScheme.primary.withValues(alpha: 0.1),
       checkmarkColor: theme.colorScheme.primary,
       labelStyle: TextStyle(
         color: isSelected
