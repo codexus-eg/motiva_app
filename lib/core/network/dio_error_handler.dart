@@ -18,7 +18,8 @@ class DioErrorInfo {
   });
 
   @override
-  String toString() => 'DioErrorInfo(message: $message, statusCode: $statusCode, type: $type)';
+  String toString() =>
+      'DioErrorInfo(message: $message, statusCode: $statusCode, type: $type)';
 }
 
 /// Centralized utility for extracting user-friendly error messages from
@@ -48,16 +49,13 @@ class DioErrorHandler {
     final data = response?.data;
 
     // Try to extract message from response data, handling List and String types
-    final message = _extractMessage(data) ??
+    final message =
+        _extractMessage(data) ??
         _statusCodeFallback(statusCode) ??
         _connectionFallback(e.type) ??
         'An unexpected error occurred';
 
-    return DioErrorInfo(
-      message: message,
-      statusCode: statusCode,
-      type: e.type,
-    );
+    return DioErrorInfo(message: message, statusCode: statusCode, type: e.type);
   }
 
   /// Extracts a user-friendly message string from the response data map.
@@ -134,7 +132,10 @@ class DioErrorHandler {
         return 'Certificate verification failed. Please check your connection';
       case DioExceptionType.cancel:
         return 'Request was cancelled';
+      case DioExceptionType.transformTimeout:
+        return 'Data processing timed out. Please try again'; // تمت إضافة هذه الحالة
       case DioExceptionType.unknown:
+      default: // تمت إضافة الـ default لتجنب الخطأ
         return 'An unexpected error occurred';
     }
   }
